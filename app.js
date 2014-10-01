@@ -19,7 +19,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
-var partyController = require('./controllers/party');
+//var partyController = require('./controllers/party');
 /**
  * API keys + Passport configuration.
  */
@@ -141,7 +141,7 @@ app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized,
 app.get('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo);
 app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postVenmo);
 app.get('/api/linkedin', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin);
-app.get('/parties', partyController.getParties);
+//app.get('/parties', partyController.getParties);
 
 /**
  * OAuth routes for sign-in.

@@ -1,0 +1,51 @@
+
+// All parties information
+{
+	"name": "WAGNER MEETS TWOANGLE",
+	"date": "01/10/2014 6 pm",
+	"location": "Le social club",
+	"theme": "Electro/Pop/Rock",
+	"done": true
+}
+{
+	"name": "BUZZ BOOSTER ILE DE FRANCE / SÉLECTION ",
+	"date": "02/10/2014 from 7 30 pm to 1 am",
+	"location": "LE GLAZART",
+	"theme": "HIP HOP",
+	"done": false
+}
+{
+	"name": "LES AMOURS ALTERNATIVES",
+	"date": "02/10/2014 from 8 pm to 2 am",
+	"location": "WORKSHOP PARIS",
+	"theme": "TECHNO / HOUSE",
+	"done": true
+}
+{
+	"name": "DIRTYTRAX",
+	"date": "02/10/2014 from 8 pm to 2 am",
+	"location": "LE BATOFAR",
+	"theme": "ELECTRO / HOUSE",
+	"done": true
+}
+{
+	"name": "HELLO PANAM AFTERWROK",
+	"date": "02/10/2014 from 8 pm to 2 am",
+	"location": "LE DJOON",
+	"theme": "HIP HOP / SOUL/FUNK",
+	"done": true
+}
+{
+	"name": "0049 – JEUDI MINUIT",
+	"date": "2/10/2014 from 11:59 pm to 6:00 am",
+	"location": "LA JAVA",
+	"theme": "TECHNO",
+	"done": false
+}
+{
+	"name": "BURN YOUR THURSDAY ",
+	"date": "2/10/2014 from 8:00 pm to 6:00 am",
+	"location": "LE MALIBV",
+	"theme": "TECHNO / HOUSE",
+	"done": false
+}
