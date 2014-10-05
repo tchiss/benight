@@ -15,4 +15,7 @@
 
 //= require lib/jquery-2.1.1.min
 //= require lib/bootstrap.min
+//= require lib/require.min.js
+//= require lib/underscore-min.js
+//= require lib/backbone-min.js
 //= require main
