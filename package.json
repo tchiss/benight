@@ -1,9 +1,9 @@
 {
-  "name": "hackathon-starter",
-  "version": "2.3.3",
+  "name": "Benight",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": null
   },
   "scripts": {
     "start": "nodemon app.js",
