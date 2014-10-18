@@ -187,7 +187,7 @@ passport.use(new GoogleStrategy(secrets.google, function(req, accessToken, refre
 
 
 // Tumblr API setup.
-
+/*
 passport.use('tumblr', new OAuthStrategy({
     requestTokenURL: 'http://www.tumblr.com/oauth/request_token',
     accessTokenURL: 'http://www.tumblr.com/oauth/access_token',
@@ -245,7 +245,7 @@ passport.use('venmo', new OAuth2Strategy({
       });
     });
   }
-));
+));*/
 
 // Login Required middleware.
 
