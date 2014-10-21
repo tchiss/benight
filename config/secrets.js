@@ -1,6 +1,6 @@
 module.exports = {
 
-  db: process.env.MONGODB|| 'mongodb://localhost:27017/test_benight_db',
+  db: process.env.MONGODB|| 'mongodb://benight_db:>.>vxjNb@ds063779.mongolab.com:63779/benight_db',
 
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 
