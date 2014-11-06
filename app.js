@@ -30,6 +30,8 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
+var EventsParty = require('./controllers/EventsController');
+var viproomController = require('./controllers/viproomController');
 
 /**
  * API keys and Passport configuration.
@@ -136,6 +138,10 @@ app.post('/account/profile', passportConf.isAuthenticated, userController.postUp
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
+
+app.get('/events', EventsParty.getEvents);
+app.get('/events/:id', EventsParty.getSingleEvent);
+app.get('/viproom', viproomController.getTemplate);
 
 /**
  * API examples routes.
