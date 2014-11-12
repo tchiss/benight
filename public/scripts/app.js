@@ -17,7 +17,7 @@ define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
 		}
 	});
 
-	Backbone.history.start();
+	Backbone.history.start({pushState: true});
 
 	return App;
 });
