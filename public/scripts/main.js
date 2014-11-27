@@ -1,13 +1,10 @@
-require.config({
-	baseUrl: "./scripts/",
-	paths:{
-		"jquery": "vendor/jquery/dist/jquery.min",
-		"underscore": "vendor/underscore-amd/underscore-min",
-		"backbone": "vendor/backbone-amd/backbone-min"
-	}
-});
+// Kick off the application.
+require(["app", "router"], function(app, Router) {
+  // Define your master router on the application namespace and trigger all
+  // navigation from this instance.
+  app.router = new Router();
 
-
-require(['app'], function(AppRouter){
-	new AppRouter;
+  // Trigger the initial route and enable HTML5 History API support, set the
+  // root folder to '/' by default.  Change in app.js.
+  Backbone.history.start({ pushState: true});
 });
