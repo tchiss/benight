@@ -1,23 +1,6 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
-	var App = Backbone.Router.extend({
-		routes: {
-			'': 'index',
-			'events': 'listEvents',
-			'events/:id': 'singleEvent'
-		},
+define(function(require, exports, module) {
+  "use strict";
 
-		index: function(){
-			console.log('The router is running');
-		},
-		listEvents: function(){
-			console.log('The router is running listEvents');
-		},	
-		singleEvent: function(){
-			console.log('The router is running singleEvent');
-		}
-	});
-
-	Backbone.history.start({pushState: true});
-
-	return App;
+  // The root path to run the application through.
+  exports.root = "/";
 });
