@@ -193,7 +193,7 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedi
 });
 
 /**
- * OAuth authorization routes for API examples.
+ * OAuth authorization routes for API examples. 
  */
 
 /*app.get('/auth/foursquare', passport.authorize('foursquare'));
