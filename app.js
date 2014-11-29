@@ -175,6 +175,8 @@ app.get('/api/instagram', passportConf.isAuthenticated, passportConf.isAuthorize
 app.get('/api/yahoo', apiController.getYahoo);
 */
 
+app.get('/api/benight/', userController.getLoginAPI);
+app.post('/api/benight/', userController.postLoginAPI);
 /**
  * OAuth sign-in routes.
  */
