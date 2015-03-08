@@ -14,7 +14,7 @@ class ConnectViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
 		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
 		view.addGestureRecognizer(tap)
@@ -77,11 +77,11 @@ class ConnectViewController: UIViewController {
 				}
 				else if user.isNew
 				{
-					NSLog("User signed up and logged in through Facebook!")
+						self.performSegueWithIdentifier("Connected", sender: nil)
 				}
 				else
 				{
-					NSLog("User logged in through Facebook!")
+						self.performSegueWithIdentifier("Connected", sender: nil)
 				}
 		})
 	}

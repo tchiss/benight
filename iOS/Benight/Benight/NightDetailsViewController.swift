@@ -40,6 +40,7 @@ class NightDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		nameLabel.text = event["name"] as String!
 		//cell.PlaceLabel.text = events[indexPath.row]["location"] as String!
 		descLabel.text = event["theme"] as String!

@@ -18,7 +18,7 @@ class CreateAccountViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
 		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
 		view.addGestureRecognizer(tap)
