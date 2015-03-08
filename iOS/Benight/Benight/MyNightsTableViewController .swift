@@ -8,14 +8,16 @@
 
 import UIKit
 
-class NightsTableViewController: UITableViewController {
+class MyNightsTableViewController: UITableViewController {
 	
 	var events: Array<AnyObject> = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		var query = PFQuery(className: "Event")
+		var query = PFQuery(className: "Reservation")
+		query.includeKey("Event")
+		query.whereKey("User", equalTo: PFUser.currentUser())
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
 				NSLog("error " + error.localizedDescription)
@@ -54,15 +56,15 @@ class NightsTableViewController: UITableViewController {
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as NightsTableViewCell
 
-		cell.fillCell(events[indexPath.row])
+		cell.fillCell(events[indexPath.row]["Event"]!!)
 		return cell
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-		if segue.identifier ==  "nightDetails"
+		if segue.identifier ==  "mynightDetails"
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow()!.row
-			let object = events[indexPath]
+			let object = events[indexPath]["Event"]
 			let vc = segue.destinationViewController as NightDetailsViewController
 			vc.event = object as PFObject
 		}

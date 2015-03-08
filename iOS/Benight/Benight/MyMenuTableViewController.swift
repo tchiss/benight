@@ -37,7 +37,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
-		return 4
+		return 5
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -47,7 +47,7 @@ class MyMenuTableViewController: UITableViewController {
 		if (cell == nil) {
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
 			cell!.backgroundColor = UIColor.clearColor()
-			cell!.textLabel?.textColor = UIColor.darkGrayColor()
+			cell!.textLabel?.textColor = UIColor.whiteColor()
 			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
 			selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
 			cell!.selectedBackgroundView = selectedBackgroundView
@@ -63,7 +63,11 @@ class MyMenuTableViewController: UITableViewController {
 			break
 		case 2:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Soirées"
+			cell!.textLabel?.text = "Les Soirées"
+			break
+		case 3:
+			cell!.imageView?.image = UIImage(named: "helpIcon")
+			cell!.textLabel?.text = "Mes Soirées"
 			break
 		default:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
@@ -96,7 +100,9 @@ class MyMenuTableViewController: UITableViewController {
 		case 2:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") as UIViewController
 			break
-		default:
+		case 3:
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as UIViewController
+			break		default:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as UIViewController
 			break
 		}
