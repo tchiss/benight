@@ -4,12 +4,15 @@ define([
     'underscore',
     'backbone',
     'parse',
+    'models/MyPartyEvent',
     'views/PartyEvents',
     'views/Login'
-], function($, _, Backbone, Parse, PartyEvents, LoginView) {
+], function($, _, Backbone, Parse, PartyEventModel, PartyEventView, LoginView) {
     'use strict';
 
     var currentUser = Parse.User.current();
+
+    var myModel = new PartyEventModel();
 
     var AppView = Backbone.View.extend({
         el: '#faithgroup-admin',
@@ -21,8 +24,9 @@ define([
         render: function(){
             console.log('AppView');
             if(currentUser) {
-                console.log('negro');
-                new PartyEvents();
+                var eventView = new PartyEventView({
+                    model: myModel
+                });
             } else {
                 new LoginView();
             }
