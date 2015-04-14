@@ -8,13 +8,15 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: ResponsiveTextFieldViewController {
 	
 	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var loginField: UITextField!
 	@IBOutlet var emailField: UITextField!
 	@IBOutlet var confirmField: UITextField!
 	@IBOutlet var nameField: UITextField!
+	
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

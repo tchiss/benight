@@ -47,7 +47,7 @@ class MyMenuTableViewController: UITableViewController {
 		if (cell == nil) {
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
 			cell!.backgroundColor = UIColor.clearColor()
-			cell!.textLabel?.textColor = UIColor.whiteColor()
+			cell!.textLabel?.textColor = UIColor.whiteColor		()
 			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
 			selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
 			cell!.selectedBackgroundView = selectedBackgroundView
