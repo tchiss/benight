@@ -1,4 +1,4 @@
-//
+	//
 //  ViewController.swift
 //  Benight
 //
@@ -8,15 +8,18 @@
 
 import UIKit
 
-class ConnectViewController: UIViewController {
+class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var emailField: UITextField!
 	@IBOutlet var passwdField: UITextField!
 	
-	override func viewDidLoad() {
+	override func viewDidLoad()
+	{
 		super.viewDidLoad()
+		UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+		
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
-		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")
 		view.addGestureRecognizer(tap)
 	}
 	

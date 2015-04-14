@@ -11,7 +11,12 @@
 		683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868A1A41BC9500C3EA24 /* SideMenu.swift */; };
 		683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */; };
 		683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */; };
-		683B86931A41CCC700C3EA24 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B86921A41CCC700C3EA24 /* ProfileViewController.swift */; };
+		687224B81AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
+		687224B91AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
+		687224BC1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */; };
+		687224BD1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */; };
+		687224BE1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
+		687224BF1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
 		68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */; };
 		688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5621A79062F000AD63D /* NightsTableViewController.swift */; };
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
@@ -20,6 +25,7 @@
 		689F7D471A9CA40B00220DD4 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689F7D451A9CA40B00220DD4 /* FBAudienceNetwork.framework */; };
 		689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
+		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
 		68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DA1A33617000B3A236 /* AudioToolbox.framework */; };
 		68DA58DD1A33617800B3A236 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DC1A33617700B3A236 /* CFNetwork.framework */; };
 		68DA58DF1A33618000B3A236 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DE1A33618000B3A236 /* CoreGraphics.framework */; };
@@ -40,6 +46,8 @@
 		68E329331A1A5B8100883116 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E329311A1A5B8100883116 /* LaunchScreen.xib */; };
 		68E3293F1A1A5B8100883116 /* BenightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3293E1A1A5B8100883116 /* BenightTests.swift */; };
 		68F473921AAC41E900C26A29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F473911AAC41E900C26A29 /* Images.xcassets */; };
+		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
+		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +65,9 @@
 		683B868A1A41BC9500C3EA24 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = Benight/SideMenu.swift; sourceTree = "<group>"; };
 		683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Benight/SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
-		683B86921A41CCC700C3EA24 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		687224B71AAE96430098DCB4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		688EE5621A79062F000AD63D /* NightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewController.swift; sourceTree = "<group>"; };
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,6 +76,7 @@
 		689F7D451A9CA40B00220DD4 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		68DA58DA1A33617000B3A236 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		68DA58DC1A33617700B3A236 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		68DA58DE1A33618000B3A236 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +102,8 @@
 		68E3293D1A1A5B8100883116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E3293E1A1A5B8100883116 /* BenightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenightTests.swift; sourceTree = "<group>"; };
 		68F473911AAC41E900C26A29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Benight/Images.xcassets; sourceTree = "<group>"; };
+		68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
+		68F473951AADE52600C26A29 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ../ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +140,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		687224B51AAE95F30098DCB4 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */,
+				687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */,
+				687224B71AAE96430098DCB4 /* Lato-Light.ttf */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
 		68C1A4101A41AA6B00A17A97 /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,18 +171,36 @@
 		68C1A41C1A41AFC400A17A97 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				683B86921A41CCC700C3EA24 /* ProfileViewController.swift */,
+				68CCF43B1ADD69ED00E2E6D2 /* Profile */,
+				68CCF43A1ADD69CD00E2E6D2 /* Nights */,
 				683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */,
 				68E3292A1A1A5B8100883116 /* ConnectViewController.swift */,
 				68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */,
 				689F19AB1A7686B500B98698 /* NewsTableViewController.swift */,
+				68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */,
+				68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		68CCF43A1ADD69CD00E2E6D2 /* Nights */ = {
+			isa = PBXGroup;
+			children = (
 				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
-				68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Nights;
+			sourceTree = "<group>";
+		};
+		68CCF43B1ADD69ED00E2E6D2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				68F473951AADE52600C26A29 /* ProfileTableViewController.swift */,
+				68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		68DA58FE1A33622400B3A236 /* Framworks */ = {
@@ -208,6 +249,7 @@
 		68E329251A1A5B8100883116 /* Benight */ = {
 			isa = PBXGroup;
 			children = (
+				687224B51AAE95F30098DCB4 /* Ressources */,
 				68C1A41C1A41AFC400A17A97 /* ViewControllers */,
 				68E329281A1A5B8100883116 /* AppDelegate.swift */,
 				68E3292C1A1A5B8100883116 /* Main.storyboard */,
@@ -325,8 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F473921AAC41E900C26A29 /* Images.xcassets in Resources */,
+				687224BE1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */,
+				687224BC1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */,
 				68E3292E1A1A5B8100883116 /* Main.storyboard in Resources */,
 				68E329331A1A5B8100883116 /* LaunchScreen.xib in Resources */,
+				687224B81AAE96430098DCB4 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +379,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687224B91AAE96430098DCB4 /* Lato-Light.ttf in Resources */,
+				687224BF1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */,
+				687224BD1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,17 +392,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */,
 				68E3292B1A1A5B8100883116 /* ConnectViewController.swift in Sources */,
 				683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */,
 				68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */,
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
 				689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */,
 				688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */,
+				68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */,
+				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
 				689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */,
 				6837DCB61AA1C79A00115F61 /* MyNightsTableViewController .swift in Sources */,
-				683B86931A41CCC700C3EA24 /* ProfileViewController.swift in Sources */,
 				683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */,
 				68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */,
 			);
