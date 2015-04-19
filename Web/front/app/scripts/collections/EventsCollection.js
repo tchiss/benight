@@ -1,8 +1,11 @@
-define(['backbone', 'models/BenightEvents'], function(Backbone, EventsModel) {
+define([
+	'backbone',
+	'parse',
+	'models/MyPartyEvent'
+], function(Backbone, Parse, PartyEventModel) {
 
-  var EventsCollection = Backbone.Collection.extend({
-    model: EventsModel,
-    url: '/events'
+  var EventsCollection = Parse.Collection.extend({
+    model: PartyEventModel
   });
 
   return EventsCollection;
