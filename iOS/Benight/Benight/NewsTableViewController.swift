@@ -40,7 +40,7 @@ class NewsTableViewController: UITableViewController {
     }
 	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as! UITableViewCell
 
 		cell.contentView.layer.cornerRadius = 10
 		cell.contentView.layer.borderWidth = 10

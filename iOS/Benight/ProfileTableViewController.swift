@@ -22,16 +22,11 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		var user = PFUser.currentUser()
 		self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
 		self.ProfileImage.clipsToBounds = true
-		UserName.text = PFUser.currentUser().username
-		UserEmail.text = PFUser.currentUser().email
-		if (user["phone"] != nil){
-			UserPhone.text = user["phone"] as NSString}
-		else{
-			UserPhone.text = "Unknow"}
-
+		UserName.text = PFUser.currentUser()!.username
+		UserEmail.text = PFUser.currentUser()!.email
+		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
 		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,6 +34,17 @@ class ProfileTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+	
+	override func viewWillAppear(animated: Bool) {
+		var user = PFUser.currentUser()
+		self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
+		self.ProfileImage.clipsToBounds = true
+		UserName.text = PFUser.currentUser()!.username
+		UserEmail.text = PFUser.currentUser()!.email
+		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
+
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

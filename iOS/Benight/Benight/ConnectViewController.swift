@@ -47,12 +47,12 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBAction func ConnectUser(sender: UIButton)
 	{
 		
-		if (countElements(emailField.text) > 0)
+		if (count(emailField.text) > 0)
 		{
-			if (countElements(passwdField.text) > 0)
+			if (count(passwdField.text) > 0)
 			{
 				PFUser.logInWithUsernameInBackground(emailField.text, password: passwdField.text) {
-					(user: PFUser!, error: NSError!) -> Void in
+					(user: PFUser?, error: NSError?) -> Void in
 					if user != nil {
 						print("login ok")
 						self.performSegueWithIdentifier("Connected", sender: nil)
@@ -72,13 +72,13 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	{
 		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
 		PFFacebookUtils.logInWithPermissions(permissions,
-			{
-				(user: PFUser!, error: NSError!) -> Void in
+			block: {
+				(user: PFUser?, error: NSError?) -> Void in
 				if user == nil
 				{
 					NSLog("Uh oh. The user cancelled the Facebook login.")
 				}
-				else if user.isNew
+				else if user!.isNew
 				{
 						self.performSegueWithIdentifier("Connected", sender: nil)
 				}

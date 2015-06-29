@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681597D21AFEF72E003582D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681597B81AFEF72E003582D4 /* Images.xcassets */; };
+		682B78141AEE0B9200762247 /* AlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B78131AEE0B9200762247 /* AlbumPhotosViewController.swift */; };
+		682B78161AEE0C5300762247 /* FlickrSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B78151AEE0C5300762247 /* FlickrSearcher.swift */; };
+		682B78181AEE11D500762247 /* AlbumPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B78171AEE11D500762247 /* AlbumPhotoCell.swift */; };
 		6837DCB61AA1C79A00115F61 /* MyNightsTableViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */; };
 		683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868A1A41BC9500C3EA24 /* SideMenu.swift */; };
 		683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */; };
@@ -20,6 +24,7 @@
 		68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */; };
 		688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5621A79062F000AD63D /* NightsTableViewController.swift */; };
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
+		689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */; };
 		689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F19AB1A7686B500B98698 /* NewsTableViewController.swift */; };
 		689F7D461A9CA40B00220DD4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689F7D441A9CA40B00220DD4 /* FacebookSDK.framework */; };
 		689F7D471A9CA40B00220DD4 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689F7D451A9CA40B00220DD4 /* FBAudienceNetwork.framework */; };
@@ -45,7 +50,6 @@
 		68E3292E1A1A5B8100883116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E3292C1A1A5B8100883116 /* Main.storyboard */; };
 		68E329331A1A5B8100883116 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E329311A1A5B8100883116 /* LaunchScreen.xib */; };
 		68E3293F1A1A5B8100883116 /* BenightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3293E1A1A5B8100883116 /* BenightTests.swift */; };
-		68F473921AAC41E900C26A29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F473911AAC41E900C26A29 /* Images.xcassets */; };
 		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
 		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		681597B81AFEF72E003582D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		682B78131AEE0B9200762247 /* AlbumPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewController.swift; sourceTree = "<group>"; };
+		682B78151AEE0C5300762247 /* FlickrSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearcher.swift; sourceTree = "<group>"; };
+		682B78171AEE11D500762247 /* AlbumPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCell.swift; sourceTree = "<group>"; };
 		6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyNightsTableViewController .swift"; sourceTree = "<group>"; };
 		683B868A1A41BC9500C3EA24 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = Benight/SideMenu.swift; sourceTree = "<group>"; };
 		683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Benight/SideMenuNavigationController.swift; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 		68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		688EE5621A79062F000AD63D /* NightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewController.swift; sourceTree = "<group>"; };
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
+		689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		689F19AB1A7686B500B98698 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		689F7D441A9CA40B00220DD4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		689F7D451A9CA40B00220DD4 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
@@ -101,7 +110,6 @@
 		68E329381A1A5B8100883116 /* BenightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E3293D1A1A5B8100883116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E3293E1A1A5B8100883116 /* BenightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenightTests.swift; sourceTree = "<group>"; };
-		68F473911AAC41E900C26A29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Benight/Images.xcassets; sourceTree = "<group>"; };
 		68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		68F473951AADE52600C26A29 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ../ProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */,
 				68DA58FA1A33621000B3A236 /* Bolts.framework in Frameworks */,
 				68DA58FB1A33621000B3A236 /* Parse.framework in Frameworks */,
 				68DA58FC1A33621000B3A236 /* ParseFacebookUtils.framework in Frameworks */,
@@ -140,6 +149,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		682B78191AEE125D00762247 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				682B78171AEE11D500762247 /* AlbumPhotoCell.swift */,
+				682B78131AEE0B9200762247 /* AlbumPhotosViewController.swift */,
+			);
+			name = Albums;
+			sourceTree = "<group>";
+		};
+		682B781A1AEFF59C00762247 /* Menu / Connection */ = {
+			isa = PBXGroup;
+			children = (
+				683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */,
+				68E3292A1A1A5B8100883116 /* ConnectViewController.swift */,
+				68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */,
+				68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */,
+			);
+			name = "Menu / Connection";
+			sourceTree = "<group>";
+		};
+		682B781B1AF012B600762247 /* Genrals Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				682B78151AEE0C5300762247 /* FlickrSearcher.swift */,
+				68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */,
+			);
+			name = "Genrals Controlers";
+			sourceTree = "<group>";
+		};
 		687224B51AAE95F30098DCB4 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +191,6 @@
 		68C1A4101A41AA6B00A17A97 /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
-				68C1A4191A41AE0E00A17A97 /* SideMenu */,
 			);
 			name = Librairies;
 			path = ..;
@@ -166,19 +203,18 @@
 				683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */,
 			);
 			name = SideMenu;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		68C1A41C1A41AFC400A17A97 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				68C1A4191A41AE0E00A17A97 /* SideMenu */,
+				682B781B1AF012B600762247 /* Genrals Controlers */,
+				682B781A1AEFF59C00762247 /* Menu / Connection */,
 				68CCF43B1ADD69ED00E2E6D2 /* Profile */,
 				68CCF43A1ADD69CD00E2E6D2 /* Nights */,
-				683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */,
-				68E3292A1A1A5B8100883116 /* ConnectViewController.swift */,
-				68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */,
 				689F19AB1A7686B500B98698 /* NewsTableViewController.swift */,
-				68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */,
-				68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -186,8 +222,9 @@
 		68CCF43A1ADD69CD00E2E6D2 /* Nights */ = {
 			isa = PBXGroup;
 			children = (
-				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
+				682B78191AEE125D00762247 /* Albums */,
 				6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */,
+				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
 			);
@@ -229,11 +266,12 @@
 		68E3291A1A1A5B8100883116 = {
 			isa = PBXGroup;
 			children = (
+				689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */,
 				68DA58FE1A33622400B3A236 /* Framworks */,
 				68E329251A1A5B8100883116 /* Benight */,
 				68E3293B1A1A5B8100883116 /* BenightTests */,
 				68E329241A1A5B8100883116 /* Products */,
-				68F473911AAC41E900C26A29 /* Images.xcassets */,
+				681597B81AFEF72E003582D4 /* Images.xcassets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -335,6 +373,7 @@
 				TargetAttributes = {
 					68E329221A1A5B8100883116 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = RK36ZAQX82;
 					};
 					68E329371A1A5B8100883116 = {
 						CreatedOnToolsVersion = 6.1;
@@ -366,8 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F473921AAC41E900C26A29 /* Images.xcassets in Resources */,
 				687224BE1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */,
+				681597D21AFEF72E003582D4 /* Images.xcassets in Resources */,
 				687224BC1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */,
 				68E3292E1A1A5B8100883116 /* Main.storyboard in Resources */,
 				68E329331A1A5B8100883116 /* LaunchScreen.xib in Resources */,
@@ -399,7 +438,10 @@
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
 				689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */,
 				688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */,
+				682B78141AEE0B9200762247 /* AlbumPhotosViewController.swift in Sources */,
+				682B78181AEE11D500762247 /* AlbumPhotoCell.swift in Sources */,
 				68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */,
+				682B78161AEE0C5300762247 /* FlickrSearcher.swift in Sources */,
 				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
@@ -532,15 +574,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Kylyu/Downloads/parse-library-1-2",
 					"$(PROJECT_DIR)/Benight/Framwork",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Benight/Benight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -551,15 +595,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Kylyu/Downloads/parse-library-1-2",
 					"$(PROJECT_DIR)/Benight/Framwork",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Benight/Benight-Bridging-Header.h";
 			};
 			name = Release;

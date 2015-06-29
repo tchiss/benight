@@ -71,13 +71,14 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		user["name"] = nameField.text
 		
 		user.signUpInBackgroundWithBlock {
-			(succeeded: Bool!, error1: NSError!) -> Void in
+			(succeeded: Bool, error1: NSError?) -> Void in
 			if error1 == nil {
 				self.NicePopup("Your account is created, Welcome")
 				self.performSegueWithIdentifier("accountCreated", sender: nil)
 			} else {
-				let errorString = error1.userInfo!["error"] as NSString
-				self.ErrorPopup(errorString)}
+				let errorString = error1!.userInfo!["error"] as! NSString
+				self.ErrorPopup(errorString as String)
+			}
 		}
 		}
 		else

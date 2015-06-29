@@ -14,16 +14,18 @@ class MyNightsTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		var query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
-		query.whereKey("User", equalTo: PFUser.currentUser())
+		query.whereKey("User", equalTo: PFUser.currentUser()!)
+		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = 130.0
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
-				NSLog("error " + error.localizedDescription)
+				NSLog("error " + error!.localizedDescription)
 			}
 			else {
-				self.events = NSArray(array: objects)
+				self.events = NSArray(array: objects!) as Array<AnyObject>
 				self.tableView.reloadData()
 			}
 		})
@@ -54,7 +56,7 @@ class MyNightsTableViewController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as NightsTableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
 		cell.fillCell(events[indexPath.row]["Event"]!!)
 		return cell
@@ -65,8 +67,8 @@ class MyNightsTableViewController: UITableViewController {
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow()!.row
 			let object = events[indexPath]["Event"]
-			let vc = segue.destinationViewController as NightDetailsViewController
-			vc.event = object as PFObject
+			let vc = segue.destinationViewController as! NightDetailsViewController
+			vc.event = object as! PFObject
 		}
 	}
 	/*

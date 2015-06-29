@@ -14,14 +14,16 @@ class NightsTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = 130.0
 		var query = PFQuery(className: "Event")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
-				NSLog("error " + error.localizedDescription)
+				NSLog("error " + error!.localizedDescription)
 			}
 			else {
-				self.events = NSArray(array: objects)
+				self.events = NSArray(array: objects!) as Array<AnyObject>
 				self.tableView.reloadData()
 			}
 		})
@@ -52,7 +54,7 @@ class NightsTableViewController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as NightsTableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
 		cell.fillCell(events[indexPath.row])
 		return cell
@@ -62,9 +64,9 @@ class NightsTableViewController: UITableViewController {
 		if segue.identifier ==  "nightDetails"
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow()!.row
-			let object = events[indexPath]
-			let vc = segue.destinationViewController as NightDetailsViewController
-			vc.event = object as PFObject
+			let object = events[indexPath] as! PFObject
+			let vc = segue.destinationViewController as! NightDetailsViewController
+			vc.event = object
 		}
 	}
 	/*

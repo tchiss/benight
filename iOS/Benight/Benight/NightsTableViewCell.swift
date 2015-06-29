@@ -21,9 +21,9 @@ class NightsTableViewCell: UITableViewCell {
 	{
 		self.mainView.layer.cornerRadius = 10
 		self.mainView.layer.masksToBounds = true
-		self.NameLabel.text = event["name"] as String!
+		self.NameLabel.text = event["name"] as! String!
 		//cell.PlaceLabel.text = events[indexPath.row]["location"] as String!
-		self.ThemeLabel.text = event["theme"] as String!
-		self.DateLabel.text = (event["date"] as NSDate!).description
+		self.ThemeLabel.text = event["theme"] as! String!
+		self.DateLabel.text = (event["date"] as! NSDate!).description
 	}
 }

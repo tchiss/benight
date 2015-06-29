@@ -14,9 +14,9 @@ class MyMenuTableViewController: UITableViewController {
 		super.viewDidLoad()
 		
 		// Customize apperance of table view
-		tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0) //
+		tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0) //
 		tableView.scrollsToTop = false
-		
+		tableView.backgroundColor = UIColor.clearColor()
 		// Preserve selection between presentations
 		self.clearsSelectionOnViewWillAppear = false
 		
@@ -47,7 +47,7 @@ class MyMenuTableViewController: UITableViewController {
 		if (cell == nil) {
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
 			cell!.backgroundColor = UIColor.clearColor()
-			cell!.textLabel?.textColor = UIColor.whiteColor		()
+			cell!.textLabel?.textColor = UIColor.darkGrayColor()
 			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
 			selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
 			cell!.selectedBackgroundView = selectedBackgroundView
@@ -92,18 +92,18 @@ class MyMenuTableViewController: UITableViewController {
 		var destViewController : UIViewController
 		switch (indexPath.row) {
 		case 0:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") as UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") as! UIViewController
 			break
 		case 1:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NewsFeedView") as UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NewsFeedView") as! UIViewController
 			break
 		case 2:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") as UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") as! UIViewController
 			break
 		case 3:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as! UIViewController
 			break		default:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as! UIViewController
 			break
 		}
 		sideMenuController()?.setContentViewController(destViewController)
