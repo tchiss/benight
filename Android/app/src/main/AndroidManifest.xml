@@ -89,6 +89,14 @@ apklib
             android:name=".BookingActivity"
             android:label="@string/title_activity_booking" >
         </activity>
+        <activity
+            android:name=".GalleryPhotoActivity"
+            android:label="@string/title_activity_gallery_photo" >
+        </activity>
+        <activity
+            android:name=".PhotoViewActivity"
+            android:label="@string/title_activity_photo_view" >
+        </activity>
     </application>
 
 </manifest>

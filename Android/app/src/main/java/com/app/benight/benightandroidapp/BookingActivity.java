@@ -1,39 +1,74 @@
 package com.app.benight.benightandroidapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.parse.Parse;
+import com.parse.ParseACL;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 
 public class BookingActivity extends ActionBarActivity {
+
+    protected TextView mEventName;
+    protected Button   mBookButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
-    }
 
+        Parse.initialize(this, "KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "qayqlys4VkNJDQ06PUUa0aUp8i7g871mjFDmlyCb");
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+        defaultACL.setPublicReadAccess(true);
+        ParseACL.setDefaultACL(defaultACL, true);
+        ParseUser currentUser = ParseUser.getCurrentUser();
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_booking, menu);
-        return true;
-    }
+        mEventName = (TextView)findViewById(R.id.EventName);
+        Intent startingIntent = getIntent();
+        //final String fName = startingIntent.getStringExtra("clubName");
+        final ParseObject mEvent = (ParseObject) startingIntent.getParcelableExtra("eventExtra");
+        final TextView mEventName = (TextView) findViewById(R.id.EventName);
+        mEventName.setText("EEE");
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        mBookButton = (Button)findViewById(R.id.bookingButton);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (currentUser != null && mEvent != null) {
+            ParseObject reservation = new ParseObject("Reservation");
+            reservation.put("Event", mEvent);
+            reservation.put("User", currentUser);
+            reservation.saveInBackground();
+        } else {
+            System.out.println("Error during reservation process!");
         }
 
-        return super.onOptionsItemSelected(item);
+        mBookButton.setOnClickListener(new View.OnClickListener() {
+            ParseUser currentUser = ParseUser.getCurrentUser();
+
+            ParseQuery<ParseObject> query = ParseQuery.getQuery("Event");
+
+            @Override
+            public void onClick(View v) {
+                onBookClick((ParseObject) mEvent, currentUser);
+            }
+        });
+    }
+
+    private void onBookClick(ParseObject mEventName, ParseUser currentUser) {
+        if (currentUser != null && mEventName != null) {
+            ParseObject reservation = new ParseObject("Reservation");
+            reservation.put("Event", mEventName);
+            reservation.put("User", currentUser);
+            reservation.saveInBackground();
+        } else {
+            System.out.println("Error during reservation process!");
+        }
     }
 }

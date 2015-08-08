@@ -34,6 +34,7 @@ public class HomepageActivity extends ListActivity {
         mDrawerList = (ListView)findViewById(R.id.navList);
         addDrawerItems();
 
+//        StartParse new startParse(this);
         Parse.initialize(this, "KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "qayqlys4VkNJDQ06PUUa0aUp8i7g871mjFDmlyCb");
         ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
@@ -82,7 +83,7 @@ public class HomepageActivity extends ListActivity {
                         startActivity(takeUserToHomepage);
                         break;
                     case "Album":
-                        Intent takeUserToAlbum = new Intent(HomepageActivity.this, PhotoAlbumActivity.class);
+                        Intent takeUserToAlbum = new Intent(HomepageActivity.this, GalleryPhotoActivity.class);
                         startActivity(takeUserToAlbum);
                         break;
                     default:

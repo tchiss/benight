@@ -63,6 +63,23 @@ public class StatusAdapter extends ArrayAdapter<ParseObject> {
             public void onClick(View v) {
                 if (onBookClick(statusObject, currentUser)) {
                     Toast.makeText(v.getContext(), "You booked " + nightclubName, Toast.LENGTH_LONG).show();
+
+
+                    SimpleQrcodeGenerator.main("Hola");
+//                    Intent takeUserBooking = new Intent(v.getContext(), BookingActivity.class);
+                    //takeUserBooking.putExtra("eventExtra", statusObject);
+                    //takeUserBooking.putExtra("clubName", nightclubName);
+                    /*try {
+                        qrTxt.setText(clipTxt);
+                        copiedStr = clipTxt.toString();
+                        fullUrl += URLEncoder.encode(copiedStr, "UTF-8");
+                        imgLoader.displayImage(fullUrl, qrImg);
+
+                    } catch (UnsupportedEncodingException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }*/
+                    //v.getContext().startActivity(takeUserBooking);
                 }
             }
         });
@@ -81,6 +98,7 @@ public class StatusAdapter extends ArrayAdapter<ParseObject> {
             reservation.put("Event", event);
             reservation.put("User", username);
             reservation.saveInBackground();
+            SimpleQrcodeGenerator.main("Hola");
             return true;
         } else {
             System.out.println("Error during reservation process!");

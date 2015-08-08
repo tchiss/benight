@@ -18,4 +18,8 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_photo_album">PhotoAlbumActivity</string>
     <string name="title_activity_booking">BookingActivity</string>
+    <string name="title_activity_gallery_photo">GalleryPhotoActivity</string>
+    <string name="title_activity_photo_view">PhotoViewActivity</string>
+    <string name="edit_text_hint">Type a flickr tag...</string>
+    <string name="button_label">Search</string>
 </resources>
