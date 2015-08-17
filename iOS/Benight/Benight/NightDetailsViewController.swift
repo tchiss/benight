@@ -28,6 +28,7 @@ class NightDetailsViewController: UIViewController {
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
 			resa.saveInBackground()
+            GenerateTicket(resa)
 		}
 		else
 		{
