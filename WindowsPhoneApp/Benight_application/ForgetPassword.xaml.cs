@@ -32,5 +32,10 @@ namespace Benight_application
                 MessageBox.Show("Adresse mail incorrecte.");
             }
         }
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
+
     }
 }

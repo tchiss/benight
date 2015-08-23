@@ -28,6 +28,7 @@ namespace Benight_application
 
         //    SupportedOrientations = SupportedPageOrientation.Portrait | SupportedPageOrientation.Landscape;
         //    browser.Loaded += WebBrowser_OnLoaded;
+
         }
 
         //public async void LoadFB()
@@ -111,6 +112,19 @@ namespace Benight_application
 
         private async void buttonSignIn_Click(object sender, RoutedEventArgs e)
         {
+            //TODO: delete query
+            //var users = await (from user in ParseUser.Query
+            //                   where user.Get<string>("username") == "totoro"
+            //                   select user).FindAsync();
+
+            var query = ParseUser.Query;
+            IEnumerable<ParseObject> results = await query.FindAsync();
+
+            var queryEvent = ParseObject.GetQuery("Event");
+            IEnumerable<ParseObject> resultsEvent = await queryEvent.FindAsync();
+
+            
+
             try
             {
                 await ParseUser.LogInAsync(logUserName.Text, logPassword.Text);
