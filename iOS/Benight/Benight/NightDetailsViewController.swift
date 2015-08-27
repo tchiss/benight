@@ -38,7 +38,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 	}
 
     @IBAction func AddToPassbook(sender: AnyObject) {
-        getTicketPassbook()
+        SwiftSpinner.show("Downloading Your Ticket")
+        getTicketPassbook(0)
     }
     
 	func switchStatusChanger() {
@@ -56,6 +57,16 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 		}
 		
 	}
+    
+    func ErrorPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
     
     func GenerateTicket () {
             if let Event: PFObject = self.reservation["Event"] as? PFObject
@@ -78,42 +89,45 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         let passname = "Benight Ticket"
         var passcontroller = PKAddPassesViewController(pass: pass)
         passcontroller.delegate = self
+        SwiftSpinner.hide()
         self.presentViewController(passcontroller, animated: true, completion: nil)
     }
     
-    func getTicketPassbook()
+    
+    func getTicketPassbook(inc: Int)
     {
         let TicketID: String  = self.reservation["Tickets"]!.objectId as String!
-        println(TicketID)
-        
-        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://tickets.benight.cc/")!)
-        request.HTTPMethod = "POST"
-        let postString: String = "ObjectId=" + TicketID + "&authKey=\"KNfCMt9TUSgYBfg\""
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            println("response = \(response)")
-            if (error == nil) {
-                let statusCode = (response as! NSHTTPURLResponse).statusCode
-                if (statusCode == 200)
+        var ticketGetted: Bool = false
+            Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"\"KNfCMt9TUSgYBfg\""]).response{ (request, response, data, error) in
+                if (error == nil)
                 {
-                    println("Success: \(statusCode)")
-                    var pkfile : NSData = NSData(data: data)
-                    var error2: NSError?
-                    var pass: PKPass = PKPass(data: data, error: &error2)
-                    if (error2 == nil)
+                    let statusCode = response!.statusCode
+                    if (statusCode == 200)
                     {
-                        self.openPass(pass)
+                        println("Success: \(statusCode)")
+                        var pkfile : NSData = NSData(data: data!)
+                        var error2: NSError?
+                        var pass: PKPass? = PKPass(data: data, error: &error2)
+                        if (error2 == nil)
+                        {
+                            ticketGetted = true
+                            self.openPass(pass!)
+                        }
                     }
                 }
-            }
-            else {
-                // Failure
-                println("Failure: %@", error.localizedDescription);
-            }
-        })
-        task.resume()
+                else {
+                    println("Failure: %@", error!.localizedDescription);
+                }
+                if (inc < 6 && ticketGetted == false)
+                {
+                    self.getTicketPassbook(inc + 1)
+                }
+                else if (ticketGetted == false)
+                {
+                    SwiftSpinner.hide()
+                    self.ErrorPopup("Can not get your Ticket. Please try again later")
+                }
+        }
 }
     
     override func viewDidLoad() {

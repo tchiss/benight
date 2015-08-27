@@ -56,6 +56,7 @@
 		68E3292E1A1A5B8100883116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68E3292C1A1A5B8100883116 /* Main.storyboard */; };
 		68E329331A1A5B8100883116 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E329311A1A5B8100883116 /* LaunchScreen.xib */; };
 		68E3293F1A1A5B8100883116 /* BenightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3293E1A1A5B8100883116 /* BenightTests.swift */; };
+		68EAEEFB1B8F8FF100F39F65 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAEEFA1B8F8FF100F39F65 /* SwiftSpinner.swift */; };
 		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
 		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 		68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F6176F1B7D5F5700290867 /* PassKit.framework */; };
@@ -125,6 +126,7 @@
 		68E329381A1A5B8100883116 /* BenightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E3293D1A1A5B8100883116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68E3293E1A1A5B8100883116 /* BenightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenightTests.swift; sourceTree = "<group>"; };
+		68EAEEFA1B8F8FF100F39F65 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = ../SwiftSpinner.swift; sourceTree = "<group>"; };
 		68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		68F473951AADE52600C26A29 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ../ProfileTableViewController.swift; sourceTree = "<group>"; };
 		68F6176F1B7D5F5700290867 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
@@ -347,6 +349,7 @@
 		68E329261A1A5B8100883116 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68EAEEFA1B8F8FF100F39F65 /* SwiftSpinner.swift */,
 				68E329271A1A5B8100883116 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -547,6 +550,7 @@
 				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
+				68EAEEFB1B8F8FF100F39F65 /* SwiftSpinner.swift in Sources */,
 				689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */,
 				6837DCB61AA1C79A00115F61 /* MyNightsTableViewController .swift in Sources */,
 				683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */,

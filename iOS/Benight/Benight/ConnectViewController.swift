@@ -12,7 +12,17 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var emailField: UITextField!
 	@IBOutlet var passwdField: UITextField!
 	
-	override func viewDidLoad()
+    func ErrorPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad()
 	{
 		super.viewDidLoad()
 		UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
@@ -34,16 +44,6 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 		view.endEditing(true)
 	}
 	
-	func ErrorPopup(message: String)
-	{
-		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-		
-		let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-		alertController.addAction(defaultAction)
-		
-		presentViewController(alertController, animated: true, completion: nil)
-	}
-	
 	@IBAction func ConnectUser(sender: UIButton)
 	{
 		
@@ -51,13 +51,16 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 		{
 			if (count(passwdField.text) > 0)
 			{
+                SwiftSpinner.show("Connection...")
 				PFUser.logInWithUsernameInBackground(emailField.text, password: passwdField.text) {
 					(user: PFUser?, error: NSError?) -> Void in
 					if user != nil {
 						print("login ok")
+                        SwiftSpinner.hide()
 						self.performSegueWithIdentifier("Connected", sender: nil)
 					} else {
 						self.ErrorPopup("Login Failed")}
+                    SwiftSpinner.hide()
 				}
 			}
 			else {
@@ -70,21 +73,25 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	
 	@IBAction func ConnectWithFace(sender: AnyObject)
 	{
+        SwiftSpinner.show("Connection...")
 		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
 		PFFacebookUtils.logInWithPermissions(permissions,
 			block: {
 				(user: PFUser?, error: NSError?) -> Void in
 				if user == nil
 				{
+                    SwiftSpinner.hide()
 					NSLog("Uh oh. The user cancelled the Facebook login.")
 				}
 				else if user!.isNew
 				{
-						self.performSegueWithIdentifier("Connected", sender: nil)
+                    SwiftSpinner.hide()
+                    self.performSegueWithIdentifier("Connected", sender: nil)
 				}
 				else
 				{
-						self.performSegueWithIdentifier("Connected", sender: nil)
+                    SwiftSpinner.hide()
+                    self.performSegueWithIdentifier("Connected", sender: nil)
 				}
 		})
 	}

@@ -17,7 +17,6 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var nameField: UITextField!
 	
 	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -26,6 +25,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		view.addGestureRecognizer(tap)
 	}
 	
+    
 	func ErrorPopup(message: String)
 	{
 		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
@@ -61,7 +61,8 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		createAccount()
 	}
 	
-	func createAccount() {
+	func createAccount()
+    {
 		if (passwordField.text == confirmField.text)
 		{
 		var user = PFUser()
