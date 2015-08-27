@@ -729,7 +729,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V11-ZA-zd2">
-                                                    <rect key="frame" x="126" y="7.5" width="466" height="30"/>
+                                                    <rect key="frame" x="126" y="8" width="466" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -762,7 +762,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-X6-T9X">
-                                                    <rect key="frame" x="126" y="7.5" width="466" height="30"/>
+                                                    <rect key="frame" x="126" y="8" width="466" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -786,7 +786,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Phone :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tt-Mk-hLy">
-                                                    <rect key="frame" x="8" y="14" width="110" height="15.5"/>
+                                                    <rect key="frame" x="8" y="14" width="110" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="zM3-Dv-3p7"/>
                                                     </constraints>
@@ -1293,8 +1293,8 @@
                                     <action selector="switchChanger:" destination="hhF-bQ-j0l" eventType="valueChanged" id="UqQ-TZ-huq"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heS-pZ-cBf">
-                                <rect key="frame" x="277" y="360" width="44" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heS-pZ-cBf">
+                                <rect key="frame" x="277" y="347" width="44" height="30"/>
                                 <state key="normal" title="Album">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1302,15 +1302,33 @@
                                     <segue destination="sCY-tL-0pI" kind="show" id="Pc1-7Q-Ctk"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC3-Gm-vOa">
+                                <rect key="frame" x="222" y="425" width="156" height="56"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="DsA-oF-SQz"/>
+                                    <constraint firstAttribute="width" constant="156" id="kGD-kA-mLR"/>
+                                </constraints>
+                                <state key="normal" image="AjouterPassbook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddToPassbook:" destination="hhF-bQ-j0l" eventType="touchUpInside" id="Kfy-gk-Ror"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.05794595927" green="0.025943355630000001" blue="0.053712360559999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OxV-N9-oqN" firstAttribute="top" secondItem="owK-G3-LJf" secondAttribute="bottom" constant="69" id="8dK-12-Doe"/>
+                            <constraint firstAttribute="centerX" secondItem="yC3-Gm-vOa" secondAttribute="centerX" id="FdT-xt-5Y2"/>
                             <constraint firstItem="gkT-aN-5ju" firstAttribute="top" secondItem="8WP-sk-ZnT" secondAttribute="bottom" constant="132" id="JbU-Op-uB2"/>
                             <constraint firstItem="8WP-sk-ZnT" firstAttribute="centerY" secondItem="sjs-KA-7EB" secondAttribute="centerY" id="OFm-sX-LWD"/>
+                            <constraint firstItem="yC3-Gm-vOa" firstAttribute="top" secondItem="heS-pZ-cBf" secondAttribute="bottom" constant="48" id="SL2-k6-do1"/>
                             <constraint firstItem="x9S-KI-eps" firstAttribute="centerX" secondItem="0sT-iG-DoJ" secondAttribute="centerX" id="WeF-Sg-cvS"/>
                             <constraint firstItem="6YP-7X-5So" firstAttribute="leading" secondItem="sjs-KA-7EB" secondAttribute="leading" id="Xe6-pV-clr"/>
+                            <constraint firstAttribute="centerX" secondItem="heS-pZ-cBf" secondAttribute="centerX" id="YrR-v4-ZP1"/>
                             <constraint firstItem="6YP-7X-5So" firstAttribute="leading" secondItem="OxV-N9-oqN" secondAttribute="leading" id="byH-a0-A69"/>
+                            <constraint firstItem="heS-pZ-cBf" firstAttribute="top" secondItem="x9S-KI-eps" secondAttribute="bottom" constant="22" id="dWq-yY-XVF"/>
                             <constraint firstItem="x9S-KI-eps" firstAttribute="centerX" secondItem="6YP-7X-5So" secondAttribute="centerX" id="g4X-qG-p1y"/>
                             <constraint firstItem="gkT-aN-5ju" firstAttribute="top" secondItem="sjs-KA-7EB" secondAttribute="bottom" constant="137" id="jvb-7w-aqZ"/>
                             <constraint firstItem="6YP-7X-5So" firstAttribute="trailing" secondItem="OxV-N9-oqN" secondAttribute="trailing" id="qMh-5T-iSh"/>
@@ -1321,6 +1339,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="AddPassbookButton" destination="yC3-Gm-vOa" id="Zyz-nL-01a"/>
                         <outlet property="DateLabel" destination="x9S-KI-eps" id="rpA-xZ-2Gh"/>
                         <outlet property="descLabel" destination="6YP-7X-5So" id="jFg-Yf-V33"/>
                         <outlet property="inscLabel" destination="sjs-KA-7EB" id="BfY-Td-fLl"/>
@@ -1394,6 +1413,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AjouterPassbook" width="334" height="111"/>
         <image name="Facebook" width="30" height="30"/>
         <image name="Google" width="30" height="30"/>
         <image name="ProfileDefault" width="200" height="200"/>
