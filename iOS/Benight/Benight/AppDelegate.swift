@@ -18,10 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		Parse.setApplicationId("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", clientKey:"qayqlys4VkNJDQ06PUUa0aUp8i7g871mjFDmlyCb")
 		PFFacebookUtils.initializeFacebook()
+<<<<<<< HEAD
 		
 		return true
 	}
 	
+=======
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        // Sets background to a blank/empty image
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        // Sets shadow (line below the bar) to a blank image
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Sets the translucent background color
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.3, blue: 0.5, alpha: 0.0)
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        UINavigationBar.appearance().translucent = true
+        return true
+	}
+>>>>>>> master
 	func application(application: UIApplication,
 		openURL url: NSURL,
 		sourceApplication: String?,
@@ -52,7 +66,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
+<<<<<<< HEAD
 	
 	
 }
 
+=======
+    
+	
+}
+
+
+
+extension String {
+    
+    subscript (i: Int) -> Character {
+        return self[advance(self.startIndex, i)]
+    }
+    
+    subscript (i: Int) -> String {
+        return String(self[i] as Character)
+    }
+    
+    subscript (r: Range<Int>) -> String {
+        return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
+    }
+}
+>>>>>>> master

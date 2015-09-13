@@ -10,6 +10,13 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
 
+<<<<<<< HEAD
+=======
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+>>>>>>> master
     override func viewDidLoad() {
         super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -40,7 +47,11 @@ class NewsTableViewController: UITableViewController {
     }
 	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+<<<<<<< HEAD
         let cell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as UITableViewCell
+=======
+        let cell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as! UITableViewCell
+>>>>>>> master
 
 		cell.contentView.layer.cornerRadius = 10
 		cell.contentView.layer.borderWidth = 10

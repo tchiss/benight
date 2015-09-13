@@ -12,6 +12,7 @@ class MyNightsTableViewController: UITableViewController {
 	
 	var events: Array<AnyObject> = []
 	
+<<<<<<< HEAD
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -24,6 +25,26 @@ class MyNightsTableViewController: UITableViewController {
 			}
 			else {
 				self.events = NSArray(array: objects)
+=======
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+	override func viewDidLoad() {
+		super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 142.0
+		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+		var query = PFQuery(className: "Reservation")
+		query.includeKey("Event")
+		query.whereKey("User", equalTo: PFUser.currentUser()!)
+		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+			if (error != nil) {
+				NSLog("error " + error!.localizedDescription)
+			}
+			else {
+				self.events = NSArray(array: objects!) as Array<AnyObject>
+>>>>>>> master
 				self.tableView.reloadData()
 			}
 		})
@@ -54,7 +75,11 @@ class MyNightsTableViewController: UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+<<<<<<< HEAD
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as NightsTableViewCell
+=======
+		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
+>>>>>>> master
 
 		cell.fillCell(events[indexPath.row]["Event"]!!)
 		return cell
@@ -65,8 +90,13 @@ class MyNightsTableViewController: UITableViewController {
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow()!.row
 			let object = events[indexPath]["Event"]
+<<<<<<< HEAD
 			let vc = segue.destinationViewController as NightDetailsViewController
 			vc.event = object as PFObject
+=======
+			let vc = segue.destinationViewController as! NightDetailsViewController
+			vc.event = object as! PFObject
+>>>>>>> master
 		}
 	}
 	/*

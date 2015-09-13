@@ -72,14 +72,23 @@ public extension UIViewController {
 }
 
 public class SideMenu : NSObject {
+<<<<<<< HEAD
     
+=======
+	private(set) var deferred : ()->() = { }
+
+>>>>>>> master
     public var menuWidth : CGFloat = 160.0 {
         didSet {
             needUpdateApperance = true
             updateFrame()
         }
     }
+<<<<<<< HEAD
     private let menuPosition:SideMenuPosition = .Left
+=======
+    private var menuPosition: SideMenuPosition = .Left
+>>>>>>> master
     public var bouncingEnabled :Bool = true
     private let sideMenuContainerView =  UIView()
     private var menuTableViewController : UITableViewController!
@@ -89,9 +98,16 @@ public class SideMenu : NSObject {
     public weak var delegate : SideMenuDelegate?
     private var isMenuOpen : Bool = false
     
+<<<<<<< HEAD
     public init(sourceView: UIView, menuPosition: SideMenuPosition) {
         super.init()
         self.sourceView = sourceView
+=======
+    public init(sourceView: UIView, menuPosition: SideMenuPosition)
+	{
+        self.sourceView = sourceView
+		super.init()
+>>>>>>> master
         self.menuPosition = menuPosition
         self.setupMenuView()
     
@@ -120,7 +136,11 @@ public class SideMenu : NSObject {
     public convenience init(sourceView: UIView, menuTableViewController: UITableViewController, menuPosition: SideMenuPosition) {
         self.init(sourceView: sourceView, menuPosition: menuPosition)
         self.menuTableViewController = menuTableViewController
+<<<<<<< HEAD
 		self.menuTableViewController.tableView.backgroundView = UIImageView(image:UIImage(named:"SideMenuBackground"))
+=======
+//		self.menuTableViewController.tableView.backgroundView = UIImageView(image:UIImage(named:"SideMenuBackground"))
+>>>>>>> master
 		self.menuTableViewController.tableView.frame = sideMenuContainerView.bounds
         self.menuTableViewController.tableView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
         sideMenuContainerView.addSubview(self.menuTableViewController.tableView)

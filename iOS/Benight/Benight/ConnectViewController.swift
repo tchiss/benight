@@ -12,7 +12,25 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var emailField: UITextField!
 	@IBOutlet var passwdField: UITextField!
 	
+<<<<<<< HEAD
 	override func viewDidLoad()
+=======
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    func ErrorPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad()
+>>>>>>> master
 	{
 		super.viewDidLoad()
 		UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
@@ -34,6 +52,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 		view.endEditing(true)
 	}
 	
+<<<<<<< HEAD
 	func ErrorPopup(message: String)
 	{
 		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
@@ -58,6 +77,25 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 						self.performSegueWithIdentifier("Connected", sender: nil)
 					} else {
 						self.ErrorPopup("Login Failed")}
+=======
+	@IBAction func ConnectUser(sender: UIButton)
+	{
+		
+		if (count(emailField.text) > 0)
+		{
+			if (count(passwdField.text) > 0)
+			{
+                SwiftSpinner.show("Connection...")
+				PFUser.logInWithUsernameInBackground(emailField.text, password: passwdField.text) {
+					(user: PFUser?, error: NSError?) -> Void in
+					if user != nil {
+						print("login ok")
+                        SwiftSpinner.hide()
+						self.performSegueWithIdentifier("Connected", sender: nil)
+					} else {
+						self.ErrorPopup("Login Failed")}
+                    SwiftSpinner.hide()
+>>>>>>> master
 				}
 			}
 			else {
@@ -70,6 +108,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	
 	@IBAction func ConnectWithFace(sender: AnyObject)
 	{
+<<<<<<< HEAD
 		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
 		PFFacebookUtils.logInWithPermissions(permissions,
 			{
@@ -85,6 +124,27 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 				else
 				{
 						self.performSegueWithIdentifier("Connected", sender: nil)
+=======
+        SwiftSpinner.show("Connection...")
+		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
+		PFFacebookUtils.logInWithPermissions(permissions,
+			block: {
+				(user: PFUser?, error: NSError?) -> Void in
+				if user == nil
+				{
+                    SwiftSpinner.hide()
+					NSLog("Uh oh. The user cancelled the Facebook login.")
+				}
+				else if user!.isNew
+				{
+                    SwiftSpinner.hide()
+                    self.performSegueWithIdentifier("Connected", sender: nil)
+				}
+				else
+				{
+                    SwiftSpinner.hide()
+                    self.performSegueWithIdentifier("Connected", sender: nil)
+>>>>>>> master
 				}
 		})
 	}

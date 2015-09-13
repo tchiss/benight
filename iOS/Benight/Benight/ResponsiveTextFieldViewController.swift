@@ -12,7 +12,15 @@ import Foundation
 
 class ResponsiveTextFieldViewController : UIViewController
 {
+<<<<<<< HEAD
 	
+=======
+
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+>>>>>>> master
 	var kPreferredTextFieldToKeyboardOffset: CGFloat = 35.0
 	var keyboardFrame: CGRect = CGRect.nullRect
 	var keyboardIsShowing: Bool = false
@@ -29,7 +37,11 @@ class ResponsiveTextFieldViewController : UIViewController
 		{
 			if (subview.isKindOfClass(UITextField))
 			{
+<<<<<<< HEAD
 				var textField = subview as UITextField
+=======
+				var textField = subview as! UITextField
+>>>>>>> master
 				textField.addTarget(self, action: "textFieldDidReturn:", forControlEvents: UIControlEvents.EditingDidEndOnExit)
 				
 				textField.addTarget(self, action: "textFieldDidBeginEditing:", forControlEvents: UIControlEvents.EditingDidBegin)
@@ -49,7 +61,11 @@ class ResponsiveTextFieldViewController : UIViewController
 		self.keyboardIsShowing = true
 		
 		if let info = notification.userInfo {
+<<<<<<< HEAD
 			self.keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue()
+=======
+			self.keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+>>>>>>> master
 			self.arrangeViewOffsetFromKeyboard()
 		}
 		
@@ -96,7 +112,11 @@ class ResponsiveTextFieldViewController : UIViewController
 		}
 	}
 	
+<<<<<<< HEAD
 	override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+=======
+	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+>>>>>>> master
 	{
 		if (self.activeTextField != nil)
 		{

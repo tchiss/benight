@@ -9,14 +9,35 @@
 import UIKit
 
 class MyMenuTableViewController: UITableViewController {
+<<<<<<< HEAD
 	var selectedMenuItem : Int = 1
+=======
+    
+	var selectedMenuItem : Int = 1
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+    
+    
+>>>>>>> master
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		// Customize apperance of table view
+<<<<<<< HEAD
 		tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0) //
 		tableView.scrollsToTop = false
 		
+=======
+		tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0) //
+		tableView.scrollsToTop = false
+		tableView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.5)
+>>>>>>> master
 		// Preserve selection between presentations
 		self.clearsSelectionOnViewWillAppear = false
 		
@@ -37,8 +58,13 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
+<<<<<<< HEAD
 		return 5
 	}
+=======
+		return 4
+    }
+>>>>>>> master
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
@@ -47,9 +73,15 @@ class MyMenuTableViewController: UITableViewController {
 		if (cell == nil) {
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
 			cell!.backgroundColor = UIColor.clearColor()
+<<<<<<< HEAD
 			cell!.textLabel?.textColor = UIColor.whiteColor		()
 			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
 			selectedBackgroundView.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
+=======
+			cell!.textLabel?.textColor = UIColor.whiteColor()
+			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
+			selectedBackgroundView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.5)
+>>>>>>> master
 			cell!.selectedBackgroundView = selectedBackgroundView
 		}
 		switch (indexPath.row) {
@@ -59,6 +91,7 @@ class MyMenuTableViewController: UITableViewController {
 			break
 		case 1:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
+<<<<<<< HEAD
 			cell!.textLabel?.text = "Actualité"
 			break
 		case 2:
@@ -66,6 +99,11 @@ class MyMenuTableViewController: UITableViewController {
 			cell!.textLabel?.text = "Les Soirées"
 			break
 		case 3:
+=======
+			cell!.textLabel?.text = "Les Soirées"
+			break
+		case 2:
+>>>>>>> master
 			cell!.imageView?.image = UIImage(named: "helpIcon")
 			cell!.textLabel?.text = "Mes Soirées"
 			break
@@ -92,6 +130,7 @@ class MyMenuTableViewController: UITableViewController {
 		var destViewController : UIViewController
 		switch (indexPath.row) {
 		case 0:
+<<<<<<< HEAD
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") as UIViewController
 			break
 		case 1:
@@ -104,6 +143,18 @@ class MyMenuTableViewController: UITableViewController {
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as UIViewController
 			break		default:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as UIViewController
+=======
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") as! UIViewController
+			break
+		case 1:
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") as! UIViewController
+			break
+		case 2:
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as! UIViewController
+			break
+        default:
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as! UIViewController
+>>>>>>> master
 			break
 		}
 		sideMenuController()?.setContentViewController(destViewController)

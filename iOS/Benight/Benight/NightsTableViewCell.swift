@@ -19,11 +19,18 @@ class NightsTableViewCell: UITableViewCell {
 
 	func fillCell(event: AnyObject)
 	{
+<<<<<<< HEAD
 		self.mainView.layer.cornerRadius = 10
 		self.mainView.layer.masksToBounds = true
 		self.NameLabel.text = event["name"] as String!
 		//cell.PlaceLabel.text = events[indexPath.row]["location"] as String!
 		self.ThemeLabel.text = event["theme"] as String!
 		self.DateLabel.text = (event["date"] as NSDate!).description
+=======
+		self.NameLabel.text = event["name"] as? String
+		self.PlaceLabel.text = event["author"] as? String
+        self.ThemeLabel.text = event["theme"] as? String
+		self.DateLabel.text = (event["date"] as! NSDate!).description
+>>>>>>> master
 	}
 }

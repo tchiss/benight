@@ -17,7 +17,10 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var nameField: UITextField!
 	
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> master
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -26,6 +29,13 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		view.addGestureRecognizer(tap)
 	}
 	
+<<<<<<< HEAD
+=======
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+>>>>>>> master
 	func ErrorPopup(message: String)
 	{
 		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
@@ -61,7 +71,12 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		createAccount()
 	}
 	
+<<<<<<< HEAD
 	func createAccount() {
+=======
+	func createAccount()
+    {
+>>>>>>> master
 		if (passwordField.text == confirmField.text)
 		{
 		var user = PFUser()
@@ -71,13 +86,23 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		user["name"] = nameField.text
 		
 		user.signUpInBackgroundWithBlock {
+<<<<<<< HEAD
 			(succeeded: Bool!, error1: NSError!) -> Void in
+=======
+			(succeeded: Bool, error1: NSError?) -> Void in
+>>>>>>> master
 			if error1 == nil {
 				self.NicePopup("Your account is created, Welcome")
 				self.performSegueWithIdentifier("accountCreated", sender: nil)
 			} else {
+<<<<<<< HEAD
 				let errorString = error1.userInfo!["error"] as NSString
 				self.ErrorPopup(errorString)}
+=======
+				let errorString = error1!.userInfo!["error"] as! NSString
+				self.ErrorPopup(errorString as String)
+			}
+>>>>>>> master
 		}
 		}
 		else

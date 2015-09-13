@@ -7,14 +7,22 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A99ED789-78BB-42C1-8DA8-197CE183782B</string>
 	<key>IDESourceControlProjectName</key>
+<<<<<<< HEAD
 	<string>Benight</string>
+=======
+	<string>project</string>
+>>>>>>> master
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7A48BADBF412004F3571257A5E268FE806A2A11A</key>
 		<string>https://github.com/tchiss/benight.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
+<<<<<<< HEAD
 	<string>iOS/Benight/Benight.xcodeproj</string>
+=======
+	<string>iOS/Benight/Benight.xcodeproj/project.xcworkspace</string>
+>>>>>>> master
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7A48BADBF412004F3571257A5E268FE806A2A11A</key>
@@ -34,7 +42,11 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>7A48BADBF412004F3571257A5E268FE806A2A11A</string>
 			<key>IDESourceControlWCCName</key>
+<<<<<<< HEAD
 			<string>Benight</string>
+=======
+			<string>benight</string>
+>>>>>>> master
 		</dict>
 	</array>
 </dict>

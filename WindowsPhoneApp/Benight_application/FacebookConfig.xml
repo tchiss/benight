@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Extensions>
+    <Facebook AppId="603572813098360" />
+
+    <RedirectPage Name="MainPage.xaml" />
+</Extensions>
