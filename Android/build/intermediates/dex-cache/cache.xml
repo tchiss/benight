@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/libs/flickrapi-1.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8931fedb56cf7ac812171e88847703804d3070a0">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/flickrapi-1.2-ac50e54eb52f0f28c3bd60639aa8b7a9abd37967.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-cc77bdcd6298e6b7f0422830b5ea1b7b11f1fb54.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/libs/ParseFacebookUtilsV4-1.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f78e5603a5ecac14eaa34a763c9165444a681193">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/ParseFacebookUtilsV4-1.9.1-97d8b307016c5d0e305010cdf68aa108c834a16e.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-f1507a1984d78d0fef0a981aa44f16179edf89ee.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/libs/Parse-1.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1b065010f3c9d441ede9078aca8eabcd1c81e647">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/Parse-1.9.1-41fbc9c7839387975e5abe8ac15c043e051809da.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/.gradle/caches/modules-2/files-2.1/com.google.zxing/javase/3.2.0/dc31d91cca282dd2d7fcd79d8510b7346c665426/javase-3.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dc31d91cca282dd2d7fcd79d8510b7346c665426">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/javase-3.2.0-96df14ab032726f34ce041bcdbda1a14a92bd4c1.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/libs/universal-image-loader-1.9.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9eeb557650c4ad7394df23f0f5cf27a7cfc697">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.4-8ce1a637561a9de8142daaefeb9ab760e568e72e.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/classes-68e324ea7ada01fff202c5e5ee1133fd0a98dd7c.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-a5860aed3ad371c437457b690a78500dcc63f07a.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.0/e019d15a13a9786f881141d2df6654b8510bce8b/core-3.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/core-3.2.0-b322fca44709facaf6bd533c68bbfe80dc8cef98.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f254ec13d6671680482d2218f01ecf14dfa93e6">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/classes-ee01dc715c9be49d80dd97303a3784db76cc6637.jar" />
+    </item>
+    <item
+        jar="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/jeirgino/AndroidStudioProjects/BenightAndroidApp/app/build/intermediates/pre-dexed/debug/classes-2fc0cb6b83843a0c0543f9ef685d32eb335a4b26.jar" />
+    </item>
+
+</items>
