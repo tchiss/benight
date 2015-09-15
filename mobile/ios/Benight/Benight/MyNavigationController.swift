@@ -9,9 +9,12 @@
 import UIKit
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class MyNavigationController: SideMenuNavigationController, SideMenuDelegate {
 	
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 extension UINavigationController {
     public override func supportedInterfaceOrientations() -> Int {
         return visibleViewController.supportedInterfaceOrientations()
@@ -23,7 +26,10 @@ extension UINavigationController {
 
 class MyNavigationController: SideMenuNavigationController, SideMenuDelegate {
     
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -31,9 +37,13 @@ class MyNavigationController: SideMenuNavigationController, SideMenuDelegate {
 		sideMenu?.delegate = self
 		sideMenu?.menuWidth = 160.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		view.bringSubviewToFront(navigationBar)
 >>>>>>> master
+=======
+		view.bringSubviewToFront(navigationBar)
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		// make navigation bar showing over side menu
 		//view.bringSubviewToFront(navigationBar)
 	}

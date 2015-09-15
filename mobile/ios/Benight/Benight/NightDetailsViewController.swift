@@ -8,6 +8,7 @@
 
 import UIKit
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class NightDetailsViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class NightDetailsViewController: UIViewController {
 	
 	
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 import PassKit
 import Alamofire
 
@@ -50,7 +53,10 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
     }
     
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	@IBAction func switchChanger(sender: AnyObject) {
 		if (switchInsc.on)
 		{
@@ -58,6 +64,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 			var resa = PFObject(className:"Reservation")
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
+<<<<<<< HEAD
 <<<<<<< HEAD
 			resa.saveInBackground()
 		}
@@ -78,6 +85,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 		descLabel.text = event["theme"] as String!
 		DateLabel.text = (event["date"] as NSDate!).description
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			resa.save()
             self.reservation = resa
             self.GenerateTicket()
@@ -217,7 +226,10 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             AlbumButton.hidden = false
         }
         
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	}
 
     override func didReceiveMemoryWarning() {
@@ -226,8 +238,11 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier ==  "ShowAlbum"
         {
@@ -237,7 +252,10 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         }
     }
     
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     /*
     // MARK: - Navigation
 

@@ -13,6 +13,7 @@ class NightsTableViewController: UITableViewController {
 	var events: Array<AnyObject> = []
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -24,6 +25,8 @@ class NightsTableViewController: UITableViewController {
 			else {
 				self.events = NSArray(array: objects)
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func shouldAutorotate() -> Bool {
         return false
     }
@@ -41,7 +44,10 @@ class NightsTableViewController: UITableViewController {
 			}
 			else {
 				self.events = NSArray(array: objects!) as Array<AnyObject>
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 				self.tableView.reloadData()
 			}
 		})
@@ -73,10 +79,14 @@ class NightsTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as NightsTableViewCell
 =======
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 >>>>>>> master
+=======
+		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 
 		cell.fillCell(events[indexPath.row])
 		return cell
@@ -87,6 +97,7 @@ class NightsTableViewController: UITableViewController {
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow()!.row
 <<<<<<< HEAD
+<<<<<<< HEAD
 			let object = events[indexPath]
 			let vc = segue.destinationViewController as NightDetailsViewController
 			vc.event = object as PFObject
@@ -95,6 +106,11 @@ class NightsTableViewController: UITableViewController {
 			let vc = segue.destinationViewController as! NightDetailsViewController
 			vc.event = object
 >>>>>>> master
+=======
+			let object = events[indexPath] as! PFObject
+			let vc = segue.destinationViewController as! NightDetailsViewController
+			vc.event = object
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		}
 	}
 	/*

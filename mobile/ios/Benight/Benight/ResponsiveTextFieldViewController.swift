@@ -13,14 +13,20 @@ import Foundation
 class ResponsiveTextFieldViewController : UIViewController
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 
     override func shouldAutorotate() -> Bool {
         return false
     }
     
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	var kPreferredTextFieldToKeyboardOffset: CGFloat = 35.0
 	var keyboardFrame: CGRect = CGRect.nullRect
 	var keyboardIsShowing: Bool = false
@@ -38,10 +44,14 @@ class ResponsiveTextFieldViewController : UIViewController
 			if (subview.isKindOfClass(UITextField))
 			{
 <<<<<<< HEAD
+<<<<<<< HEAD
 				var textField = subview as UITextField
 =======
 				var textField = subview as! UITextField
 >>>>>>> master
+=======
+				var textField = subview as! UITextField
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 				textField.addTarget(self, action: "textFieldDidReturn:", forControlEvents: UIControlEvents.EditingDidEndOnExit)
 				
 				textField.addTarget(self, action: "textFieldDidBeginEditing:", forControlEvents: UIControlEvents.EditingDidBegin)
@@ -62,10 +72,14 @@ class ResponsiveTextFieldViewController : UIViewController
 		
 		if let info = notification.userInfo {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			self.keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue()
 =======
 			self.keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
 >>>>>>> master
+=======
+			self.keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			self.arrangeViewOffsetFromKeyboard()
 		}
 		
@@ -113,10 +127,14 @@ class ResponsiveTextFieldViewController : UIViewController
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
 =======
 	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
 >>>>>>> master
+=======
+	override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	{
 		if (self.activeTextField != nil)
 		{

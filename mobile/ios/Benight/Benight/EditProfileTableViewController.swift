@@ -13,6 +13,7 @@ class EditProfileTableViewController: UITableViewController {
 		
 		@IBOutlet var Statut: UILabel!
 <<<<<<< HEAD
+<<<<<<< HEAD
 		@IBOutlet var UserName: UILabel!
 		@IBOutlet var UserPhone: UITextField!
 		@IBOutlet var UserEmail: UITextField!
@@ -22,6 +23,8 @@ class EditProfileTableViewController: UITableViewController {
 		@IBOutlet var UserAdress: UITextField!
 		override func viewDidLoad() {
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		@IBOutlet var UserName: UITextField!
 		@IBOutlet var UserPhone: UITextField!
 		@IBOutlet var UserEmail: UITextField!
@@ -35,12 +38,16 @@ class EditProfileTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			super.viewDidLoad()
 			self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 			var user = PFUser.currentUser()
 			self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
 			self.ProfileImage.clipsToBounds = true
+<<<<<<< HEAD
 <<<<<<< HEAD
 			UserName.text = PFUser.currentUser().username
 			UserEmail.text = PFUser.currentUser().email
@@ -49,11 +56,16 @@ class EditProfileTableViewController: UITableViewController {
 			else{
 				UserPhone.text = "Unknow"}
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			UserName.text = user!.username
 			UserEmail.text = user!.email
 			UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
 			UserAdress.text = PFUser.currentUser()!["adress"] as? String ?? "Unknown"
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			
 			// Uncomment the following line to preserve selection between presentations
 			// self.clearsSelectionOnViewWillAppear = false
@@ -62,9 +74,12 @@ class EditProfileTableViewController: UITableViewController {
 			// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 		override func didReceiveMemoryWarning() {
 =======
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	func ErrorPopup(message: String)
 	{
 		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
@@ -110,7 +125,10 @@ class EditProfileTableViewController: UITableViewController {
 	}
 	
 	override func didReceiveMemoryWarning() {
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			super.didReceiveMemoryWarning()
 			// Dispose of any resources that can be recreated.
 		}
@@ -127,9 +145,13 @@ class EditProfileTableViewController: UITableViewController {
 			// #warning Incomplete method implementation.
 			// Return the number of rows in the section.
 <<<<<<< HEAD
+<<<<<<< HEAD
 			return 5
 =======
 			return 7
 >>>>>>> master
+=======
+			return 7
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		}
 }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "0610"
+=======
+   LastUpgradeVersion = "0640"
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -20,6 +24,7 @@
                ReferencedContainer = "container:Benight.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+<<<<<<< HEAD
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -34,6 +39,8 @@
                ReferencedContainer = "container:Benight.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,6 +49,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+<<<<<<< HEAD
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -52,6 +60,8 @@
                ReferencedContainer = "container:Benight.xcodeproj">
             </BuildableReference>
          </TestableReference>
+=======
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -72,7 +82,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+<<<<<<< HEAD
       <BuildableProductRunnable>
+=======
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "68E329221A1A5B8100883116"
@@ -90,7 +105,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+<<<<<<< HEAD
       <BuildableProductRunnable>
+=======
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "68E329221A1A5B8100883116"

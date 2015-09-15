@@ -8,16 +8,31 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< HEAD
+=======
+			<key>orderHint</key>
+			<integer>0</integer>
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< HEAD
+=======
+			<key>orderHint</key>
+			<integer>1</integer>
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		</dict>
 		<key>SwiftSpinner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< HEAD
+=======
+			<key>orderHint</key>
+			<integer>2</integer>
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -27,7 +42,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+<<<<<<< HEAD
 		<key>A3CDFF1F977739DE079672A3E632ECD8</key>
+=======
+		<key>8E8C606DACC9B653D36A662C743128B9</key>
+>>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		<dict>
 			<key>primary</key>
 			<true/>
