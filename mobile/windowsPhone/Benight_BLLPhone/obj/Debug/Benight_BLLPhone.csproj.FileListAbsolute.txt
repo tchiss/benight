@@ -1,0 +1,9 @@
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_BLLPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_BLLPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_CommonPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_DALPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_CommonPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\bin\Debug\Benight_DALPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\obj\Debug\Benight_BLLPhone.csprojResolveAssemblyReference.cache
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\obj\Debug\Benight_BLLPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_BLLPhone\obj\Debug\Benight_BLLPhone.pdb
