@@ -33,6 +33,7 @@ class NightsTableViewController: UITableViewController {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -40,9 +41,11 @@ class NightsTableViewController: UITableViewController {
 		var query = PFQuery(className: "Event")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
+                SwiftSpinner.hide()
 				NSLog("error " + error!.localizedDescription)
 			}
 			else {
+                SwiftSpinner.hide()
 				self.events = NSArray(array: objects!) as Array<AnyObject>
 <<<<<<< HEAD
 >>>>>>> master

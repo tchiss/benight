@@ -42,6 +42,7 @@ class MyNightsTableViewController: UITableViewController {
 		var query = PFQuery(className: "Reservation")
 =======
         super.viewDidLoad()
+        SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -52,9 +53,11 @@ class MyNightsTableViewController: UITableViewController {
 		query.whereKey("User", equalTo: PFUser.currentUser()!)
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
+                SwiftSpinner.hide()
 				NSLog("error " + error!.localizedDescription)
 			}
 			else {
+                SwiftSpinner.hide()
 				self.events = NSArray(array: objects!) as Array<AnyObject>
 <<<<<<< HEAD
 >>>>>>> master
