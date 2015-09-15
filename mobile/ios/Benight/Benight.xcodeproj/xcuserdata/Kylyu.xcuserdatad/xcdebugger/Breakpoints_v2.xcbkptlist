@@ -26,25 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/CreateAccountViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "447571418.916653"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462976153.957056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkName = "createAccount()"
             landmarkType = "5">
          </BreakpointContent>
@@ -52,11 +38,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -157,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightsTableViewController.swift"
-            timestampString = "464046791.824392"
+            timestampString = "462976153.957056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -201,24 +182,10 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "446562198.339509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -256,10 +223,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkName = "NightDetailsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -271,17 +234,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "446562198.339509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -304,10 +256,6 @@
             startingLineNumber = "101"
             endingLineNumber = "101"
             landmarkName = "openPass(_:)"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -318,27 +266,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "447506146.578869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "ErrorPopup(_:)"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -349,27 +282,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "447506146.578869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "GenerateTicket()"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -380,27 +298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "447506146.578869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
             landmarkName = "GenerateTicket()"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -411,48 +314,18 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/NightDetailsViewController.swift"
-<<<<<<< HEAD
-<<<<<<< HEAD
-            timestampString = "447506146.578869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             timestampString = "462989471.329179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
             landmarkName = "GenerateTicket()"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-<<<<<<< HEAD
-<<<<<<< HEAD
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Benight/ConnectViewController.swift"
-            timestampString = "447583563.346209"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "ErrorPopup(_:)"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -463,31 +336,12 @@
             startingLineNumber = "92"
             endingLineNumber = "92"
             landmarkName = "GenerateTicket()"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-<<<<<<< HEAD
-<<<<<<< HEAD
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ProfileTableViewController.swift"
-            timestampString = "447905135.974518"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidLoad()"
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -546,10 +400,6 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "switchChanger(_:)"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

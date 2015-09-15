@@ -7,24 +7,6 @@
 //
 
 import UIKit
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class NightDetailsViewController: UIViewController {
-
-	var event: PFObject = PFObject(className: "Event")
-	
-	
-	@IBOutlet var switchInsc: UISwitch!
-	@IBOutlet var inscLabel: UILabel!
-	@IBOutlet var DateLabel: UILabel!
-	@IBOutlet var descLabel: UILabel!
-	@IBOutlet var nameLabel: UILabel!
-	
-	
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 import PassKit
 import Alamofire
 
@@ -53,10 +35,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
     }
     
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	@IBAction func switchChanger(sender: AnyObject) {
 		if (switchInsc.on)
 		{
@@ -64,29 +42,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 			var resa = PFObject(className:"Reservation")
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
-<<<<<<< HEAD
-<<<<<<< HEAD
-			resa.saveInBackground()
-		}
-		else
-		{
-			inscLabel.text = "Non Inscrit"
-			print("titi")
-
-		}
-
-	}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		nameLabel.text = event["name"] as String!
-		//cell.PlaceLabel.text = events[indexPath.row]["location"] as String!
-		descLabel.text = event["theme"] as String!
-		DateLabel.text = (event["date"] as NSDate!).description
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			resa.save()
             self.reservation = resa
             self.GenerateTicket()
@@ -226,10 +181,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             AlbumButton.hidden = false
         }
         
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	}
 
     override func didReceiveMemoryWarning() {
@@ -237,12 +188,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         // Dispose of any resources that can be recreated.
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier ==  "ShowAlbum"
         {
@@ -252,10 +197,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         }
     }
     
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     /*
     // MARK: - Navigation
 

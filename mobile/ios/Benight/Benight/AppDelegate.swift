@@ -7,11 +7,8 @@
 //
 
 import UIKit
-<<<<<<< HEAD
-=======
 import Parse
 import Bolts
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,15 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		Parse.setApplicationId("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", clientKey:"qayqlys4VkNJDQ06PUUa0aUp8i7g871mjFDmlyCb")
 		PFFacebookUtils.initializeFacebook()
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-		return true
-	}
-	
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         // Sets background to a blank/empty image
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
@@ -43,10 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().translucent = true
         return true
 	}
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	func application(application: UIApplication,
 		openURL url: NSURL,
 		sourceApplication: String?,
@@ -77,15 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-	
-}
-
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     
 	
 }
@@ -106,7 +81,3 @@ extension String {
         return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
     }
 }
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd

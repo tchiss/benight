@@ -17,13 +17,6 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var nameField: UITextField!
 	
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-=======
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	override func viewDidLoad() {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -32,19 +25,10 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		view.addGestureRecognizer(tap)
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func shouldAutorotate() -> Bool {
         return false
     }
     
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	func ErrorPopup(message: String)
 	{
 		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
@@ -80,17 +64,8 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		createAccount()
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	func createAccount() {
-=======
 	func createAccount()
     {
->>>>>>> master
-=======
-	func createAccount()
-    {
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		if (passwordField.text == confirmField.text)
 		{
 		var user = PFUser()
@@ -100,33 +75,14 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		user["name"] = nameField.text
 		
 		user.signUpInBackgroundWithBlock {
-<<<<<<< HEAD
-<<<<<<< HEAD
-			(succeeded: Bool!, error1: NSError!) -> Void in
-=======
 			(succeeded: Bool, error1: NSError?) -> Void in
->>>>>>> master
-=======
-			(succeeded: Bool, error1: NSError?) -> Void in
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			if error1 == nil {
 				self.NicePopup("Your account is created, Welcome")
 				self.performSegueWithIdentifier("accountCreated", sender: nil)
 			} else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-				let errorString = error1.userInfo!["error"] as NSString
-				self.ErrorPopup(errorString)}
-=======
 				let errorString = error1!.userInfo!["error"] as! NSString
 				self.ErrorPopup(errorString as String)
 			}
->>>>>>> master
-=======
-				let errorString = error1!.userInfo!["error"] as! NSString
-				self.ErrorPopup(errorString as String)
-			}
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		}
 		}
 		else
