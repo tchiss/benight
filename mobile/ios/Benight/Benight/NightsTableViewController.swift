@@ -18,6 +18,7 @@ class NightsTableViewController: UITableViewController {
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -32,6 +33,7 @@ class NightsTableViewController: UITableViewController {
 				self.tableView.reloadData()
 			}
 		})
+        SwiftSpinner.hide()
 		// Uncomment the following line to preserve selection between presentations
 		// self.clearsSelectionOnViewWillAppear = false
 		

@@ -39,6 +39,8 @@
 		689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
 		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
+		68D31F7F1BAA1C1A005E604C /* NightMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */; };
+		68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D31F801BAA21F0005E604C /* MapKit.framework */; };
 		68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DA1A33617000B3A236 /* AudioToolbox.framework */; };
 		68DA58DD1A33617800B3A236 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DC1A33617700B3A236 /* CFNetwork.framework */; };
 		68DA58DF1A33618000B3A236 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DE1A33618000B3A236 /* CoreGraphics.framework */; };
@@ -102,6 +104,8 @@
 		689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightMapViewController.swift; sourceTree = "<group>"; };
+		68D31F801BAA21F0005E604C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68DA58DA1A33617000B3A236 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		68DA58DC1A33617700B3A236 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		68DA58DE1A33618000B3A236 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +162,7 @@
 				6874546C1B92548C00FF57FF /* Bolts.framework in Frameworks */,
 				6874546E1B92548C00FF57FF /* ParseCrashReporting.framework in Frameworks */,
 				687454751B9254A900FF57FF /* FacebookSDK.framework in Frameworks */,
+				68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +188,7 @@
 		24C0723AB9610497F7C35950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68D31F801BAA21F0005E604C /* MapKit.framework */,
 				CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -260,6 +266,7 @@
 				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
+				68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */,
 			);
 			name = Nights;
 			sourceTree = "<group>";
@@ -418,6 +425,9 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = RK36ZAQX82;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Passbook = {
 								enabled = 1;
 							};
@@ -547,6 +557,7 @@
 				6837DCB61AA1C79A00115F61 /* MyNightsTableViewController .swift in Sources */,
 				683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */,
 				68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */,
+				68D31F7F1BAA1C1A005E604C /* NightMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

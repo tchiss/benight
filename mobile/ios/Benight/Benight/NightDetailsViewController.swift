@@ -16,6 +16,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     var reservation: PFObject = PFObject(className: "Reservation")
 
     
+    @IBOutlet weak var MapButton: UIBarButtonItem!
 	@IBOutlet var switchInsc: UISwitch!
 	@IBOutlet var inscLabel: UILabel!
 	@IBOutlet var DateLabel: UILabel!
@@ -144,6 +145,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SwiftSpinner.show("Getting Data", animated: true)
         let leftConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 0)
         self.view.addConstraint(leftConstraint)
         
@@ -154,7 +156,11 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"),
             forBarMetrics: .Default)
-		desc.text = event["Description"] as? String
+        if (event["location"] == nil)
+        {
+            self.navigationItem.rightBarButtonItems = []
+        }
+        desc.text = event["Description"] as? String
 		DateLabel.text = (event["date"] as! NSDate!).description
 		var query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
@@ -180,7 +186,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         if (self.event["Album"] != nil) {
             AlbumButton.hidden = false
         }
-        
+        SwiftSpinner.hide()
+
 	}
 
     override func didReceiveMemoryWarning() {
@@ -194,6 +201,16 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             let album = event["Album"] as! PFObject
             let vc = segue.destinationViewController as! AlbumPhotosViewController
             vc.album = album
+        }
+        else if segue.identifier == "ShowMap"
+        {
+            var descLocation: PFGeoPoint = event["location"] as! PFGeoPoint
+            var placeTitle: String = event["author"] as! String
+            var eventTitle: String = event["name"] as! String
+            let vc = segue.destinationViewController as! NightMapViewController
+            vc.eventTitle = eventTitle
+            vc.placeTitle  = placeTitle
+            vc.descLocation = descLocation
         }
     }
     
