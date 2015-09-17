@@ -12,13 +12,13 @@ class MyMenuTableViewController: UITableViewController {
     
 	var selectedMenuItem : Int = 1
     
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
+    //override func shouldAutorotate() -> Bool {
+    //    return false
+    //}
     
-    override func supportedInterfaceOrientations() -> Int {
-            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-    }
+   // override func supportedInterfaceOrientations() -> Int {
+   //         return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+   // }
     
     
 	override func viewDidLoad() {

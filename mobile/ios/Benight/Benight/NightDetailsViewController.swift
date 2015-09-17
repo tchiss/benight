@@ -27,10 +27,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 
     @IBOutlet weak var desc: UITextView!
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-    }
-    
     override func viewDidAppear(animated: Bool) {
         let value = UIInterfaceOrientation.Portrait.rawValue
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
