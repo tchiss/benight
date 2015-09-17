@@ -8,10 +8,11 @@
 
 import UIKit
 
-class NightsTableViewController: UITableViewController {
+class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UISearchDisplayDelegate {
 	
 	var events: Array<AnyObject> = []
-	
+    var filteredEvents: Array<AnyObject> = []
+
     override func shouldAutorotate() -> Bool {
         return false
     }
@@ -22,7 +23,7 @@ class NightsTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-
+        
 		var query = PFQuery(className: "Event")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
@@ -33,6 +34,7 @@ class NightsTableViewController: UITableViewController {
 				self.tableView.reloadData()
 			}
 		})
+        
         SwiftSpinner.hide()
 		// Uncomment the following line to preserve selection between presentations
 		// self.clearsSelectionOnViewWillAppear = false
@@ -41,6 +43,24 @@ class NightsTableViewController: UITableViewController {
 		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 	}
 	
+    func filterContentForSearchText(searchText: String) {
+        // Filter the array using the filter method
+        self.filteredEvents = self.events.filter({( event: PFObject) -> Bool in
+            let stringMatch = event["name"](searchText)
+            return (stringMatch != nil)
+        })
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        self.filterContentForSearchText(searchString)
+        return true
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        return true
+    }
+    
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -57,13 +77,21 @@ class NightsTableViewController: UITableViewController {
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// #warning Incomplete method implementation.
 		// Return the number of rows in the section.
-		return events.count
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            return filteredEvents.count
+        } else {
+            return events.count
+        }
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
-		cell.fillCell(events[indexPath.row])
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            cell.fillCell(filteredEvents[indexPath.row])
+        } else {
+            cell.fillCell(events[indexPath.row])
+        }
 		return cell
 	}
 	

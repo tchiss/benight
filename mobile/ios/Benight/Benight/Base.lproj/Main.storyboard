@@ -1100,6 +1100,14 @@
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.070588235289999995" green="0.023529411760000001" blue="0.062745098040000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.070588235289999995" green="0.023529411760000001" blue="0.062745098040000002" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" placeholder="Rechercher une soirée" id="jP3-or-TC0">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="1dM-Py-HVN" id="1Ml-8x-kGi"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="NightCell" rowHeight="142" id="D86-h7-KgU" customClass="NightsTableViewCell" customModule="Benight" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -1182,8 +1190,20 @@
                     <navigationItem key="navigationItem" title="Events" id="MbY-aP-wh5"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="0yc-U3-77f" id="DC3-dW-Tys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg9-Ie-wgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="0yc-U3-77f">
+                    <connections>
+                        <outlet property="delegate" destination="1dM-Py-HVN" id="wV9-A1-MIJ"/>
+                        <outlet property="searchBar" destination="jP3-or-TC0" id="iqG-Pd-7fK"/>
+                        <outlet property="searchContentsController" destination="1dM-Py-HVN" id="p5G-CF-eqa"/>
+                        <outlet property="searchResultsDataSource" destination="1dM-Py-HVN" id="AdZ-hK-6t7"/>
+                        <outlet property="searchResultsDelegate" destination="1dM-Py-HVN" id="JmJ-Lv-Vqm"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2040" y="491"/>
         </scene>
@@ -1575,6 +1595,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4jS-Il-EhX"/>
-        <segue reference="rif-Gd-UFC"/>
+        <segue reference="oVQ-75-ahk"/>
     </inferredMetricsTieBreakers>
 </document>
