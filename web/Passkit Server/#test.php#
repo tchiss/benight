@@ -1,0 +1,7 @@
+<?php
+
+$testObject = ParseObject::create("TestObject");
+$testObject->set("foo", "bar");
+$testObject->save();
+
+?>
