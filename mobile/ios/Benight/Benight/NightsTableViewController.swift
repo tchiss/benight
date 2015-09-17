@@ -17,13 +17,18 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         return false
     }
     
+    func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView searchTableView: UITableView) {
+        searchTableView.rowHeight = tableView.rowHeight
+        searchTableView.estimatedRowHeight = 142.0
+        searchTableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+    }
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
         SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        
 		var query = PFQuery(className: "Event")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
@@ -36,22 +41,30 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 		})
         
         SwiftSpinner.hide()
-		// Uncomment the following line to preserve selection between presentations
-		// self.clearsSelectionOnViewWillAppear = false
-		
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 	}
 	
     func filterContentForSearchText(searchText: String) {
         // Filter the array using the filter method
-        self.events.filter()
+        self.filteredEvents = self.events.filter()
             {
-                if let type = ($0 as PFObject)["name"] as String {
-                    return type.rangeOfString("Saga") != nil
-                } else {
-                    return false
+                var nameMatch: Bool = false
+                var descMatch: Bool = false
+                var authorMatch: Bool = false
+                var themeMatch: Bool = false
+
+                if let name = ($0 as! PFObject)["name"] as? String {
+                    nameMatch = (name.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
                 }
+                if let author = ($0 as! PFObject)["author"] as? String {
+                    authorMatch = (author.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
+                }
+                if let theme = ($0 as! PFObject)["theme"] as? String {
+                    themeMatch = (theme.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
+                }
+               if let desc = ($0 as! PFObject)["Description"] as? String {
+                    let descMatch = (desc.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
+                }
+                return (nameMatch || authorMatch || themeMatch || descMatch)
         }
     }
     
@@ -64,23 +77,13 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
     }
-    
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
 	
-	// MARK: - Table view data source
 	
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		// #warning Potentially incomplete method implementation.
-		// Return the number of sections.
 		return 1
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		// #warning Incomplete method implementation.
-		// Return the number of rows in the section.
         if tableView == self.searchDisplayController!.searchResultsTableView {
             return filteredEvents.count
         } else {
@@ -89,7 +92,7 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
+		let cell = self.tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
         if tableView == self.searchDisplayController!.searchResultsTableView {
             cell.fillCell(filteredEvents[indexPath.row])
@@ -102,55 +105,16 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 		if segue.identifier ==  "nightDetails"
 		{
-			let indexPath = self.tableView.indexPathForSelectedRow()!.row
-			let object = events[indexPath] as! PFObject
-			let vc = segue.destinationViewController as! NightDetailsViewController
-			vc.event = object
-		}
+            let vc = segue.destinationViewController as! NightDetailsViewController
+            if self.searchDisplayController!.active {
+                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!.row
+                let object = filteredEvents[indexPath] as! PFObject
+                vc.event = object
+            } else {
+                let indexPath = self.tableView.indexPathForSelectedRow()!.row
+                let object = events[indexPath] as! PFObject
+                vc.event = object
+            }
+        }
 	}
-	/*
-	// Override to support conditional editing of the table view.
-	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-	// Return NO if you do not want the specified item to be editable.
-	return true
-	}
-	*/
-	
-	/*
-	// Override to support editing the table view.
-	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-	if editingStyle == .Delete {
-	// Delete the row from the data source
-	tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-	} else if editingStyle == .Insert {
-	// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-	}
-	}
-	*/
-	
-	/*
-	// Override to support rearranging the table view.
-	override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-	
-	}
-	*/
-	
-	/*
-	// Override to support conditional rearranging of the table view.
-	override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-	// Return NO if you do not want the item to be re-orderable.
-	return true
-	}
-	*/
-	
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	// Get the new view controller using [segue destinationViewController].
-	// Pass the selected object to the new view controller.
-	}
-	*/
-	
 }
