@@ -45,10 +45,14 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 	
     func filterContentForSearchText(searchText: String) {
         // Filter the array using the filter method
-        self.filteredEvents = self.events.filter({( event: PFObject) -> Bool in
-            let stringMatch = event["name"](searchText)
-            return (stringMatch != nil)
-        })
+        self.events.filter()
+            {
+                if let type = ($0 as PFObject)["name"] as String {
+                    return type.rangeOfString("Saga") != nil
+                } else {
+                    return false
+                }
+        }
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
