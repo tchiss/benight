@@ -24,18 +24,18 @@ class NightMapViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         map.setRegion(coordinateRegion, animated: true)
-        println(location)
+        print(location)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let status = CLLocationManager.authorizationStatus()
-        var latitude: CLLocationDegrees = descLocation.latitude
-        var longtitude: CLLocationDegrees = descLocation.longitude
-        var location: CLLocation = CLLocation(latitude: latitude, longitude: longtitude)
-        var loc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
+        let latitude: CLLocationDegrees = descLocation.latitude
+        let longtitude: CLLocationDegrees = descLocation.longitude
+        let location: CLLocation = CLLocation(latitude: latitude, longitude: longtitude)
+        let loc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
         centerMapOnLocation(location)
-        var annotation = MKPointAnnotation()
+        let annotation = MKPointAnnotation()
         annotation.title = placeTitle
         annotation.coordinate = loc
         

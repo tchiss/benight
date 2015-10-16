@@ -33,7 +33,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 		
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
-		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")
+		let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")
 		view.addGestureRecognizer(tap)
 	}
 	
@@ -51,15 +51,15 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBAction func ConnectUser(sender: UIButton)
 	{
 		
-		if (count(emailField.text) > 0)
+		if (emailField.text!.characters.count > 0)
 		{
-			if (count(passwdField.text) > 0)
+			if (passwdField.text!.characters.count > 0)
 			{
                 SwiftSpinner.show("Connection...")
-				PFUser.logInWithUsernameInBackground(emailField.text, password: passwdField.text) {
+				PFUser.logInWithUsernameInBackground(emailField.text!, password: passwdField.text!) {
 					(user: PFUser?, error: NSError?) -> Void in
 					if user != nil {
-						print("login ok")
+						print("login ok", terminator: "")
                         SwiftSpinner.hide()
 						self.performSegueWithIdentifier("Connected", sender: nil)
 					} else {

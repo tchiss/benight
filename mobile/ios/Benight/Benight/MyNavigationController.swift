@@ -13,7 +13,7 @@ extension UINavigationController {
     //    return visibleViewController.supportedInterfaceOrientations()
     //}
     public override func shouldAutorotate() -> Bool {
-       return visibleViewController.shouldAutorotate()
+       return visibleViewController!.shouldAutorotate()
     }
 }
 

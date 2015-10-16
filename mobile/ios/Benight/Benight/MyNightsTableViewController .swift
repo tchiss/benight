@@ -23,7 +23,7 @@ class MyNightsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
       
-        var query = PFQuery(className: "Reservation")
+        let query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
 		query.whereKey("User", equalTo: PFUser.currentUser()!)
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
@@ -72,7 +72,7 @@ class MyNightsTableViewController: UITableViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
 		if segue.identifier ==  "mynightDetails"
 		{
-			let indexPath = self.tableView.indexPathForSelectedRow()!.row
+			let indexPath = self.tableView.indexPathForSelectedRow!.row
 			let object = events[indexPath]["Event"]
 			let vc = segue.destinationViewController as! NightDetailsViewController
 			vc.event = object as! PFObject

@@ -53,7 +53,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+		var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as UITableViewCell!
 		
 		if (cell == nil) {
 			cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
@@ -99,16 +99,16 @@ class MyMenuTableViewController: UITableViewController {
 		var destViewController : UIViewController
 		switch (indexPath.row) {
 		case 0:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") as! UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") 
 			break
 		case 1:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") as! UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") 
 			break
 		case 2:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") as! UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") 
 			break
         default:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") as! UIViewController
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") 
 			break
 		}
 		sideMenuController()?.setContentViewController(destViewController)

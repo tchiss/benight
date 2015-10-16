@@ -1,13 +1,13 @@
 PODS:
-  - Alamofire (1.3.1)
+  - Alamofire (2.0.2)
   - SwiftSpinner (0.7.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 1.3)
+  - Alamofire (~> 2.0)
   - SwiftSpinner
 
 SPEC CHECKSUMS:
-  Alamofire: e4ab637e3195b645c814b87a652373439e59f2a4
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   SwiftSpinner: 034bb8b00675b3e4f4c97531fa9af3f550462192
 
 COCOAPODS: 0.38.2

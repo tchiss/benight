@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication,
 		openURL url: NSURL,
 		sourceApplication: String?,
-		annotation: AnyObject?) -> Bool {
+		annotation: AnyObject) -> Bool {
 			return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
 				withSession:PFFacebookUtils.session())
 	}
@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension String {
     
     subscript (i: Int) -> Character {
-        return self[advance(self.startIndex, i)]
+        return self[self.startIndex.advancedBy(i)]
     }
     
     subscript (i: Int) -> String {
@@ -78,6 +78,6 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
+        return substringWithRange(Range(start: startIndex.advancedBy(r.startIndex), end: startIndex.advancedBy(r.endIndex)))
     }
 }

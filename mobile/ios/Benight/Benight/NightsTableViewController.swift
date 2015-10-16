@@ -29,7 +29,7 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		var query = PFQuery(className: "Event")
+		let query = PFQuery(className: "Event")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
 				NSLog("error " + error!.localizedDescription)
@@ -48,7 +48,7 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         self.filteredEvents = self.events.filter()
             {
                 var nameMatch: Bool = false
-                var descMatch: Bool = false
+                let descMatch: Bool = false
                 var authorMatch: Bool = false
                 var themeMatch: Bool = false
 
@@ -68,13 +68,13 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         }
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        self.filterContentForSearchText(searchString)
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String?) -> Bool {
+        self.filterContentForSearchText(searchString!)
         return true
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
         return true
     }
 	
@@ -107,11 +107,11 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 		{
             let vc = segue.destinationViewController as! NightDetailsViewController
             if self.searchDisplayController!.active {
-                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!.row
+                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!.row
                 let object = filteredEvents[indexPath] as! PFObject
                 vc.event = object
             } else {
-                let indexPath = self.tableView.indexPathForSelectedRow()!.row
+                let indexPath = self.tableView.indexPathForSelectedRow!.row
                 let object = events[indexPath] as! PFObject
                 vc.event = object
             }

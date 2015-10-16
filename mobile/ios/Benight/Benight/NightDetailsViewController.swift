@@ -36,7 +36,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 		if (switchInsc.on)
 		{
 			inscLabel.text = "Inscrit"
-			var resa = PFObject(className:"Reservation")
+			let resa = PFObject(className:"Reservation")
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
 			resa.save()
@@ -81,7 +81,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             if let Event: PFObject = self.reservation["Event"] as? PFObject
             {
                 let EventNameString : String = Event["name"] as! String
-                var Ticket = PFObject(className:"Tickets")
+                let Ticket = PFObject(className:"Tickets")
                 Ticket["Reservation"] = reservation
                 Ticket["User"] = PFUser.currentUser()
                 Ticket["EventName"] = EventNameString[0..<15]
@@ -95,8 +95,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     
     func openPass(pass: PKPass)
     {
-        let passname = "Benight Ticket"
-        var passcontroller = PKAddPassesViewController(pass: pass)
+        _ = "Benight Ticket"
+        let passcontroller = PKAddPassesViewController(pass: pass)
         passcontroller.delegate = self
         SwiftSpinner.hide()
         self.presentViewController(passcontroller, animated: true, completion: nil)
@@ -113,10 +113,18 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                     let statusCode = response!.statusCode
                     if (statusCode == 200)
                     {
-                        println("Success: \(statusCode)")
+                        print("Success: \(statusCode)")
                         var pkfile : NSData = NSData(data: data!)
                         var error2: NSError?
-                        var pass: PKPass? = PKPass(data: data, error: &error2)
+                        var pass: PKPass?
+                        do {
+                            pass = try PKPass(data: data!, error: nil)
+                        } catch let error as NSError {
+                            error2 = error
+                            pass = nil
+                        } catch {
+                            fatalError()
+                        }
                         if (error2 == nil)
                         {
                             ticketGetted = true
@@ -125,7 +133,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                     }
                 }
                 else {
-                    println("Failure: %@", error!.localizedDescription);
+                    print("Failure: %@", error.debugDescription);
                 }
                 if (inc < 6 && ticketGetted == false)
                 {
@@ -157,8 +165,12 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             self.navigationItem.rightBarButtonItems = []
         }
         desc.text = event["Description"] as? String
-		DateLabel.text = (event["date"] as! NSDate!).description
-		var query = PFQuery(className: "Reservation")
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        
+        DateLabel.text = formatter.stringFromDate(event["date"] as! NSDate!)
+		let query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
 		query.whereKey("User", equalTo: PFUser.currentUser()!)
 		query.whereKey("Event", equalTo: event)
@@ -200,9 +212,9 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         }
         else if segue.identifier == "ShowMap"
         {
-            var descLocation: PFGeoPoint = event["location"] as! PFGeoPoint
-            var placeTitle: String = event["author"] as! String
-            var eventTitle: String = event["name"] as! String
+            let descLocation: PFGeoPoint = event["location"] as! PFGeoPoint
+            let placeTitle: String = event["author"] as! String
+            let eventTitle: String = event["name"] as! String
             let vc = segue.destinationViewController as! NightMapViewController
             vc.eventTitle = eventTitle
             vc.placeTitle  = placeTitle

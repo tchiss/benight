@@ -21,7 +21,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		super.viewDidLoad()
 				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
-		var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+		let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
 		view.addGestureRecognizer(tap)
 	}
 	
@@ -80,7 +80,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 				self.NicePopup("Your account is created, Welcome")
 				self.performSegueWithIdentifier("accountCreated", sender: nil)
 			} else {
-				let errorString = error1!.userInfo!["error"] as! NSString
+				let errorString = error1!.userInfo["error"] as! NSString
 				self.ErrorPopup(errorString as String)
 			}
 		}

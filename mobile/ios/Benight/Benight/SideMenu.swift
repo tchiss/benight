@@ -48,7 +48,7 @@ public extension UIViewController {
         if (iteration == nil) {
             return topMostController()
         }
-        do {
+        repeat {
             if (iteration is SideMenuProtocol) {
                 return iteration as? SideMenuProtocol
             } else if (iteration?.parentViewController != nil && iteration?.parentViewController != iteration) {
@@ -124,7 +124,7 @@ public class SideMenu : NSObject {
         self.menuTableViewController = menuTableViewController
 //		self.menuTableViewController.tableView.backgroundView = UIImageView(image:UIImage(named:"SideMenuBackground"))
 		self.menuTableViewController.tableView.frame = sideMenuContainerView.bounds
-        self.menuTableViewController.tableView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        self.menuTableViewController.tableView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
         sideMenuContainerView.addSubview(self.menuTableViewController.tableView)
     }
     
@@ -157,9 +157,9 @@ public class SideMenu : NSObject {
         
         if (NSClassFromString("UIVisualEffectView") != nil) {
             // Add blur view
-            var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
             visualEffectView.frame = sideMenuContainerView.bounds
-            visualEffectView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+            visualEffectView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
             sideMenuContainerView.addSubview(visualEffectView)
         }
         else {

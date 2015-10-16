@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Benight/NightsTableViewController.swift"
-            timestampString = "464219113.199237"
+            filePath = "Benight/FlickrSearcher.swift"
+            timestampString = "464626214.36148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "filterContentForSearchText(_:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "searchFlickrForTerm(_:completion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

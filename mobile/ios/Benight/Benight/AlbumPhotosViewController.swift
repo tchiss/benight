@@ -20,8 +20,8 @@ class AlbumPhotosViewController: UICollectionViewController {
     var album: PFObject = PFObject(className: "PhotoAlbum")
 	
     
-    override func supportedInterfaceOrientations() -> Int {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+            return UIInterfaceOrientationMask.All
     }
 	override func viewDidLoad() {
         self.isPresent = true
@@ -36,7 +36,7 @@ class AlbumPhotosViewController: UICollectionViewController {
         flickr.searchFlickrForTerm(album) {
 			results, error in
 			if error != nil {
-				println("Error searching : \(error)")
+				print("Error searching : \(error)")
                 SwiftSpinner.hide()
             }
 			if results != nil {
@@ -54,7 +54,7 @@ class AlbumPhotosViewController: UICollectionViewController {
 	
 }
 
-extension AlbumPhotosViewController : UICollectionViewDataSource {
+extension AlbumPhotosViewController {
  
 	override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 		return searches.count

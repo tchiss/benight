@@ -27,7 +27,7 @@ class EditProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
 			super.viewDidLoad()
 			self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-			var user = PFUser.currentUser()
+			let user = PFUser.currentUser()
 			self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
 			self.ProfileImage.clipsToBounds = true
 			UserName.text = user!.username
@@ -76,12 +76,12 @@ class EditProfileTableViewController: UITableViewController {
 				if (success) {
 					self.SavePopup("Informations saved")
 				} else {
-					self.ErrorPopup(error!.userInfo!.description)
+					self.ErrorPopup(error!.userInfo.description)
 				}
 			})
 		}
 		else {
-			print("toto")
+			print("toto", terminator: "")
 		}
 	}
 	
