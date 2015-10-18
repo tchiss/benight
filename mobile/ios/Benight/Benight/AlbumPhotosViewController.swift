@@ -30,7 +30,12 @@ class AlbumPhotosViewController: UICollectionViewController {
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         SwiftSpinner.show("Getting Pictures...")
-        album.fetch()
+            do {
+                try album.fetch()
+        }
+            catch {
+                print(error)
+        }
         self.PageTitle.title = album["title"] as? String
 
         flickr.searchFlickrForTerm(album) {

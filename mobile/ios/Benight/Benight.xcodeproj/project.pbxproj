@@ -22,15 +22,6 @@
 		687224BD1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */; };
 		687224BE1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
 		687224BF1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
-		6874546C1B92548C00FF57FF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454651B92548C00FF57FF /* Bolts.framework */; };
-		6874546D1B92548C00FF57FF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454661B92548C00FF57FF /* Parse.framework */; };
-		6874546E1B92548C00FF57FF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454671B92548C00FF57FF /* ParseCrashReporting.framework */; };
-		6874546F1B92548C00FF57FF /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454681B92548C00FF57FF /* ParseFacebookUtils.framework */; };
-		687454701B92548C00FF57FF /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454691B92548C00FF57FF /* ParseFacebookUtilsV4.framework */; };
-		687454711B92548C00FF57FF /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6874546A1B92548C00FF57FF /* ParseTwitterUtils.framework */; };
-		687454721B92548C00FF57FF /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6874546B1B92548C00FF57FF /* ParseUI.framework */; };
-		687454751B9254A900FF57FF /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454731B9254A900FF57FF /* FacebookSDK.framework */; };
-		687454761B9254A900FF57FF /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687454741B9254A900FF57FF /* FBAudienceNetwork.framework */; };
 		68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */; };
 		688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5621A79062F000AD63D /* NightsTableViewController.swift */; };
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
@@ -87,15 +78,6 @@
 		687224B71AAE96430098DCB4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		687454651B92548C00FF57FF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Benight/Framework/Bolts.framework; sourceTree = "<group>"; };
-		687454661B92548C00FF57FF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Benight/Framework/Parse.framework; sourceTree = "<group>"; };
-		687454671B92548C00FF57FF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Benight/Framework/ParseCrashReporting.framework; sourceTree = "<group>"; };
-		687454681B92548C00FF57FF /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Benight/Framework/ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		687454691B92548C00FF57FF /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Benight/Framework/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		6874546A1B92548C00FF57FF /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = Benight/Framework/ParseTwitterUtils.framework; sourceTree = "<group>"; };
-		6874546B1B92548C00FF57FF /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Benight/Framework/ParseUI.framework; sourceTree = "<group>"; };
-		687454731B9254A900FF57FF /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Benight/Framework/FacebookSDK.framework; sourceTree = "<group>"; };
-		687454741B9254A900FF57FF /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Benight/Framework/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		688EE5621A79062F000AD63D /* NightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewController.swift; sourceTree = "<group>"; };
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,14 +123,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */,
-				687454711B92548C00FF57FF /* ParseTwitterUtils.framework in Frameworks */,
-				687454721B92548C00FF57FF /* ParseUI.framework in Frameworks */,
 				68DA58ED1A3361B600B3A236 /* SystemConfiguration.framework in Frameworks */,
 				68DA58EB1A3361AD00B3A236 /* StoreKit.framework in Frameworks */,
 				68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */,
-				6874546D1B92548C00FF57FF /* Parse.framework in Frameworks */,
-				687454761B9254A900FF57FF /* FBAudienceNetwork.framework in Frameworks */,
-				6874546F1B92548C00FF57FF /* ParseFacebookUtils.framework in Frameworks */,
 				68DA58E91A3361A700B3A236 /* Security.framework in Frameworks */,
 				68DA58E71A3361A000B3A236 /* QuartzCore.framework in Frameworks */,
 				68DA58E51A33619A00B3A236 /* MobileCoreServices.framework in Frameworks */,
@@ -157,11 +134,7 @@
 				68DA58DF1A33618000B3A236 /* CoreGraphics.framework in Frameworks */,
 				68DA58DD1A33617800B3A236 /* CFNetwork.framework in Frameworks */,
 				68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */,
-				687454701B92548C00FF57FF /* ParseFacebookUtilsV4.framework in Frameworks */,
 				F4AE332ED98F8768431502B5 /* Pods.framework in Frameworks */,
-				6874546C1B92548C00FF57FF /* Bolts.framework in Frameworks */,
-				6874546E1B92548C00FF57FF /* ParseCrashReporting.framework in Frameworks */,
-				687454751B9254A900FF57FF /* FacebookSDK.framework in Frameworks */,
 				68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,15 +258,6 @@
 			children = (
 				68F6176F1B7D5F5700290867 /* PassKit.framework */,
 				689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */,
-				687454731B9254A900FF57FF /* FacebookSDK.framework */,
-				687454741B9254A900FF57FF /* FBAudienceNetwork.framework */,
-				687454651B92548C00FF57FF /* Bolts.framework */,
-				687454661B92548C00FF57FF /* Parse.framework */,
-				687454671B92548C00FF57FF /* ParseCrashReporting.framework */,
-				687454681B92548C00FF57FF /* ParseFacebookUtils.framework */,
-				687454691B92548C00FF57FF /* ParseFacebookUtilsV4.framework */,
-				6874546A1B92548C00FF57FF /* ParseTwitterUtils.framework */,
-				6874546B1B92548C00FF57FF /* ParseUI.framework */,
 				68DA58EC1A3361B600B3A236 /* SystemConfiguration.framework */,
 				68DA58EA1A3361AD00B3A236 /* StoreKit.framework */,
 				68DA58E81A3361A700B3A236 /* Security.framework */,

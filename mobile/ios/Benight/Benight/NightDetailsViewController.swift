@@ -39,7 +39,12 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 			let resa = PFObject(className:"Reservation")
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
-			resa.save()
+            do {
+             try resa.save()
+            }
+            catch{
+            print(error)
+            }
             self.reservation = resa
             self.GenerateTicket()
             AddPassbookButton.hidden = false
@@ -87,9 +92,20 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                 Ticket["EventName"] = EventNameString[0..<15]
                 Ticket["EventPlace"] = Event["author"]
                 Ticket["Date"] = Event["date"]
-                Ticket.save()
+                
+                do {
+                    try Ticket.save()
+                }
+                catch {
+                    print(error)
+                }
                 self.reservation["Tickets"] = Ticket
-                self.reservation.save()
+                do {
+                    try self.reservation.save()
+                }
+                catch {
+                    print(error)
+                }
             }
     }
     
@@ -150,10 +166,10 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         SwiftSpinner.show("Getting Data", animated: true)
-        let leftConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 0)
+        let leftConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
         self.view.addConstraint(leftConstraint)
         
-        let rightConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 0)
+        let rightConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
         self.view.addConstraint(rightConstraint)
         let EventNameString : String = self.event["name"] as! String
         self.EventTitle.title = EventNameString[0..<15]
@@ -176,12 +192,12 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 		query.whereKey("Event", equalTo: event)
 		query.findObjectsInBackgroundWithBlock(
 			{
-				(objects: [AnyObject]?, NSError error) in
+				(objects: [PFObject]?, NSError error) in
 				if (error != nil) {
 					NSLog("error " + error!.localizedDescription)
 				}
 				else {
-					if let objects = objects as? [PFObject] {
+					if let objects = objects as [PFObject]? {
 						if (objects.count != 0)
 						{
 							self.switchStatusChanger()

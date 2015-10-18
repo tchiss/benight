@@ -6,7 +6,12 @@
 //  Copyright (c) 2014 Benight. All rights reserved.
 //
 
-import UIKit
+    import UIKit
+    import Parse
+    import Bolts
+    import ParseFacebookUtilsV4
+    import FBSDKCoreKit
+    import FBSDKLoginKit
 
 class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var emailField: UITextField!
@@ -79,7 +84,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	{
         SwiftSpinner.show("Connection...")
 		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
-		PFFacebookUtils.logInWithPermissions(permissions,
+		/*PFFacebookUtils.logInWithPermissions(permissions,
 			block: {
 				(user: PFUser?, error: NSError?) -> Void in
 				if user == nil
@@ -98,6 +103,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
                     self.performSegueWithIdentifier("Connected", sender: nil)
 				}
 		})
+    */
 	}
 }
 
