@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-<<<<<<< HEAD
-   LastUpgradeVersion = "0610"
-=======
-   LastUpgradeVersion = "0640"
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -24,44 +20,14 @@
                ReferencedContainer = "container:Benight.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-<<<<<<< HEAD
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68E329371A1A5B8100883116"
-               BuildableName = "BenightTests.xctest"
-               BlueprintName = "BenightTests"
-               ReferencedContainer = "container:Benight.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-<<<<<<< HEAD
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68E329371A1A5B8100883116"
-               BuildableName = "BenightTests.xctest"
-               BlueprintName = "BenightTests"
-               ReferencedContainer = "container:Benight.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -72,22 +38,21 @@
             ReferencedContainer = "container:Benight.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-<<<<<<< HEAD
-      <BuildableProductRunnable>
-=======
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "68E329221A1A5B8100883116"
@@ -100,17 +65,13 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-<<<<<<< HEAD
-      <BuildableProductRunnable>
-=======
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "68E329221A1A5B8100883116"

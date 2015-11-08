@@ -13,14 +13,18 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
     @IBOutlet weak var EmailField: UITextField!
     
     @IBAction func PasswordForget(sender: AnyObject) {
-        if (count(EmailField.text) < 0)
+        if (EmailField.text!.characters.count < 0)
         {
             ErrorPopup("Enter Email Please")
         }
         else
         {
             var error: NSError? = nil
-        PFUser.requestPasswordResetForEmail(EmailField.text, error: &error)
+            do {
+                try PFUser.requestPasswordResetForEmail(EmailField.text!)
+            } catch var error1 as NSError {
+                error = error1
+            }
             if (error == nil)
             {
                 let alertController = UIAlertController(title: "Ok", message: "Link Sent", preferredStyle: .Alert)
@@ -57,7 +61,7 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         // Do any additional setup after loading the view.
-        var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
     }
 

@@ -19,24 +19,6 @@ class ProfileTableViewController: UITableViewController {
 	
 	
 	@IBOutlet var UserAdress: UILabel!
-<<<<<<< HEAD
-<<<<<<< HEAD
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		var user = PFUser.currentUser()
-		self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
-		self.ProfileImage.clipsToBounds = true
-		UserName.text = PFUser.currentUser().username
-		UserEmail.text = PFUser.currentUser().email
-		if (user["phone"] != nil){
-			UserPhone.text = user["phone"] as NSString}
-		else{
-			UserPhone.text = "Unknow"}
-
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     
     override func shouldAutorotate() -> Bool {
         return false
@@ -50,10 +32,6 @@ class ProfileTableViewController: UITableViewController {
 		UserName.text = PFUser.currentUser()!.username
 		UserEmail.text = PFUser.currentUser()!.email
 		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,11 +39,6 @@ class ProfileTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	
 	override func viewWillAppear(animated: Bool) {
 		var user = PFUser.currentUser()
@@ -77,10 +50,6 @@ class ProfileTableViewController: UITableViewController {
 
 	}
 	
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

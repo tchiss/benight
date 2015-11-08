@@ -7,24 +7,6 @@
 //
 
 import UIKit
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-class NightDetailsViewController: UIViewController {
-
-	var event: PFObject = PFObject(className: "Event")
-	
-	
-	@IBOutlet var switchInsc: UISwitch!
-	@IBOutlet var inscLabel: UILabel!
-	@IBOutlet var DateLabel: UILabel!
-	@IBOutlet var descLabel: UILabel!
-	@IBOutlet var nameLabel: UILabel!
-	
-	
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 import PassKit
 import Alamofire
 
@@ -34,6 +16,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     var reservation: PFObject = PFObject(className: "Reservation")
 
     
+    @IBOutlet weak var MapButton: UIBarButtonItem!
 	@IBOutlet var switchInsc: UISwitch!
 	@IBOutlet var inscLabel: UILabel!
 	@IBOutlet var DateLabel: UILabel!
@@ -44,49 +27,18 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 
     @IBOutlet weak var desc: UITextView!
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
-    }
-    
     override func viewDidAppear(animated: Bool) {
         let value = UIInterfaceOrientation.Portrait.rawValue
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
     }
     
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 	@IBAction func switchChanger(sender: AnyObject) {
 		if (switchInsc.on)
 		{
 			inscLabel.text = "Inscrit"
-			var resa = PFObject(className:"Reservation")
+			let resa = PFObject(className:"Reservation")
 			resa["User"] = PFUser.currentUser()
 			resa["Event"] = event
-<<<<<<< HEAD
-<<<<<<< HEAD
-			resa.saveInBackground()
-		}
-		else
-		{
-			inscLabel.text = "Non Inscrit"
-			print("titi")
-
-		}
-
-	}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-				self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-		nameLabel.text = event["name"] as String!
-		//cell.PlaceLabel.text = events[indexPath.row]["location"] as String!
-		descLabel.text = event["theme"] as String!
-		DateLabel.text = (event["date"] as NSDate!).description
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
 			resa.save()
             self.reservation = resa
             self.GenerateTicket()
@@ -129,7 +81,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             if let Event: PFObject = self.reservation["Event"] as? PFObject
             {
                 let EventNameString : String = Event["name"] as! String
-                var Ticket = PFObject(className:"Tickets")
+                let Ticket = PFObject(className:"Tickets")
                 Ticket["Reservation"] = reservation
                 Ticket["User"] = PFUser.currentUser()
                 Ticket["EventName"] = EventNameString[0..<15]
@@ -143,8 +95,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     
     func openPass(pass: PKPass)
     {
-        let passname = "Benight Ticket"
-        var passcontroller = PKAddPassesViewController(pass: pass)
+        _ = "Benight Ticket"
+        let passcontroller = PKAddPassesViewController(pass: pass)
         passcontroller.delegate = self
         SwiftSpinner.hide()
         self.presentViewController(passcontroller, animated: true, completion: nil)
@@ -161,10 +113,18 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                     let statusCode = response!.statusCode
                     if (statusCode == 200)
                     {
-                        println("Success: \(statusCode)")
+                        print("Success: \(statusCode)")
                         var pkfile : NSData = NSData(data: data!)
                         var error2: NSError?
-                        var pass: PKPass? = PKPass(data: data, error: &error2)
+                        var pass: PKPass?
+                        do {
+                            pass = try PKPass(data: data!, error: nil)
+                        } catch let error as NSError {
+                            error2 = error
+                            pass = nil
+                        } catch {
+                            fatalError()
+                        }
                         if (error2 == nil)
                         {
                             ticketGetted = true
@@ -173,7 +133,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                     }
                 }
                 else {
-                    println("Failure: %@", error!.localizedDescription);
+                    print("Failure: %@", error.debugDescription);
                 }
                 if (inc < 6 && ticketGetted == false)
                 {
@@ -189,6 +149,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SwiftSpinner.show("Getting Data", animated: true)
         let leftConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 0)
         self.view.addConstraint(leftConstraint)
         
@@ -199,9 +160,17 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"),
             forBarMetrics: .Default)
-		desc.text = event["Description"] as? String
-		DateLabel.text = (event["date"] as! NSDate!).description
-		var query = PFQuery(className: "Reservation")
+        if (event["location"] == nil)
+        {
+            self.navigationItem.rightBarButtonItems = []
+        }
+        desc.text = event["Description"] as? String
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        formatter.timeStyle = .MediumStyle
+        
+        DateLabel.text = formatter.stringFromDate(event["date"] as! NSDate!)
+		let query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
 		query.whereKey("User", equalTo: PFUser.currentUser()!)
 		query.whereKey("Event", equalTo: event)
@@ -225,11 +194,8 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         if (self.event["Album"] != nil) {
             AlbumButton.hidden = false
         }
-        
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
+        SwiftSpinner.hide()
+
 	}
 
     override func didReceiveMemoryWarning() {
@@ -237,12 +203,6 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
         // Dispose of any resources that can be recreated.
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier ==  "ShowAlbum"
         {
@@ -250,12 +210,18 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             let vc = segue.destinationViewController as! AlbumPhotosViewController
             vc.album = album
         }
+        else if segue.identifier == "ShowMap"
+        {
+            let descLocation: PFGeoPoint = event["location"] as! PFGeoPoint
+            let placeTitle: String = event["author"] as! String
+            let eventTitle: String = event["name"] as! String
+            let vc = segue.destinationViewController as! NightMapViewController
+            vc.eventTitle = eventTitle
+            vc.placeTitle  = placeTitle
+            vc.descLocation = descLocation
+        }
     }
     
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> 0c94aa5349038aa570b1a5831ce89db810edfbfd
     /*
     // MARK: - Navigation
 
