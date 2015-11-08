@@ -1,0 +1,22 @@
+
+body{
+  font-size: 10px;
+  font-family: Arial;
+}
+
+header { 
+  text-align : center; 
+  font-weight : bold; 
+} 
+
+section { 
+  padding : 1px; 
+  margin-bottom: 10px;
+} 
+ 
+footer { 
+  font-weight : bold; 
+  text-align : center; 
+  padding : 1px;
+} 
+ 
