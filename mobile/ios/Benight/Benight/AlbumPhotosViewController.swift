@@ -56,6 +56,18 @@ class AlbumPhotosViewController: UICollectionViewController {
 	{
 		return searches[indexPath.section].searchResults[indexPath.row]
 	}
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier ==  "imageFull"
+        {
+            let vc = segue.destinationViewController as! ImageFullViewController
+            let cell = sender as! UICollectionViewCell
+            let indexPath = self.collectionView!.indexPathForCell(cell)
+            let image = photoForIndexPath(indexPath!)
+            vc.photo = image
+        }
+    }
+
 	
 }
 

@@ -123,7 +123,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
     {
         let TicketID: String  = self.reservation["Tickets"]!.objectId as String!
         var ticketGetted: Bool = false
-            Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"\"KNfCMt9TUSgYBfg\""]).response{ (request, response, data, error) in
+            Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"KNfCMt9TUSgYBfg"]).response{ (request, response, data, error) in
                 if (error == nil)
                 {
                     let statusCode = response!.statusCode

@@ -104,9 +104,9 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-		if segue.identifier ==  "nightDetails"
+		if segue.identifier ==  "myNightDetails"
 		{
-            let vc = segue.destinationViewController as! NightDetailsViewController
+            let vc = segue.destinationViewController as! NightDetailsTableViewController
             if self.searchDisplayController!.active {
                 let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!.row
                 let object = filteredEvents[indexPath] as! PFObject

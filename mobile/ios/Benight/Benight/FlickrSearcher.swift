@@ -32,7 +32,7 @@ class FlickrPhoto : Equatable {
     }
     
     func flickrImageURL(size:String = "m") -> NSURL {
-        return NSURL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")!
+        return NSURL(string: "https://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")!
     }
     
     func loadLargeImage(completion: (flickrPhoto:FlickrPhoto, error: NSError?) -> Void) {
