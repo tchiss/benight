@@ -13,7 +13,7 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
 	
 	var events: Array<AnyObject> = []
     var filteredEvents: Array<AnyObject> = []
-
+    @IBOutlet weak var searchBar: UISearchBar!
     override func shouldAutorotate() -> Bool {
         return false
     }
@@ -26,11 +26,13 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        searchBar.showsScopeBar = true
         SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		let query = PFQuery(className: "Event")
+        query.orderByAscending("date")
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
 				NSLog("error " + error!.localizedDescription)
@@ -44,7 +46,9 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
         SwiftSpinner.hide()
 	}
 	
-    func filterContentForSearchText(searchText: String) {
+
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
         // Filter the array using the filter method
         self.filteredEvents = self.events.filter()
             {
@@ -52,7 +56,31 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
                 let descMatch: Bool = false
                 var authorMatch: Bool = false
                 var themeMatch: Bool = false
-
+                var scopeMatch: Bool = true
+                if (scope == "Passé")
+                {
+                    if let date = ($0 as! PFObject)["date"] as? NSDate {
+                        let nowDate = NSDate()
+                        if date.isGreaterThanDate(nowDate)
+                        {
+                            return false
+                        }
+                        if (scope != "All" && searchText == "")
+                        {
+                            return true
+                        }
+                    }
+                }
+                if (scope == "A Venir")
+                {
+                    if let date = ($0 as! PFObject)["date"] as? NSDate {
+                        let nowDate = NSDate()
+                        if date.isLessThanDate(nowDate)
+                        {
+                            return false
+                        }
+                    }
+                }
                 if let name = ($0 as! PFObject)["name"] as? String {
                     nameMatch = (name.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
                 }
@@ -65,17 +93,21 @@ class NightsTableViewController: UITableViewController,  UISearchBarDelegate, UI
                if let desc = ($0 as! PFObject)["Description"] as? String {
                     let descMatch = (desc.lowercaseString.rangeOfString(searchText.lowercaseString) != nil)
                 }
+
                 return (nameMatch || authorMatch || themeMatch || descMatch)
         }
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String?) -> Bool {
-        self.filterContentForSearchText(searchString!)
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles! as [String]
+        let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
+        self.filterContentForSearchText(searchString!, scope: selectedScope)
         return true
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
+        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles! as [String]
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!, scope: scope[searchOption])
         return true
     }
 	
