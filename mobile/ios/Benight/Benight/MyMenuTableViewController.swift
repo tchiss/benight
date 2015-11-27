@@ -71,8 +71,12 @@ class MyMenuTableViewController: UITableViewController {
 		case 1:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
 			cell!.textLabel?.text = "Les Soirées"
-			break
-		case 2:
+            break
+        case 2:
+                cell!.imageView?.image = UIImage(named: "helpIcon")
+                cell!.textLabel?.text = "Soirées passées"
+            break
+		case 3:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
 			cell!.textLabel?.text = "Mes Soirées"
 			break
@@ -104,7 +108,10 @@ class MyMenuTableViewController: UITableViewController {
 		case 1:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") 
 			break
-		case 2:
+        case 2:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PastNightsView")
+            break
+		case 3:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") 
 			break
         default:

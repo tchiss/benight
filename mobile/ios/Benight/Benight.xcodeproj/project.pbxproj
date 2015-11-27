@@ -32,6 +32,8 @@
 		689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
 		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
+		68CE3B9C1C07AFD60052353B /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */; };
+		68CE3B9E1C07CDAA0052353B /* PastNightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */; };
 		68D31F7F1BAA1C1A005E604C /* NightMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */; };
 		68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D31F801BAA21F0005E604C /* MapKit.framework */; };
 		68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58DA1A33617000B3A236 /* AudioToolbox.framework */; };
@@ -90,6 +92,8 @@
 		689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastNightsTableViewController.swift; sourceTree = "<group>"; };
 		68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightMapViewController.swift; sourceTree = "<group>"; };
 		68D31F801BAA21F0005E604C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68DA58DA1A33617000B3A236 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -241,8 +245,10 @@
 			children = (
 				682B78191AEE125D00762247 /* Albums */,
 				6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */,
+				68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */,
 				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
+				68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */,
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
 				68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */,
 				689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */,
@@ -511,6 +517,7 @@
 				68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */,
 				68E3292B1A1A5B8100883116 /* ConnectViewController.swift in Sources */,
 				681EBB681B998A6B00F3DB03 /* ForgetPasswordViewController.swift in Sources */,
+				68CE3B9E1C07CDAA0052353B /* PastNightsTableViewController.swift in Sources */,
 				683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */,
 				68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */,
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
@@ -522,6 +529,7 @@
 				682B78181AEE11D500762247 /* AlbumPhotoCell.swift in Sources */,
 				68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */,
 				682B78161AEE0C5300762247 /* FlickrSearcher.swift in Sources */,
+				68CE3B9C1C07AFD60052353B /* GlobalVariable.swift in Sources */,
 				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,

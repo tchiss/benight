@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class NightsTableViewController: UITableViewController, UISearchResultsUpdating, UISearchControllerDelegate,UISearchBarDelegate {
+class PastNightsTableViewController: UITableViewController, UISearchResultsUpdating, UISearchControllerDelegate,UISearchBarDelegate {
 	
 	var events: Array<AnyObject> = []
     var filteredEvents: Array<AnyObject> = []
@@ -30,7 +30,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
         let now = NSDate()
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let midnightOfToday = cal!.startOfDayForDate(now)
-        query.whereKey("date", greaterThanOrEqualTo: midnightOfToday)
+        query.whereKey("date", lessThan: midnightOfToday)
         switch segmentedControl.selectedSegmentIndex{
         case 1:
             query.whereKey("location", nearGeoPoint: GlobalVariables.sharedManager.userLoc!, withinKilometers: 5)
@@ -63,18 +63,6 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
     }
     
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return (48)
-    }
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UITableViewHeaderFooterView? {
-        return segView
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-
-    }
-    
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.definesPresentationContext = false
@@ -99,7 +87,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
         let now = NSDate()
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let midnightOfToday = cal!.startOfDayForDate(now)
-        query.whereKey("date", greaterThanOrEqualTo: midnightOfToday)
+        query.whereKey("date", lessThan: midnightOfToday)
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
 			if (error != nil) {
 				NSLog("error " + error!.localizedDescription)

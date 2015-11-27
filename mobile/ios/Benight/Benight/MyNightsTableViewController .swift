@@ -18,6 +18,12 @@ class MyNightsTableViewController: UITableViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
+        PFGeoPoint.geoPointForCurrentLocationInBackground {
+            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+            if error == nil {
+                // do something with the new geoPoint
+            }
+        }
         SwiftSpinner.show("Getting Data", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
