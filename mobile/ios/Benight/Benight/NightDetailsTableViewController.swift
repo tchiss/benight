@@ -77,7 +77,14 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         SwiftSpinner.show("Getting Data", animated: true)
 
         let EventNameString : String = self.event["name"] as! String
-        self.EventTitle.title = EventNameString[0..<15]
+        if EventNameString.characters.count < 15
+        {
+            self.EventTitle.title = EventNameString
+        }
+        else
+        {
+            self.EventTitle.title = EventNameString[0..<15]
+        }
         
         desc.text = event["Description"] as? String
         let formatter = NSDateFormatter()
