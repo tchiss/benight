@@ -34,18 +34,24 @@ PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         UINavigationBar.appearance().translucent = true
         return true
 	}
-	func application(application: UIApplication,
-		openURL url: NSURL,
-		sourceApplication: String?,
-		annotation: AnyObject) -> Bool {
-			//return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
-			//	withSession:PFFacebookUtils.FBSession)
-            return false
-	}
 
-	func applicationDidBecomeActive(application: UIApplication) {
-		//FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
-	}
+    
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
+    }
+    
+    
+    //Make sure it isn't already declared in the app delegate (possible redefinition of func error)
+    func applicationDidBecomeActive(application: UIApplication) {
+        FBSDKAppEvents.activateApp()
+    }
+
 	
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

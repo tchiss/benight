@@ -44,7 +44,6 @@
 		68DA58E51A33619A00B3A236 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58E41A33619A00B3A236 /* MobileCoreServices.framework */; };
 		68DA58E71A3361A000B3A236 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58E61A3361A000B3A236 /* QuartzCore.framework */; };
 		68DA58E91A3361A700B3A236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58E81A3361A700B3A236 /* Security.framework */; };
-		68DA58EB1A3361AD00B3A236 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58EA1A3361AD00B3A236 /* StoreKit.framework */; };
 		68DA58ED1A3361B600B3A236 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DA58EC1A3361B600B3A236 /* SystemConfiguration.framework */; };
 		68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E329281A1A5B8100883116 /* AppDelegate.swift */; };
 		68E3292B1A1A5B8100883116 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3292A1A1A5B8100883116 /* ConnectViewController.swift */; };
@@ -104,7 +103,6 @@
 		68DA58E41A33619A00B3A236 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		68DA58E61A3361A000B3A236 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68DA58E81A3361A700B3A236 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		68DA58EA1A3361AD00B3A236 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		68DA58EC1A3361B600B3A236 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		68DA58FF1A3362AE00B3A236 /* Benight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Benight-Bridging-Header.h"; sourceTree = "<group>"; };
 		68E329231A1A5B8100883116 /* Benight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +130,6 @@
 			files = (
 				689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */,
 				68DA58ED1A3361B600B3A236 /* SystemConfiguration.framework in Frameworks */,
-				68DA58EB1A3361AD00B3A236 /* StoreKit.framework in Frameworks */,
 				68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */,
 				68DA58E91A3361A700B3A236 /* Security.framework in Frameworks */,
 				68DA58E71A3361A000B3A236 /* QuartzCore.framework in Frameworks */,
@@ -271,7 +268,6 @@
 				68F6176F1B7D5F5700290867 /* PassKit.framework */,
 				689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */,
 				68DA58EC1A3361B600B3A236 /* SystemConfiguration.framework */,
-				68DA58EA1A3361AD00B3A236 /* StoreKit.framework */,
 				68DA58E81A3361A700B3A236 /* Security.framework */,
 				68DA58E61A3361A000B3A236 /* QuartzCore.framework */,
 				68DA58E41A33619A00B3A236 /* MobileCoreServices.framework */,
@@ -402,6 +398,9 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = RK36ZAQX82;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};

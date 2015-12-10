@@ -82,11 +82,10 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 	
 	@IBAction func ConnectWithFace(sender: AnyObject)
 	{
-        SwiftSpinner.show("Connection...")
+        //SwiftSpinner.show("Connection...")
 		let permissions = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
-		/*PFFacebookUtils.logInWithPermissions(permissions,
-			block: {
-				(user: PFUser?, error: NSError?) -> Void in
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            (user: PFUser?, error: NSError?) -> Void in
 				if user == nil
 				{
                     SwiftSpinner.hide()
@@ -102,8 +101,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
                     SwiftSpinner.hide()
                     self.performSegueWithIdentifier("Connected", sender: nil)
 				}
-		})
-    */
+		}
 	}
 }
 
