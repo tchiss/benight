@@ -24,6 +24,9 @@ PODS:
     - FBSDKCoreKit (~> 4.8)
     - FBSDKLoginKit (~> 4.8)
     - Parse (~> 1.9)
+  - ParseTwitterUtils (1.9.1):
+    - Bolts/Tasks (~> 1.5)
+    - Parse (~> 1.9)
   - SwiftSpinner (0.8.0)
 
 DEPENDENCIES:
@@ -32,6 +35,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - Parse
   - ParseFacebookUtilsV4
+  - ParseTwitterUtils
   - SwiftSpinner
 
 SPEC CHECKSUMS:
@@ -41,6 +45,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2
   ParseFacebookUtilsV4: eab9b4ade12f0800b4d30f6b808bca55ce17a0e9
+  ParseTwitterUtils: 41e8849e37db471e874c6e515190ded19e043dc8
   SwiftSpinner: 11c2c5ec7443d92f3026d3067ca8a91d4adef13f
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

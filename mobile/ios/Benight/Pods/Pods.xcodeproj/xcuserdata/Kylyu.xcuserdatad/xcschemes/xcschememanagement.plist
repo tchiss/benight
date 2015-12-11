@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ParseTwitterUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22242373BF29CDDE913FE7EAF63836C4</key>
+		<key>0F98F85575B93F19AE698C564B266D98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>238A0B1E18A765CAA7CA29BAC2ECD783</key>
+		<key>124BA04F2E4A4F5C8CDAA39DB6C7F903</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DD84712CC1323ACA2339B34DF7BA963</key>
+		<key>30082E6A462F23AD723D0621FB6D4980</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62BA7F37563492940706ADB361C85390</key>
+		<key>4B2F30D90D85A544E9EFE2A49D392C25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92D866F563EB2D60EA5911EFFF9C1683</key>
+		<key>511B536F0DE06D9C3BD65397A91990C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>953C398339DB640152800242D8D25B32</key>
+		<key>57ADC05E440A960212657DE6DA1FEDD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A86685C44F40FD05FA10C9F65A235324</key>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C08C289F771810C5DA998DD76DDB6E67</key>
+		<key>BC58DB0FE42D6C5DFA797C787570BB13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5ACF367AE3BD7A7F2AF2D430901DF7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

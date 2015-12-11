@@ -23,6 +23,9 @@
 		687224BD1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */; };
 		687224BE1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
 		687224BF1AAE96940098DCB4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */; };
+		68741F2C1C1A514B00043BAB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741F2B1C1A514B00043BAB /* Accounts.framework */; };
+		68741F2E1C1A515100043BAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741F2D1C1A515100043BAB /* Social.framework */; };
+		68741F301C1A5E5400043BAB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741F2F1C1A5E5400043BAB /* Twitter.framework */; };
 		68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */; };
 		688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5621A79062F000AD63D /* NightsTableViewController.swift */; };
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
@@ -54,7 +57,7 @@
 		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
 		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 		68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F6176F1B7D5F5700290867 /* PassKit.framework */; };
-		F4AE332ED98F8768431502B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F4AE332ED98F8768431502B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		687224B71AAE96430098DCB4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		68741F2B1C1A514B00043BAB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		68741F2D1C1A515100043BAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		68741F2F1C1A5E5400043BAB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		688EE5621A79062F000AD63D /* NightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewController.swift; sourceTree = "<group>"; };
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68741F301C1A5E5400043BAB /* Twitter.framework in Frameworks */,
+				68741F2E1C1A515100043BAB /* Social.framework in Frameworks */,
+				68741F2C1C1A514B00043BAB /* Accounts.framework in Frameworks */,
 				689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */,
 				68DA58ED1A3361B600B3A236 /* SystemConfiguration.framework in Frameworks */,
 				68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */,
@@ -166,6 +175,9 @@
 		24C0723AB9610497F7C35950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68741F2F1C1A5E5400043BAB /* Twitter.framework */,
+				68741F2D1C1A515100043BAB /* Social.framework */,
+				68741F2B1C1A514B00043BAB /* Accounts.framework */,
 				68D31F801BAA21F0005E604C /* MapKit.framework */,
 				CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */,
 			);

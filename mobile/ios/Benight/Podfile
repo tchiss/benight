@@ -7,4 +7,5 @@ pod "SwiftSpinner"
 pod 'FBSDKLoginKit'
 pod 'ParseFacebookUtilsV4'
 pod 'Parse'
+pod 'ParseTwitterUtils'
 

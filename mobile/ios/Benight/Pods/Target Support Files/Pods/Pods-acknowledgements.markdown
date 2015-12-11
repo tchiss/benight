@@ -107,6 +107,10 @@ See https://www.parse.com/about/terms
 
 See https://www.parse.com/about/terms
 
+## ParseTwitterUtils
+
+See https://www.parse.com/about/terms
+
 ## SwiftSpinner
 
 Copyright (c) 2015 Marin Todorov <touch-code-magazine@underplot.com>

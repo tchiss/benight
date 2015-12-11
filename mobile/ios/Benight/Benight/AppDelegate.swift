@@ -12,6 +12,7 @@ import Bolts
 import ParseFacebookUtilsV4
 import FBSDKCoreKit
 import FBSDKLoginKit
+import ParseTwitterUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		Parse.setApplicationId("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", clientKey:"qayqlys4VkNJDQ06PUUa0aUp8i7g871mjFDmlyCb")
-PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        PFTwitterUtils.initializeWithConsumerKey("Vr1zQD8S0Oa5Q6CSl4tlTKHsl", consumerSecret: "tRwrCVjgMy3W3yyZiJsjbicgsnE6Ci225zjRFFAMeBC258XROr")
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         // Sets background to a blank/empty image
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)

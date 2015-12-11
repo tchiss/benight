@@ -12,6 +12,8 @@
     import ParseFacebookUtilsV4
     import FBSDKCoreKit
     import FBSDKLoginKit
+    import Twitter
+    import ParseTwitterUtils
 
 class ConnectViewController: ResponsiveTextFieldViewController {
 	@IBOutlet var emailField: UITextField!
@@ -103,6 +105,29 @@ class ConnectViewController: ResponsiveTextFieldViewController {
 				}
 		}
 	}
+    
+    @IBAction func ConnectWithTwitter(sender: AnyObject)
+    {
+        SwiftSpinner.show("Connection...")
+        PFTwitterUtils.logInWithBlock() {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user == nil
+            {
+                SwiftSpinner.hide()
+                NSLog("Uh oh. The user cancelled the Twitter login.")
+            }
+            else if user!.isNew
+            {
+                SwiftSpinner.hide()
+                self.performSegueWithIdentifier("Connected", sender: nil)
+            }
+            else
+            {
+                SwiftSpinner.hide()
+                self.performSegueWithIdentifier("Connected", sender: nil)
+            }
+        }
+    }
 }
 
 
