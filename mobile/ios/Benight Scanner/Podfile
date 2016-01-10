@@ -1,9 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-
+pod 'FBSDKCoreKit'
+pod 'Alamofire', '~> 2.0'
 pod "SwiftSpinner"
+pod 'FBSDKLoginKit'
 pod 'Parse'
 pod 'QRCodeReader.swift'
-pod 'ParseUI'
-
