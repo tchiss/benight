@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Stripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftSpinner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30082E6A462F23AD723D0621FB6D4980</key>
+		<key>4B2F30D90D85A544E9EFE2A49D392C25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B2F30D90D85A544E9EFE2A49D392C25</key>
+		<key>4F7CAAC61369E5165DD984C84F79B699</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC58DB0FE42D6C5DFA797C787570BB13</key>
+		<key>7CBB6EE0127B63C310D06351506FDF1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D025AB200EC2355F891F8C81D4451FFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

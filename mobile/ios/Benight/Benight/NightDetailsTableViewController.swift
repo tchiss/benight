@@ -10,7 +10,7 @@ import UIKit
 import PassKit
 import Alamofire
 
-class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate {
+class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
     var event: PFObject = PFObject(className: "Event")
     var reservation: PFObject = PFObject(className: "Reservation")
@@ -53,19 +53,38 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
         else
         {
-            let resa = PFObject(className:"Reservation")
-            resa["User"] = PFUser.currentUser()
-            resa["Event"] = event
-            do {
-                try resa.save()
+            if (event["price"]! as! Int == 0)
+            {
+                let resa = PFObject(className:"Reservation")
+                resa["User"] = PFUser.currentUser()
+                resa["Event"] = event
+                do {
+                    try resa.save()
+                }
+                catch{
+                    print(error)
+                }
+                self.reservation = resa
+                self.GenerateTicket(true)
+                HasTicket = true
+                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
             }
-            catch{
-                print(error)
+            else
+            {
+                let resa = PFObject(className:"Reservation")
+                resa["User"] = PFUser.currentUser()
+                resa["Event"] = event
+                do {
+                    try resa.save()
+                }
+                catch{
+                    print(error)
+                }
+                self.reservation = resa
+                self.GenerateTicket(false)
+                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
+                self.performSegueWithIdentifier("payPopOver", sender: nil)
             }
-            self.reservation = resa
-            self.GenerateTicket()
-            HasTicket = true
-            self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
         }
     }
     
@@ -123,8 +142,8 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
         else
         {
-            var url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
-            var request = NSMutableURLRequest(URL: url!)
+            let url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
+            let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event["SoundCloud"].objectId!!
             request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
@@ -146,7 +165,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
 
     // MARK: - Table view data source
     
-    func GenerateTicket () {
+    func GenerateTicket (paid: Bool) {
         if let Event: PFObject = self.reservation["Event"] as? PFObject
         {
             let EventNameString : String = Event["name"] as! String
@@ -156,7 +175,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             Ticket["EventName"] = EventNameString[0..<15]
             Ticket["EventPlace"] = Event["author"]
             Ticket["Date"] = Event["date"]
-            
+            Ticket["paid"] = paid
             do {
                 try Ticket.save()
             }
@@ -252,6 +271,12 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             vc.eventTitle = eventTitle
             vc.placeTitle  = placeTitle
             vc.descLocation = descLocation
+        }
+        if segue.identifier == "payPopOver" {
+            if let controller = segue.destinationViewController as? PayPopOverViewController {
+                controller.popoverPresentationController!.delegate = self
+                controller.preferredContentSize = CGSize(width: 320, height: 186)
+            }
         }
     }
     

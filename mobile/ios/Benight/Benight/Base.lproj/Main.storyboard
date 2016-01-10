@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1595,11 +1594,35 @@
                         <outlet property="desc" destination="yjI-uD-7vs" id="1Tr-tC-iJj"/>
                         <outlet property="imgCell" destination="a2c-NR-bIe" id="OM1-rp-MKu"/>
                         <outlet property="webView" destination="8G7-Nw-QRJ" id="EA0-5p-UYq"/>
+                        <segue destination="r8e-mx-dee" kind="popoverPresentation" identifier="payPopOver" popoverAnchorView="GI3-aF-gMk" id="9de-ac-A8x">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                            <popoverPassthroughViews>
+                                <tableView reference="E0F-Rl-rZV"/>
+                            </popoverPassthroughViews>
+                        </segue>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msd-sD-5Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3505" y="660"/>
+            <point key="canvasLocation" x="3510" y="675"/>
+        </scene>
+        <!--Pay Pop Over View Controller-->
+        <scene sceneID="Ktu-ft-YRK">
+            <objects>
+                <viewController id="r8e-mx-dee" customClass="PayPopOverViewController" customModule="Benight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EVK-8G-5yx"/>
+                        <viewControllerLayoutGuide type="bottom" id="w8N-ec-SFN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sya-gr-JvF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qs-NB-R2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4316" y="675"/>
         </scene>
         <!--Title-->
         <scene sceneID="8Gh-pV-ubJ">

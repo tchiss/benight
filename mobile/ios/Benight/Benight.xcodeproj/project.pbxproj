@@ -34,6 +34,7 @@
 		689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F19AB1A7686B500B98698 /* NewsTableViewController.swift */; };
 		689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
+		68CA09D11C42D1A400E4869A /* PayPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */; };
 		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
 		68CE3B9C1C07AFD60052353B /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */; };
 		68CE3B9E1C07CDAA0052353B /* PastNightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */; };
@@ -96,6 +97,7 @@
 		689F19AB1A7686B500B98698 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPopOverViewController.swift; sourceTree = "<group>"; };
 		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastNightsTableViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				682B78191AEE125D00762247 /* Albums */,
 				6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */,
+				68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */,
 				68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */,
 				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
@@ -542,6 +545,7 @@
 				682B78161AEE0C5300762247 /* FlickrSearcher.swift in Sources */,
 				68CE3B9C1C07AFD60052353B /* GlobalVariable.swift in Sources */,
 				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
+				68CA09D11C42D1A400E4869A /* PayPopOverViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
 				68EAEEFB1B8F8FF100F39F65 /* SwiftSpinner.swift in Sources */,
@@ -687,7 +691,7 @@
 					"$(PROJECT_DIR)/Benight/Framework",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Benight.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -713,7 +717,7 @@
 					"$(PROJECT_DIR)/Benight/Framework",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Benight.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

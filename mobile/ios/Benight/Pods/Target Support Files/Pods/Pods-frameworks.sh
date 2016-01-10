@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
   install_framework "Pods/ParseTwitterUtils.framework"
+  install_framework "Pods/Stripe.framework"
   install_framework "Pods/SwiftSpinner.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -101,5 +102,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Parse.framework"
   install_framework "Pods/ParseFacebookUtilsV4.framework"
   install_framework "Pods/ParseTwitterUtils.framework"
+  install_framework "Pods/Stripe.framework"
   install_framework "Pods/SwiftSpinner.framework"
 fi
