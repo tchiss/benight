@@ -1,0 +1,28 @@
+<form action="" method="POST" class="payment-form" style="text-align: center;">
+  <span class="payment-errors"></span>
+
+  <div class="form-row">
+    <label>
+      <span style="color:white">Card Number</span>
+      <input type="text" size="20" id="number"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span style="color:white">CVC</span>
+      <input type="text" size="4" id="cvc"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span style="color:white">Expiration (MM/YYYY)</span>
+      <input type="text" size="2" id="exp-month"/>
+    </label>
+    <span style="color:white"> / </span>
+    <input type="text" size="4" id="exp-year"/>
+  </div>
+
+  <button type="submit">Submit Payment</button>
+</form>
