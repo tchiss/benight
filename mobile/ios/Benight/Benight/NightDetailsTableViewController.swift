@@ -12,11 +12,11 @@ import Alamofire
 
 class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
-    var event: PFObject = PFObject(className: "Event")
-    var reservation: PFObject = PFObject(className: "Reservation")
+    weak var event: PFObject? = PFObject(className: "Event")
+    weak var reservation: PFObject? = PFObject(className: "Reservation")
     var HasTicket:  Bool = false
-    var popOver: PayPopOverViewController = PayPopOverViewController()
-    var Ticket1: PFObject? = nil
+    weak var popOver: PayPopOverViewController? = PayPopOverViewController()
+    weak var Ticket1: PFObject? = nil
     var SeletedVIP: Bool = false
     
     @IBOutlet weak var SoldOutVIP: UIImageView!
@@ -62,7 +62,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
         else
         {
-            if (event["price"]! as! Int == 0)
+            if (event!["price"]! as! Int == 0)
             {
                 self.GenerateTicket(true)
                 HasTicket = true
@@ -83,7 +83,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             forBarMetrics: .Default)
         
 
-        let EventNameString : String = self.event["name"] as! String
+        let EventNameString : String = self.event!["name"] as! String
         if EventNameString.characters.count < 15
         {
             self.EventTitle.title = EventNameString
@@ -95,14 +95,14 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         desc.textContainerInset = UIEdgeInsetsZero;
         desc.textContainer.lineFragmentPadding = 0;
         desc.scrollEnabled = false
-        desc.text = event["Description"] as? String
+        desc.text = event!["Description"] as? String
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = .MediumStyle
         formatter.locale = NSLocale(localeIdentifier: "fr_FR")
-        if (event["Flyer"] != nil)
+        if (event!["Flyer"] != nil)
         {
-            if let userImageFile = event["Flyer"] as? PFFile
+            if let userImageFile = event!["Flyer"] as? PFFile
             {
                 userImageFile.getDataInBackgroundWithBlock {
                     (imageData: NSData?, error: NSError?) -> Void in
@@ -116,11 +116,11 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             }
         }
         
-        DateLabel.text = formatter.stringFromDate(event["date"] as! NSDate!)
+        DateLabel.text = formatter.stringFromDate(event!["date"] as! NSDate!)
         let query = PFQuery(className: "Reservation")
         query.includeKey("Event")
         query.whereKey("User", equalTo: PFUser.currentUser()!)
-        query.whereKey("Event", equalTo: event)
+        query.whereKey("Event", equalTo: event!)
         query.findObjectsInBackgroundWithBlock(
             {
                 (objects: [PFObject]?, NSError error) in
@@ -135,21 +135,21 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                             self.HasTicket = true
                             self.reservation = objects[0]
                         }
-                        else if self.event["price"] == nil
+                        else if self.event!["price"] == nil
                         {
                             self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
                         }
-                        else if self.event["price"] as! Int == 0
+                        else if self.event!["price"] as! Int == 0
                         {
                             self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
                         }
                         else
                         {
-                            self.TicketButton.setTitle("Acheter un Ticket à " + String(self.event["price"]) + "€.", forState: UIControlState.Normal)
+                            self.TicketButton.setTitle("Acheter un Ticket à " + String(self.event!["price"]) + "€.", forState: UIControlState.Normal)
                         }
                         if (self.HasTicket == false)
                         {
-                            if let left = self.event["PlaceLeft"] as? Int
+                            if let left = self.event!["PlaceLeft"] as? Int
                             {
                                 if left == 0
                                 {
@@ -157,22 +157,22 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                                     self.TicketButton.userInteractionEnabled = false
                                 }
                             }
-                            if let vip = self.event["VIP"] as? Bool
+                            if let vip = self.event!["VIP"] as? Bool
                             {
                                 if vip == true
                                 {
                                     self.VIPCell.hidden = false
-                                    if let vipleft = self.event["PlaceVipLeft"] as? Int
+                                    if let vipleft = self.event!["PlaceVipLeft"] as? Int
                                     {
                                         if vipleft == 0
                                         {
-                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
                                             self.SoldOutVIP.hidden = false
                                             self.TicketVipButton.userInteractionEnabled = false
                                         }
                                         else
                                         {
-                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
                                         }
                                     }
                                 }
@@ -185,10 +185,10 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                 SwiftSpinner.hide()
         })
 
-        if (self.event["Album"] == nil) {
+        if (self.event!["Album"] == nil) {
             AlbumCell.hidden = true
         }
-        if (event["SoundCloud"] == nil)
+        if (event!["SoundCloud"] == nil)
         {
             SoundcloudCell.hidden = true
         }
@@ -197,7 +197,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             let url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
-            var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event["SoundCloud"].objectId!!
+            var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
             request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
             webView.loadRequest(request)
         }
@@ -231,7 +231,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             print(error)
         }
         self.reservation = resa
-        if let Event: PFObject = self.reservation["Event"] as? PFObject
+        if let Event: PFObject = self.reservation!["Event"] as? PFObject
         {
             let EventNameString : String = Event["name"] as! String
     
@@ -245,22 +245,22 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             Ticket["VIP"] = self.SeletedVIP
             if (self.SeletedVIP)
             {
-                event["PlaceVipLeft"] = event["PlaceVipLeft"] as! Int - 1
+                event!["PlaceVipLeft"] = event!["PlaceVipLeft"] as! Int - 1
             }
             else
             {
-                event["PlaceLeft"] = event["PlaceLeft"] as! Int - 1
+                event!["PlaceLeft"] = event!["PlaceLeft"] as! Int - 1
             }
             do {
-                try event.save()
+                try event!.save()
                 try Ticket.save()
             }
             catch {
                 print(error)
             }
-            self.reservation["Tickets"] = Ticket
+            self.reservation!["Tickets"] = Ticket
             do {
-                try self.reservation.save()
+                try self.reservation!.save()
                 Ticket1 = Ticket
                 HasTicket = true
                 self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
@@ -283,7 +283,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     
     func getTicketPassbook(inc: Int)
     {
-        let TicketID: String  = self.reservation["Tickets"]!.objectId as String!
+        let TicketID: String  = self.reservation!["Tickets"]!.objectId as String!
         var ticketGetted: Bool = false
         Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"KNfCMt9TUSgYBfg"]).response{ (request, response, data, error) in
             if (error == nil)
@@ -338,15 +338,15 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier ==  "ShowAlbum"
         {
-            let album = event["Album"] as! PFObject
+            let album = event!["Album"] as! PFObject
             let vc = segue.destinationViewController as! AlbumPhotosViewController
             vc.album = album
         }
         else if segue.identifier == "ShowMap"
         {
-            let descLocation: PFGeoPoint = event["location"] as! PFGeoPoint
-            let placeTitle: String = event["author"] as! String
-            let eventTitle: String = event["name"] as! String
+            let descLocation: PFGeoPoint = event!["location"] as! PFGeoPoint
+            let placeTitle: String = event!["author"] as! String
+            let eventTitle: String = event!["name"] as! String
             let vc = segue.destinationViewController as! NightMapViewController
             vc.eventTitle = eventTitle
             vc.placeTitle  = placeTitle

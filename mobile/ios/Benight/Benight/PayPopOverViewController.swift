@@ -13,7 +13,7 @@ import Parse
 
 class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     
-    var master: NightDetailsTableViewController!
+    weak var master: NightDetailsTableViewController!
     @IBOutlet weak var PartyName: UILabel!
     @IBOutlet weak var paymentField2: STPPaymentCardTextField!
     @IBOutlet weak var TicketType: UILabel!
@@ -27,12 +27,12 @@ class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegat
         PartyName.text = master.EventTitle.title
         if master.SeletedVIP == false
         {
-            self.price = master.event["price"] as! Int
+            self.price = master.event!["price"] as! Int
             TicketType.text = "Billet Normal"
         }
         else
         {
-            self.price = master.event["VipPrice"] as! Int
+            self.price = master.event!["VipPrice"] as! Int
             TicketType.text = "Billet VIP"
 
         }

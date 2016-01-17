@@ -566,11 +566,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.178932"
+                  timestampString = "474765791.798858"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
                   offsetFromSymbolStart = "1615">
                </Location>
                <Location
@@ -581,11 +581,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.179018"
+                  timestampString = "474765791.798961"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
                   offsetFromSymbolStart = "460">
                </Location>
             </Locations>
@@ -614,11 +614,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.179577"
+                  timestampString = "474765791.799521"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
                   offsetFromSymbolStart = "1250">
                </Location>
                <Location
@@ -629,11 +629,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.179689"
+                  timestampString = "474765791.799618"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
@@ -662,11 +662,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.180279"
+                  timestampString = "474765791.80017"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
                   offsetFromSymbolStart = "1250">
                </Location>
                <Location
@@ -677,11 +677,11 @@
                   moduleName = "Benight"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/PayPopOverViewController.swift"
-                  timestampString = "474743808.180361"
+                  timestampString = "474765791.800269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
@@ -892,6 +892,146 @@
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "postStripeToken(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Benight/NightDetailsTableViewController.swift"
+            timestampString = "474765619.716096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "NightDetailsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.popOver.getter : Benight.PayPopOverViewController"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.735943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.popOver.setter : Benight.PayPopOverViewController"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.736104"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.popOver.materializeForSet : Benight.PayPopOverViewController"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.736198"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.init (Benight.NightDetailsTableViewController.Type)(style : __C.UITableViewStyle) -&gt; Benight.NightDetailsTableViewController"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.736274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.init (Benight.NightDetailsTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Benight.NightDetailsTableViewController"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.736349"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight.NightDetailsTableViewController.init (Benight.NightDetailsTableViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Benight.NightDetailsTableViewController&gt;"
+                  moduleName = "Benight"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/Benight/Benight/NightDetailsTableViewController.swift"
+                  timestampString = "474765619.736422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Benight/NightDetailsTableViewController.swift"
+            timestampString = "474765728.732935"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "GenerateTicket(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Benight/NightDetailsTableViewController.swift"
+            timestampString = "474765741.74973"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "GenerateTicket(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
