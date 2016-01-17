@@ -15,7 +15,12 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     var event: PFObject = PFObject(className: "Event")
     var reservation: PFObject = PFObject(className: "Reservation")
     var HasTicket:  Bool = false
+    var popOver: PayPopOverViewController = PayPopOverViewController()
+    var Ticket1: PFObject? = nil
+    var SeletedVIP: Bool = false
     
+    @IBOutlet weak var SoldOutVIP: UIImageView!
+    @IBOutlet weak var SoldOut: UIImageView!
     @IBOutlet weak var SoundcloudCell: UITableViewCell!
     @IBOutlet weak var AlbumCell: UITableViewCell!
     @IBOutlet weak var imgCell: UITableViewCell!
@@ -26,13 +31,18 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     @IBOutlet weak var EventTitle: UINavigationItem!
     @IBOutlet weak var AlbumButton: UIButton!
     
+    @IBOutlet weak var VIPCell: UITableViewCell!
+    @IBOutlet weak var FlyerImage: UIImageView!
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var TicketButton: UIButton!
     @IBOutlet weak var desc: UITextView!
     
+    @IBOutlet weak var TicketVipButton: UIButton!
+    
     override func viewDidAppear(animated: Bool) {
         let value = UIInterfaceOrientation.Portrait.rawValue
         UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        desc.scrollEnabled = true
     }
 
     func ErrorPopup(message: String)
@@ -41,7 +51,6 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
-        
         presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -55,45 +64,24 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         {
             if (event["price"]! as! Int == 0)
             {
-                let resa = PFObject(className:"Reservation")
-                resa["User"] = PFUser.currentUser()
-                resa["Event"] = event
-                do {
-                    try resa.save()
-                }
-                catch{
-                    print(error)
-                }
-                self.reservation = resa
                 self.GenerateTicket(true)
                 HasTicket = true
                 self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
             }
             else
             {
-                let resa = PFObject(className:"Reservation")
-                resa["User"] = PFUser.currentUser()
-                resa["Event"] = event
-                do {
-                    try resa.save()
-                }
-                catch{
-                    print(error)
-                }
-                self.reservation = resa
-                self.GenerateTicket(false)
-                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
                 self.performSegueWithIdentifier("payPopOver", sender: nil)
             }
         }
     }
+
     
     override func viewDidLoad() {
+        SwiftSpinner.show("Getting Data", animated: true)
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"),
             forBarMetrics: .Default)
         
-        SwiftSpinner.show("Getting Data", animated: true)
 
         let EventNameString : String = self.event["name"] as! String
         if EventNameString.characters.count < 15
@@ -104,11 +92,29 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         {
             self.EventTitle.title = EventNameString[0..<15]
         }
-        
+        desc.textContainerInset = UIEdgeInsetsZero;
+        desc.textContainer.lineFragmentPadding = 0;
+        desc.scrollEnabled = false
         desc.text = event["Description"] as? String
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.LongStyle
         formatter.timeStyle = .MediumStyle
+        formatter.locale = NSLocale(localeIdentifier: "fr_FR")
+        if (event["Flyer"] != nil)
+        {
+            if let userImageFile = event["Flyer"] as? PFFile
+            {
+                userImageFile.getDataInBackgroundWithBlock {
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        if let imageData = imageData {
+                            let image = UIImage(data:imageData)
+                            self.FlyerImage.image = image
+                        }
+                    }
+                }
+            }
+        }
         
         DateLabel.text = formatter.stringFromDate(event["date"] as! NSDate!)
         let query = PFQuery(className: "Reservation")
@@ -129,8 +135,54 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                             self.HasTicket = true
                             self.reservation = objects[0]
                         }
+                        else if self.event["price"] == nil
+                        {
+                            self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
+                        }
+                        else if self.event["price"] as! Int == 0
+                        {
+                            self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
+                        }
+                        else
+                        {
+                            self.TicketButton.setTitle("Acheter un Ticket à " + String(self.event["price"]) + "€.", forState: UIControlState.Normal)
+                        }
+                        if (self.HasTicket == false)
+                        {
+                            if let left = self.event["PlaceLeft"] as? Int
+                            {
+                                if left == 0
+                                {
+                                    self.SoldOut.hidden = false
+                                    self.TicketButton.userInteractionEnabled = false
+                                }
+                            }
+                            if let vip = self.event["VIP"] as? Bool
+                            {
+                                if vip == true
+                                {
+                                    self.VIPCell.hidden = false
+                                    if let vipleft = self.event["PlaceVipLeft"] as? Int
+                                    {
+                                        if vipleft == 0
+                                        {
+                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                            self.SoldOutVIP.hidden = false
+                                            self.TicketVipButton.userInteractionEnabled = false
+                                        }
+                                        else
+                                        {
+                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
                     }
                 }
+
+                SwiftSpinner.hide()
         })
 
         if (self.event["Album"] == nil) {
@@ -149,13 +201,16 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
             webView.loadRequest(request)
         }
-        SwiftSpinner.hide()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -166,9 +221,20 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     // MARK: - Table view data source
     
     func GenerateTicket (paid: Bool) {
+        let resa = PFObject(className:"Reservation")
+        resa["User"] = PFUser.currentUser()
+        resa["Event"] = event
+        do {
+            try resa.save()
+        }
+        catch{
+            print(error)
+        }
+        self.reservation = resa
         if let Event: PFObject = self.reservation["Event"] as? PFObject
         {
             let EventNameString : String = Event["name"] as! String
+    
             let Ticket = PFObject(className:"Tickets")
             Ticket["Reservation"] = reservation
             Ticket["User"] = PFUser.currentUser()
@@ -176,7 +242,17 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             Ticket["EventPlace"] = Event["author"]
             Ticket["Date"] = Event["date"]
             Ticket["paid"] = paid
+            Ticket["VIP"] = self.SeletedVIP
+            if (self.SeletedVIP)
+            {
+                event["PlaceVipLeft"] = event["PlaceVipLeft"] as! Int - 1
+            }
+            else
+            {
+                event["PlaceLeft"] = event["PlaceLeft"] as! Int - 1
+            }
             do {
+                try event.save()
                 try Ticket.save()
             }
             catch {
@@ -185,6 +261,10 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             self.reservation["Tickets"] = Ticket
             do {
                 try self.reservation.save()
+                Ticket1 = Ticket
+                HasTicket = true
+                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
+                self.VIPCell.hidden = true
             }
             catch {
                 print(error)
@@ -274,11 +354,22 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
         if segue.identifier == "payPopOver" {
             if let controller = segue.destinationViewController as? PayPopOverViewController {
+                self.popOver = controller
+                controller.master = self
+                self.SeletedVIP = false
                 controller.popoverPresentationController!.delegate = self
-                controller.preferredContentSize = CGSize(width: 320, height: 186)
+            }
+        }
+        if segue.identifier == "payVipPopOver" {
+            if let controller = segue.destinationViewController as? PayPopOverViewController {
+                self.popOver = controller
+                controller.master = self
+                self.SeletedVIP = true
+                controller.popoverPresentationController!.delegate = self
             }
         }
     }
+    
     
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
