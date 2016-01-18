@@ -1,29 +1,23 @@
 PODS:
   - Alamofire (2.0.2)
-  - Bolts (1.5.1):
-    - Bolts/AppLinks (= 1.5.1)
-    - Bolts/Tasks (= 1.5.1)
-  - Bolts/AppLinks (1.5.1):
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.5.1)
-  - FBSDKCoreKit (4.8.0):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc (= 4.8.0)
-    - FBSDKCoreKit/no-arc (= 4.8.0)
-  - FBSDKCoreKit/arc (4.8.0):
-    - Bolts (~> 1.1)
-  - FBSDKCoreKit/no-arc (4.8.0):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc
-  - FBSDKLoginKit (4.8.0):
+  - Bolts/Tasks (1.6.0)
+  - FBSDKCoreKit (4.9.0):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.9.0):
     - FBSDKCoreKit
   - Parse (1.11.0):
     - Bolts/Tasks (~> 1.5)
-  - ParseFacebookUtilsV4 (1.9.1):
+  - ParseFacebookUtilsV4 (1.11.0):
     - Bolts/Tasks (>= 1.5)
-    - FBSDKCoreKit (~> 4.8)
-    - FBSDKLoginKit (~> 4.8)
-    - Parse (~> 1.9)
+    - FBSDKCoreKit (~> 4.9.0-beta)
+    - FBSDKLoginKit (~> 4.9.0-beta)
+    - FBSDKTVOSKit (~> 4.9.0-beta)
+    - Parse (~> 1.11)
   - ParseTwitterUtils (1.10.0):
     - Bolts/Tasks (~> 1.5)
     - Parse (~> 1.9)
@@ -45,13 +39,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
-  Bolts: a12663244b1d3351c738882e71902fc74db54f64
-  FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
-  FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  FBSDKCoreKit: c4f25d27949a6ac80206063804d12ad1c7879612
+  FBSDKLoginKit: d46210c3955d69337c61325327f486ca50a8661f
   Parse: 886af46a0a677402f6374bb97ac212e795f70afe
-  ParseFacebookUtilsV4: eab9b4ade12f0800b4d30f6b808bca55ce17a0e9
+  ParseFacebookUtilsV4: 216e03bd560404eed09a4875c75f0c1cdf758070
   ParseTwitterUtils: 8856ac80da50bbb0f0bcf251def20b62e1ae6bc4
   Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
   SwiftSpinner: 11c2c5ec7443d92f3026d3067ca8a91d4adef13f
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2

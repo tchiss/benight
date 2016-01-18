@@ -1,0 +1,6 @@
+framework module QRCodeKit {
+  umbrella header "QRCodeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

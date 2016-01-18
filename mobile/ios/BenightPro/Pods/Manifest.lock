@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (2.0.2)
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.6.0)
+  - FBSDKCoreKit (4.9.0):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.9.0):
+    - FBSDKCoreKit
+  - Parse (1.11.0):
+    - Bolts/Tasks (~> 1.5)
+  - ParseFacebookUtilsV4 (1.11.0):
+    - Bolts/Tasks (>= 1.5)
+    - FBSDKCoreKit (~> 4.9.0-beta)
+    - FBSDKLoginKit (~> 4.9.0-beta)
+    - FBSDKTVOSKit (~> 4.9.0-beta)
+    - Parse (~> 1.11)
+  - ParseTwitterUtils (1.10.0):
+    - Bolts/Tasks (~> 1.5)
+    - Parse (~> 1.9)
+  - QRCodeKit (0.1.0)
+  - Stripe (6.0.1):
+    - Stripe/Core (= 6.0.1)
+  - Stripe/Core (6.0.1)
+  - SwiftSpinner (0.8.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 2.0)
+  - Bolts
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - Parse (~> 1.11.0)
+  - ParseFacebookUtilsV4
+  - ParseTwitterUtils
+  - QRCodeKit
+  - Stripe
+  - SwiftSpinner
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  FBSDKCoreKit: c4f25d27949a6ac80206063804d12ad1c7879612
+  FBSDKLoginKit: d46210c3955d69337c61325327f486ca50a8661f
+  Parse: 886af46a0a677402f6374bb97ac212e795f70afe
+  ParseFacebookUtilsV4: 216e03bd560404eed09a4875c75f0c1cdf758070
+  ParseTwitterUtils: 8856ac80da50bbb0f0bcf251def20b62e1ae6bc4
+  QRCodeKit: ca3079847b8f1ea753676a1ca871cd76d52549c8
+  Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
+  SwiftSpinner: 11c2c5ec7443d92f3026d3067ca8a91d4adef13f
+
+COCOAPODS: 0.38.2
