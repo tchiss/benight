@@ -44,7 +44,14 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-
+    func TicketPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Scanned", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         SwiftSpinner.show("Getting Data", animated: true)
@@ -128,6 +135,37 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         guard let qrCodeObject = QRCodeMetadataObjects.last else { return }
         
         print(qrCodeObject.stringValue)
+        self.navigationController!.popViewControllerAnimated(true)
+        //self.TicketPopup("Ticket Scanné")
+        let query = PFQuery(className:"Tickets")
+        query.includeKey("Reservation")
+        query.getObjectInBackgroundWithId(qrCodeObject.stringValue) {
+            (tickett: PFObject?, error: NSError?) -> Void in
+            if error == nil && tickett != nil {
+                if (tickett!["Reservation"]["Event"]!!.objectId != self.event?.objectId)
+                {
+                    self.ErrorPopup("Ticket Invalide pour cette soirée")
+                }
+                else if (tickett!["Check"] as? Bool != true)
+                {
+                    tickett!["Check"] = true
+                    tickett?.saveInBackground()
+                    if tickett!["VIP"] as? Bool == true
+                    {
+                        self.TicketPopup("Ticket VIP Validé. Passez une bonne soirée.")
+                    }
+                    else
+                    {
+                        self.TicketPopup("Ticket Normal Validé. Passez une bonne soirée.")
+  
+                    }
+                }
+            } else {
+                self.ErrorPopup("Ticket Invalide.")
+            }
+        }
+
+        
     }
     
     /*

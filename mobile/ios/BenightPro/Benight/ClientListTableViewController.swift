@@ -66,7 +66,14 @@ class ClientListTableViewController: UITableViewController {
         
         cell.textLabel!.text = user["name"] as? String
         cell.detailTextLabel?.text = user.username
-        //if (ticket["Check"] as? Bool == )
+        if (ticket["Check"] as? Bool == true)
+        {
+            cell.imageView?.image = UIImage(named: "Checked")
+        }
+        else
+        {
+            cell.imageView?.image = UIImage(named: "Circle")
+        }
         return cell
     }
     
