@@ -48,7 +48,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
-		return 4
+		return 3
     }
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -70,20 +70,14 @@ class MyMenuTableViewController: UITableViewController {
 			break
 		case 1:
 			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Les Soirées"
+			cell!.textLabel?.text = "Mes Soirées"
             break
         case 2:
                 cell!.imageView?.image = UIImage(named: "helpIcon")
                 cell!.textLabel?.text = "Soirées passées"
             break
-		case 3:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Mes Soirées"
-			break
-		default:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Agenda"
-			break
+        default:
+            break
 		}
 		return cell!
 	}
@@ -111,12 +105,8 @@ class MyMenuTableViewController: UITableViewController {
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PastNightsView")
             break
-		case 3:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") 
-			break
         default:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") 
-			break
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PastNightsView")
 		}
 		sideMenuController()?.setContentViewController(destViewController)
 	}
