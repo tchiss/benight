@@ -48,7 +48,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
-		return 4
+		return 5
     }
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -65,24 +65,24 @@ class MyMenuTableViewController: UITableViewController {
 		}
 		switch (indexPath.row) {
 		case 0:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Profil"
+			cell!.imageView?.image = UIImage(named: "profile")
+			cell!.textLabel?.text = "Mon Profil"
 			break
 		case 1:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
+			cell!.imageView?.image = UIImage(named: "event")
 			cell!.textLabel?.text = "Les Soirées"
             break
         case 2:
-                cell!.imageView?.image = UIImage(named: "helpIcon")
+                cell!.imageView?.image = UIImage(named: "past")
                 cell!.textLabel?.text = "Soirées passées"
             break
 		case 3:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
+			cell!.imageView?.image = UIImage(named: "ticket")
 			cell!.textLabel?.text = "Mes Soirées"
 			break
 		default:
-			cell!.imageView?.image = UIImage(named: "helpIcon")
-			cell!.textLabel?.text = "Agenda"
+			cell!.imageView?.image = UIImage(named: "logout")
+			cell!.textLabel?.text = "Déconnection"
 			break
 		}
 		return cell!
@@ -100,10 +100,11 @@ class MyMenuTableViewController: UITableViewController {
 		
 		//Present new view controller
 		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        var LogOut: Bool = false
 		var destViewController : UIViewController
 		switch (indexPath.row) {
 		case 0:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView") 
+			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ProfileView")
 			break
 		case 1:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NightsView") 
@@ -115,10 +116,15 @@ class MyMenuTableViewController: UITableViewController {
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") 
 			break
         default:
-			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AgendaView") 
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Connexion")
+            LogOut = true
 			break
 		}
-		sideMenuController()?.setContentViewController(destViewController)
+        if (LogOut)
+        {
+            PFUser.logOut()
+        }
+        sideMenuController()?.setContentViewController(destViewController)
 	}
 	
 	

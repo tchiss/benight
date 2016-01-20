@@ -24,7 +24,7 @@ class MyNavigationController: SideMenuNavigationController, SideMenuDelegate {
 		
 		sideMenu = SideMenu(sourceView: self.view, menuTableViewController: MyMenuTableViewController(), menuPosition:.Left)
 		sideMenu?.delegate = self
-		sideMenu?.menuWidth = 160.0
+		sideMenu?.menuWidth = 200.0
 		view.bringSubviewToFront(navigationBar)
 		// make navigation bar showing over side menu
 		//view.bringSubviewToFront(navigationBar)
