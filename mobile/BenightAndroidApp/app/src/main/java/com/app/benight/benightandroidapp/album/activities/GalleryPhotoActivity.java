@@ -139,7 +139,7 @@ public class GalleryPhotoActivity extends RoboActivity {
 			for (Photo photo : photos) {
 				currentIndex++;
 				List<Size> sizes = flickr.getPhotos().getSizes(photo.getId());
-				String thumbnailUrl = sizes.get(0).getSource();
+				String thumbnailUrl = sizes.get(5).getSource();
 				String mediumUrl = sizes.get(4).getSource();
 				InputStream inputStreamThumbnail = null, inputStreamMedium = null;
 				try {
