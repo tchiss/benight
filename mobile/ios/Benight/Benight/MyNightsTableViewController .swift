@@ -80,7 +80,7 @@ class MyNightsTableViewController: UITableViewController {
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow!.row
 			let object = events[indexPath]["Event"]
-			let vc = segue.destinationViewController as! NightDetailsViewController
+			let vc = segue.destinationViewController as! NightDetailsTableViewController
 			vc.event = object as! PFObject
 		}
 	}

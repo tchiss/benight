@@ -124,9 +124,16 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
        if segue.identifier ==  "ShowList"
         {
             let vc = segue.destinationViewController as! ClientListTableViewController
+            vc.vip = false
             vc.event = self.event
         }
-        if let captureViewController = segue.destinationViewController as? QRCodeCaptureViewController {
+        else if segue.identifier ==  "ShowListVIP"
+        {
+            let vc = segue.destinationViewController as! ClientListTableViewController
+            vc.vip = true
+            vc.event = self.event
+        }
+        else if let captureViewController = segue.destinationViewController as? QRCodeCaptureViewController {
             captureViewController.delegate = self
         }
     }

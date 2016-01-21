@@ -12,11 +12,11 @@ import Alamofire
 
 class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
-    weak var event: PFObject? = PFObject(className: "Event")
-    weak var reservation: PFObject? = PFObject(className: "Reservation")
+    var event: PFObject? = PFObject(className: "Event")
+    var reservation: PFObject? = PFObject(className: "Reservation")
     var HasTicket:  Bool = false
     weak var popOver: PayPopOverViewController? = PayPopOverViewController()
-    weak var Ticket1: PFObject? = nil
+    var Ticket1: PFObject? = nil
     var SeletedVIP: Bool = false
     
     @IBOutlet weak var SoldOutVIP: UIImageView!
@@ -62,11 +62,17 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
         else
         {
-            if (event!["price"]! as! Int == 0)
+            if (event!["price"]! as? Int == 0)
             {
                 self.GenerateTicket(true)
                 HasTicket = true
-                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
+                buttonwallet()
+            }
+            else if (event!["price"]! as? Int == nil)
+            {
+                self.GenerateTicket(true)
+                HasTicket = true
+                buttonwallet()
             }
             else
             {
@@ -75,6 +81,11 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         }
     }
 
+    func buttonwallet()
+    {
+        self.TicketButton.setImage(UIImage(named: "Pass"), forState: .Normal)
+        self.TicketButton.setTitle("", forState: .Normal)
+    }
     
     override func viewDidLoad() {
         SwiftSpinner.show("Getting Data", animated: true)
@@ -119,6 +130,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         DateLabel.text = formatter.stringFromDate(event!["date"] as! NSDate!)
         let query = PFQuery(className: "Reservation")
         query.includeKey("Event")
+        query.includeKey("Tickets")
         query.whereKey("User", equalTo: PFUser.currentUser()!)
         query.whereKey("Event", equalTo: event!)
         query.findObjectsInBackgroundWithBlock(
@@ -131,9 +143,10 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     if let objects = objects as [PFObject]? {
                         if (objects.count != 0)
                         {
-                            self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
+                            self.buttonwallet()
                             self.HasTicket = true
                             self.reservation = objects[0]
+                            print(self.reservation)
                         }
                         else if self.event!["price"] == nil
                         {
@@ -181,7 +194,13 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                         }
                     }
                 }
-
+                let now = NSDate()
+                if (now.compare((self.event!["date"] as? NSDate)!) == NSComparisonResult.OrderedDescending && self.HasTicket != true)
+                {
+                    self.TicketCell.hidden = true
+                    self.VIPCell.hidden = true
+                    self.tableView.reloadData()
+                }
                 SwiftSpinner.hide()
         })
 
@@ -238,7 +257,14 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             let Ticket = PFObject(className:"Tickets")
             Ticket["Reservation"] = reservation
             Ticket["User"] = PFUser.currentUser()
-            Ticket["EventName"] = EventNameString[0..<15]
+            if (EventNameString.characters.count <= 15)
+            {
+                Ticket["EventName"] = EventNameString
+            }
+            else
+            {
+                Ticket["EventName"] = EventNameString[0..<15]
+            }
             Ticket["EventPlace"] = Event["author"]
             Ticket["Date"] = Event["date"]
             Ticket["paid"] = paid
@@ -263,7 +289,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                 try self.reservation!.save()
                 Ticket1 = Ticket
                 HasTicket = true
-                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
+                self.buttonwallet()
                 self.VIPCell.hidden = true
             }
             catch {
@@ -283,6 +309,15 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     
     func getTicketPassbook(inc: Int)
     {
+        print(self.reservation)
+        let Ticket = self.reservation!["Tickets"] as! PFObject
+        do {
+            try Ticket.fetch()
+        }
+        catch {
+            print(error)
+            return
+        }
         let TicketID: String  = self.reservation!["Tickets"]!.objectId as String!
         var ticketGetted: Bool = false
         Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"KNfCMt9TUSgYBfg"]).response{ (request, response, data, error) in
@@ -327,12 +362,28 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        if (section == 0)
+        {
+            return 2
+        }
+        else if (section == 1)
+        {
+            if (self.VIPCell.hidden == true && self.TicketCell.hidden == true)
+            {
+                return 0
+            }
+            else if (self.VIPCell.hidden == true || self.TicketCell.hidden == true)
+            {
+                return 1
+            }
+            return 2
+        }
+        return 2
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

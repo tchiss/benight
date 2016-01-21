@@ -94,7 +94,7 @@ class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegat
     func postStripeToken(token: STPToken) {
         
         let params: [String: NSObject] = ["stripeToken": token.tokenId,
-            "amount": price ]
+            "amount": price, "currency": "euro" ]
         PFCloud.callFunctionInBackground("purchase", withParameters: params) { (result, error) -> Void in
             if error == nil {
                 print(result)

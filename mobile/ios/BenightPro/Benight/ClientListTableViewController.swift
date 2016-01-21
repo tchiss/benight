@@ -8,28 +8,55 @@
 
 import UIKit
 import Parse
+import Alamofire
+import QRCodeKit
+import AVFoundation
 
-
-class ClientListTableViewController: UITableViewController {
+class ClientListTableViewController: UITableViewController, QRCodeCaptureCameraDelegate {
 
     weak var event: PFObject? = PFObject(className: "Event")
     var tickets: Array<AnyObject> = []
-
+    var vip: Bool? = nil
     
+    @IBOutlet weak var ScanTitle: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        SwiftSpinner.show("Loading")
+        let EventNameString : String = self.event!["name"] as! String
+        if EventNameString.characters.count < 15
+        {
+            self.ScanTitle.title = "Normal - " + EventNameString
+        }
+        else
+        {
+            self.ScanTitle.title =  "VIP - " + EventNameString[0..<15]
+        }
         let query = PFQuery(className: "Reservation")
         query.includeKey("User")
         query.includeKey("Tickets")
         query.whereKey("Event", equalTo: self.event!)
+        if (vip == true)
+        {
+            let innerQuery = PFQuery(className: "Tickets")
+            innerQuery.whereKey("VIP", equalTo: true)
+            query.whereKey("Tickets", matchesQuery: innerQuery)
+        }
+        else if (vip == false)
+        {
+            let innerQuery = PFQuery(className: "Tickets")
+            innerQuery.whereKey("VIP", notEqualTo: true)
+            query.whereKey("Tickets", matchesQuery: innerQuery)
+        }
         query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
             if (error != nil) {
                 NSLog("error " + error!.localizedDescription)
+                SwiftSpinner.hide()
             }
             else {
                 self.tickets = NSArray(array: objects!) as! Array<AnyObject>
                 self.tableView.reloadData()
+                SwiftSpinner.hide()
             }
         })
 
@@ -77,6 +104,66 @@ class ClientListTableViewController: UITableViewController {
         return cell
     }
     
+    func ErrorPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func TicketPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Scanned", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if let captureViewController = segue.destinationViewController as? QRCodeCaptureViewController {
+            captureViewController.delegate = self
+        }
+    }
+    
+    func qrCodeCaptureCamera(captureCamera: QRCodeCaptureCamera, didCaptureQRCodeMetadataObjects QRCodeMetadataObjects: [AVMetadataMachineReadableCodeObject]) {
+        guard let qrCodeObject = QRCodeMetadataObjects.last else { return }
+        
+        print(qrCodeObject.stringValue)
+        self.navigationController!.popViewControllerAnimated(true)
+        //self.TicketPopup("Ticket Scanné")
+        let query = PFQuery(className:"Tickets")
+        query.includeKey("Reservation")
+        query.getObjectInBackgroundWithId(qrCodeObject.stringValue) {
+            (tickett: PFObject?, error: NSError?) -> Void in
+            if error == nil && tickett != nil {
+                if (tickett!["Reservation"]["Event"]!!.objectId != self.event?.objectId)
+                {
+                    self.ErrorPopup("Ticket Invalide pour cette soirée")
+                }
+                else if (tickett!["Check"] as? Bool != true)
+                {
+                    tickett!["Check"] = true
+                    tickett?.saveInBackground()
+                    if tickett!["VIP"] as? Bool == true
+                    {
+                        self.TicketPopup("Ticket VIP Validé. Passez une bonne soirée.")
+                    }
+                    else
+                    {
+                        self.TicketPopup("Ticket Normal Validé. Passez une bonne soirée.")
+                        
+                    }
+                    self.tableView.reloadData()
+                }
+            } else {
+                self.ErrorPopup("Ticket Invalide.")
+            }
+        }
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
