@@ -30,6 +30,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
         let now = NSDate()
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let midnightOfToday = cal!.startOfDayForDate(now)
+        query.whereKey("Creator", equalTo: PFUser.currentUser()!)
         query.whereKey("date", lessThan: midnightOfToday)
         switch segmentedControl.selectedSegmentIndex{
         case 1:
@@ -84,6 +85,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		let query = PFQuery(className: "Event")
         query.orderByAscending("date")
+        query.whereKey("Creator", equalTo: PFUser.currentUser()!)
         let now = NSDate()
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let midnightOfToday = cal!.startOfDayForDate(now)
