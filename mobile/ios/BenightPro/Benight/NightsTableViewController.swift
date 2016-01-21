@@ -114,7 +114,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
         
 	}
 	
-
+  
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredEvents.removeAll()

@@ -17,6 +17,7 @@
 		683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868A1A41BC9500C3EA24 /* SideMenu.swift */; };
 		683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */; };
 		683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */; };
+		685921811C4FB9B8007F1DD6 /* VipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685921801C4FB9B8007F1DD6 /* VipViewController.swift */; };
 		687224B81AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
 		687224B91AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
 		687224BC1AAE96940098DCB4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */; };
@@ -58,7 +59,7 @@
 		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
 		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 		68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F6176F1B7D5F5700290867 /* PassKit.framework */; };
-		F4AE332ED98F8768431502B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */; };
+		9801196DD6C8DE9D8993EC86 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B4A7C16EF4B47A127866F8E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		681597B81AFEF72E003582D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		681EBB671B998A6B00F3DB03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		682B78131AEE0B9200762247 /* AlbumPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		683B868A1A41BC9500C3EA24 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = Benight/SideMenu.swift; sourceTree = "<group>"; };
 		683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Benight/SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		685921801C4FB9B8007F1DD6 /* VipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VipViewController.swift; sourceTree = "<group>"; };
 		687224B71AAE96430098DCB4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		687224BB1AAE96940098DCB4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 		68F6176F1B7D5F5700290867 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		68F617711B7D5F5700290867 /* Benight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Benight.entitlements; sourceTree = "<group>"; };
 		CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0AF2BA1EEE9DD57932BEB73 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +152,8 @@
 				68DA58DF1A33618000B3A236 /* CoreGraphics.framework in Frameworks */,
 				68DA58DD1A33617800B3A236 /* CFNetwork.framework in Frameworks */,
 				68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */,
-				F4AE332ED98F8768431502B5 /* Pods.framework in Frameworks */,
 				68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */,
+				9801196DD6C8DE9D8993EC86 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,15 +167,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F29940143168A02DA1CAE6A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4B4A7C16EF4B47A127866F8E /* Pods.debug.xcconfig */,
-				F0AF2BA1EEE9DD57932BEB73 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		24C0723AB9610497F7C35950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +257,7 @@
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
 				68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */,
 				689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */,
+				685921801C4FB9B8007F1DD6 /* VipViewController.swift */,
 			);
 			name = Nights;
 			sourceTree = "<group>";
@@ -303,8 +297,8 @@
 				68E3293B1A1A5B8100883116 /* BenightTests */,
 				68E329241A1A5B8100883116 /* Products */,
 				681597B81AFEF72E003582D4 /* Images.xcassets */,
-				0F29940143168A02DA1CAE6A /* Pods */,
 				24C0723AB9610497F7C35950 /* Frameworks */,
+				EAB352F3D14AE910AC7D7C48 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,6 +351,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EAB352F3D14AE910AC7D7C48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */,
+				284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,12 +367,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68E329421A1A5B8100883116 /* Build configuration list for PBXNativeTarget "Benight" */;
 			buildPhases = (
-				21A69F4E25539DCF4EB75E34 /* Check Pods Manifest.lock */,
+				B433BA1245D201B984007A57 /* Check Pods Manifest.lock */,
 				68E3291F1A1A5B8100883116 /* Sources */,
 				68E329201A1A5B8100883116 /* Frameworks */,
 				68E329211A1A5B8100883116 /* Resources */,
-				70360975D1DD91FC240015F2 /* Copy Pods Resources */,
-				3CD4A14CDC37EFFACBF553EE /* Embed Pods Frameworks */,
+				2948468FD4F2C61761FF40FB /* Embed Pods Frameworks */,
+				C06E027C360961DB6EA67C06 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,22 +479,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21A69F4E25539DCF4EB75E34 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3CD4A14CDC37EFFACBF553EE /* Embed Pods Frameworks */ = {
+		2948468FD4F2C61761FF40FB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,7 +494,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70360975D1DD91FC240015F2 /* Copy Pods Resources */ = {
+		B433BA1245D201B984007A57 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C06E027C360961DB6EA67C06 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,6 +550,7 @@
 				68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */,
 				68CA09D11C42D1A400E4869A /* PayPopOverViewController.swift in Sources */,
 				688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */,
+				685921811C4FB9B8007F1DD6 /* VipViewController.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
 				68EAEEFB1B8F8FF100F39F65 /* SwiftSpinner.swift in Sources */,
 				689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */,
@@ -677,7 +681,7 @@
 		};
 		68E329431A1A5B8100883116 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B4A7C16EF4B47A127866F8E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -693,7 +697,7 @@
 				INFOPLIST_FILE = Benight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Benight.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benight.benight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Benight/Benight-Bridging-Header.h";
@@ -703,7 +707,7 @@
 		};
 		68E329441A1A5B8100883116 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0AF2BA1EEE9DD57932BEB73 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -719,7 +723,7 @@
 				INFOPLIST_FILE = Benight/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Benight.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benight.benight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Benight/Benight-Bridging-Header.h";

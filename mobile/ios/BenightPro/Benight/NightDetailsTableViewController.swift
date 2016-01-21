@@ -9,8 +9,10 @@
 import UIKit
 import PassKit
 import Alamofire
+import QRCodeKit
+import AVFoundation
 
-class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
+class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate, QRCodeCaptureCameraDelegate {
 
     weak var event: PFObject? = PFObject(className: "Event")
     weak var reservation: PFObject? = PFObject(className: "Reservation")
@@ -19,25 +21,13 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     weak var Ticket1: PFObject? = nil
     var SeletedVIP: Bool = false
     
-    @IBOutlet weak var SoldOutVIP: UIImageView!
-    @IBOutlet weak var SoldOut: UIImageView!
-    @IBOutlet weak var SoundcloudCell: UITableViewCell!
-    @IBOutlet weak var AlbumCell: UITableViewCell!
     @IBOutlet weak var imgCell: UITableViewCell!
     @IBOutlet weak var DescCell: UITableViewCell!
     @IBOutlet weak var MapButton: UIBarButtonItem!
-    @IBOutlet weak var TicketCell: UITableViewCell!
     @IBOutlet var DateLabel: UILabel!
     @IBOutlet weak var EventTitle: UINavigationItem!
-    @IBOutlet weak var AlbumButton: UIButton!
     
-    @IBOutlet weak var VIPCell: UITableViewCell!
-    @IBOutlet weak var FlyerImage: UIImageView!
-    @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var TicketButton: UIButton!
     @IBOutlet weak var desc: UITextView!
-    
-    @IBOutlet weak var TicketVipButton: UIButton!
     
     override func viewDidAppear(animated: Bool) {
         let value = UIInterfaceOrientation.Portrait.rawValue
@@ -54,27 +44,14 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func BuyOrGetTicket(let sender: AnyObject) {
-        if HasTicket
-        {
-            SwiftSpinner.show("Downloading Your Ticket")
-            getTicketPassbook(0)
-        }
-        else
-        {
-            if (event!["price"]! as! Int == 0)
-            {
-                self.GenerateTicket(true)
-                HasTicket = true
-                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
-            }
-            else
-            {
-                self.performSegueWithIdentifier("payPopOver", sender: nil)
-            }
-        }
+    func TicketPopup(message: String)
+    {
+        let alertController = UIAlertController(title: "Scanned", message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
-
     
     override func viewDidLoad() {
         SwiftSpinner.show("Getting Data", animated: true)
@@ -109,109 +86,21 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     if error == nil {
                         if let imageData = imageData {
                             let image = UIImage(data:imageData)
-                            self.FlyerImage.image = image
+                            //self.FlyerImage.image = image
                         }
                     }
                 }
             }
         }
-        
         DateLabel.text = formatter.stringFromDate(event!["date"] as! NSDate!)
-        let query = PFQuery(className: "Reservation")
-        query.includeKey("Event")
-        query.whereKey("User", equalTo: PFUser.currentUser()!)
-        query.whereKey("Event", equalTo: event!)
-        query.findObjectsInBackgroundWithBlock(
-            {
-                (objects: [PFObject]?, NSError error) in
-                if (error != nil) {
-                    NSLog("error " + error!.localizedDescription)
-                }
-                else {
-                    if let objects = objects as [PFObject]? {
-                        if (objects.count != 0)
-                        {
-                            self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
-                            self.HasTicket = true
-                            self.reservation = objects[0]
-                        }
-                        else if self.event!["price"] == nil
-                        {
-                            self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
-                        }
-                        else if self.event!["price"] as! Int == 0
-                        {
-                            self.TicketButton.setTitle("Obtenir un Ticket Gratuit", forState: UIControlState.Normal)
-                        }
-                        else
-                        {
-                            self.TicketButton.setTitle("Acheter un Ticket à " + String(self.event!["price"]) + "€.", forState: UIControlState.Normal)
-                        }
-                        if (self.HasTicket == false)
-                        {
-                            if let left = self.event!["PlaceLeft"] as? Int
-                            {
-                                if left == 0
-                                {
-                                    self.SoldOut.hidden = false
-                                    self.TicketButton.userInteractionEnabled = false
-                                }
-                            }
-                            if let vip = self.event!["VIP"] as? Bool
-                            {
-                                if vip == true
-                                {
-                                    self.VIPCell.hidden = false
-                                    if let vipleft = self.event!["PlaceVipLeft"] as? Int
-                                    {
-                                        if vipleft == 0
-                                        {
-                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
-                                            self.SoldOutVIP.hidden = false
-                                            self.TicketVipButton.userInteractionEnabled = false
-                                        }
-                                        else
-                                        {
-                                            self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
-                                        }
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-
-                SwiftSpinner.hide()
-        })
-
-        if (self.event!["Album"] == nil) {
-            AlbumCell.hidden = true
-        }
-        if (event!["SoundCloud"] == nil)
-        {
-            SoundcloudCell.hidden = true
-        }
-        else
-        {
-            let url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
-            let request = NSMutableURLRequest(URL: url!)
-            request.HTTPMethod = "POST"
-            var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
-            request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
-            webView.loadRequest(request)
-        }
-
+        SwiftSpinner.hide()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
 
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -219,111 +108,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     }
 
     // MARK: - Table view data source
-    
-    func GenerateTicket (paid: Bool) {
-        let resa = PFObject(className:"Reservation")
-        resa["User"] = PFUser.currentUser()
-        resa["Event"] = event
-        do {
-            try resa.save()
-        }
-        catch{
-            print(error)
-        }
-        self.reservation = resa
-        if let Event: PFObject = self.reservation!["Event"] as? PFObject
-        {
-            let EventNameString : String = Event["name"] as! String
-    
-            let Ticket = PFObject(className:"Tickets")
-            Ticket["Reservation"] = reservation
-            Ticket["User"] = PFUser.currentUser()
-            Ticket["EventName"] = EventNameString[0..<15]
-            Ticket["EventPlace"] = Event["author"]
-            Ticket["Date"] = Event["date"]
-            Ticket["paid"] = paid
-            Ticket["VIP"] = self.SeletedVIP
-            if (self.SeletedVIP)
-            {
-                event!["PlaceVipLeft"] = event!["PlaceVipLeft"] as! Int - 1
-            }
-            else
-            {
-                event!["PlaceLeft"] = event!["PlaceLeft"] as! Int - 1
-            }
-            do {
-                try event!.save()
-                try Ticket.save()
-            }
-            catch {
-                print(error)
-            }
-            self.reservation!["Tickets"] = Ticket
-            do {
-                try self.reservation!.save()
-                Ticket1 = Ticket
-                HasTicket = true
-                self.TicketButton.setTitle("Télécharger le ticket", forState: .Normal)
-                self.VIPCell.hidden = true
-            }
-            catch {
-                print(error)
-            }
-        }
-    }
-
-    func openPass(pass: PKPass)
-    {
-        _ = "Benight Ticket"
-        let passcontroller = PKAddPassesViewController(pass: pass)
-        passcontroller.delegate = self
-        SwiftSpinner.hide()
-        self.presentViewController(passcontroller, animated: true, completion: nil)
-    }
-    
-    func getTicketPassbook(inc: Int)
-    {
-        let TicketID: String  = self.reservation!["Tickets"]!.objectId as String!
-        var ticketGetted: Bool = false
-        Alamofire.request(.POST, "https://tickets.benight.cc", parameters: ["ObjectId":TicketID, "authKey":"KNfCMt9TUSgYBfg"]).response{ (request, response, data, error) in
-            if (error == nil)
-            {
-                let statusCode = response!.statusCode
-                if (statusCode == 200)
-                {
-                    print("Success: \(statusCode)")
-                    var pkfile : NSData = NSData(data: data!)
-                    var error2: NSError?
-                    var pass: PKPass?
-                    do {
-                        pass = try PKPass(data: data!, error: nil)
-                    } catch let error as NSError {
-                        error2 = error
-                        pass = nil
-                    } catch {
-                        fatalError()
-                    }
-                    if (error2 == nil)
-                    {
-                        ticketGetted = true
-                        self.openPass(pass!)
-                    }
-                }
-            }
-            else {
-                print("Failure: %@", error.debugDescription);
-            }
-            if (inc < 6 && ticketGetted == false)
-            {
-                self.getTicketPassbook(inc + 1)
-            }
-            else if (ticketGetted == false)
-            {
-                SwiftSpinner.hide()
-                self.ErrorPopup("Can not get your Ticket. Please try again later")
-            }
-        }
-    }
+        
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -332,44 +117,63 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 3
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier ==  "ShowAlbum"
+       if segue.identifier ==  "ShowList"
         {
-            let album = event!["Album"] as! PFObject
-            let vc = segue.destinationViewController as! AlbumPhotosViewController
-            vc.album = album
+            let vc = segue.destinationViewController as! ClientListTableViewController
+            vc.vip = false
+            vc.event = self.event
         }
-        else if segue.identifier == "ShowMap"
+        else if segue.identifier ==  "ShowListVIP"
         {
-            let descLocation: PFGeoPoint = event!["location"] as! PFGeoPoint
-            let placeTitle: String = event!["author"] as! String
-            let eventTitle: String = event!["name"] as! String
-            let vc = segue.destinationViewController as! NightMapViewController
-            vc.eventTitle = eventTitle
-            vc.placeTitle  = placeTitle
-            vc.descLocation = descLocation
+            let vc = segue.destinationViewController as! ClientListTableViewController
+            vc.vip = true
+            vc.event = self.event
         }
-        if segue.identifier == "payPopOver" {
-            if let controller = segue.destinationViewController as? PayPopOverViewController {
-                self.popOver = controller
-                controller.master = self
-                self.SeletedVIP = false
-                controller.popoverPresentationController!.delegate = self
-            }
-        }
-        if segue.identifier == "payVipPopOver" {
-            if let controller = segue.destinationViewController as? PayPopOverViewController {
-                self.popOver = controller
-                controller.master = self
-                self.SeletedVIP = true
-                controller.popoverPresentationController!.delegate = self
-            }
+        else if let captureViewController = segue.destinationViewController as? QRCodeCaptureViewController {
+            captureViewController.delegate = self
         }
     }
     
+    func qrCodeCaptureCamera(captureCamera: QRCodeCaptureCamera, didCaptureQRCodeMetadataObjects QRCodeMetadataObjects: [AVMetadataMachineReadableCodeObject]) {
+        guard let qrCodeObject = QRCodeMetadataObjects.last else { return }
+        
+        print(qrCodeObject.stringValue)
+        self.navigationController!.popViewControllerAnimated(true)
+        //self.TicketPopup("Ticket Scanné")
+        let query = PFQuery(className:"Tickets")
+        query.includeKey("Reservation")
+        query.getObjectInBackgroundWithId(qrCodeObject.stringValue) {
+            (tickett: PFObject?, error: NSError?) -> Void in
+            if error == nil && tickett != nil {
+                if (tickett!["Reservation"]["Event"]!!.objectId != self.event?.objectId)
+                {
+                    self.ErrorPopup("Ticket Invalide pour cette soirée")
+                }
+                else if (tickett!["Check"] as? Bool != true)
+                {
+                    tickett!["Check"] = true
+                    tickett?.saveInBackground()
+                    if tickett!["VIP"] as? Bool == true
+                    {
+                        self.TicketPopup("Ticket VIP Validé. Passez une bonne soirée.")
+                    }
+                    else
+                    {
+                        self.TicketPopup("Ticket Normal Validé. Passez une bonne soirée.")
+  
+                    }
+                }
+            } else {
+                self.ErrorPopup("Ticket Invalide.")
+            }
+        }
+
+        
+    }
     
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

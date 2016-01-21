@@ -20,6 +20,8 @@ class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegat
     @IBOutlet weak var TicketPrice: UILabel!
     var price: Int = 0
     
+    @IBOutlet weak var VipButton: UIButton!
+    
     override func viewDidLoad() {
         // add text field for fill card information
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegat
         {
             self.price = master.event!["price"] as! Int
             TicketType.text = "Billet Normal"
+            VipButton.hidden = true
         }
         else
         {
@@ -91,7 +94,7 @@ class PayPopOverViewController: UIViewController, STPPaymentCardTextFieldDelegat
     func postStripeToken(token: STPToken) {
         
         let params: [String: NSObject] = ["stripeToken": token.tokenId,
-            "amount": price ]
+            "amount": price, "currency": "euro" ]
         PFCloud.callFunctionInBackground("purchase", withParameters: params) { (result, error) -> Void in
             if error == nil {
                 print(result)
