@@ -5,11 +5,7 @@ require(['config'], function () {
 
         app.router.bind("all", function(route, router) {
 
-        console.log("binding router?");
-
         });
-        
-        console.log("lancement du history");
 
         Backbone.history.start();
     });

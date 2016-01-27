@@ -28,8 +28,11 @@ define(['jquery',
     	},
 
     	logOut: function(e){
-    		/*this.undelegateEvents();
-    		delete this;*/
+            Parse.User.logOut();
+            this.remove();
+            this.unbind();
+    		this.undelegateEvents();
+    		delete this;
     	},
 
 /*    	news: function(e){

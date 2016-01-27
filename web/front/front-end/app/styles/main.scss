@@ -28,12 +28,18 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.reserve {
+.reserve, .details, .vip, .album
+{
     padding: 10px 10px;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.panel-footer
+{
+    background: #2A0247;
 }
 
 /* Make the masthead heading the same height as the navigation */

@@ -10,6 +10,8 @@ define(function(require, exports, module){
     var HomeView = require('views/Home');
     var LoginView = require('views/Login');
     var PaymentView = require('views/PaymentView');
+    var EventSoloView = require('views/EventView');
+    var AlbumView = require('views/AlbumView');
 
 
     module.exports = Backbone.Router.extend({
@@ -22,7 +24,9 @@ define(function(require, exports, module){
         "login": "login",
         "logout": "logout",
         "events": "events",
-        "payment": "payment",
+        "event/:eventID": "event",
+        "payment/:eventID": "payment",
+        "album/:albumID": "album",
         "signup": "signup"
         },
 
@@ -47,7 +51,7 @@ define(function(require, exports, module){
 
         logout: function() {
             Parse.User.logOut();
-            this.login();
+            this.navigate('', {trigger: true});
         },
 
         events: function() {
@@ -58,12 +62,56 @@ define(function(require, exports, module){
             this.loadView(evView);
         },
 
-        payment: function() {
-            console.log('hello payment');
-            this.navigate('#payment', {trigger : true});
-            var payView = new PaymentView;
-            //payView.render();
-            this.loadView(payView);
+        event: function(eventID) {
+
+            var soloModel = Parse.Object.extend('Event');
+
+            var query = new Parse.Query(soloModel);
+            query.get(eventID, {
+                success: function(soloModel) {
+                    var EventView = new EventSoloView({model: soloModel});
+                },
+                error: function(soloModel, error) {
+                    console.log('damn');
+                }
+            });
+        },
+
+        payment: function(eventID) {
+
+            var soloModel = Parse.Object.extend('Event');
+
+            var query = new Parse.Query(soloModel);
+            query.get(eventID, {
+                success: function(soloModel) {
+
+                    var price = soloModel.get("price");
+
+                    var payView = new PaymentView({amount: price});
+                },
+                error: function(soloModel, error) {
+                    console.log('damn');
+                }
+            });
+        },
+
+        album: function(albumID) {
+
+            var albumModel = Parse.Object.extend('PhotoAlbum');
+
+            var query = new Parse.Query(albumModel); 
+            query.get(albumID, {
+                success: function(albumModel) {
+
+                    var FlickrAlbumId = albumModel.get("FlickrAlbumId");
+                    var FlickrUserId = albumModel.get("FlickrUserId");
+
+                    var albumView = new AlbumView({albumId: FlickrAlbumId, userId: FlickrUserId});
+                },
+                error: function(albumModel, error) {
+                    console.log('damn');
+                }
+            });
         },
 
         signup: function() {
@@ -72,53 +120,9 @@ define(function(require, exports, module){
 
         loadView : function(view) {
         this.view && (view.close ? view.close() : view.remove());
-        console.log('erase shit');
+        //console.log('erase shit');
         view.render();
         }
 
     });
 });
-
-/*    var AppRouter = Parse.Router.extend({
-        initialize: function(){
-            console.log('initialized router');
-        },
-        routes: {
-            '': 'home',
-            'news':'news',
-            'events': 'eventsfeed',
-            'event/:id': 'editEvent',
-            'contact': 'contact',
-            'login': 'login'
-        },
-        home: function() {
-            var partyevents = new PartyEventsCollection();
-
-            partyevents.fetch({
-                success: function(data) {
-                    var loginView = new LoginView({
-                        collections: data
-                    });
-                    $('content').html(loginView.render().el);
-                },
-                error: function(error)      {
-                    console.log(error.message);
-                }
-            });
-        console.log('hello main');
-        },
-        news: function(){},
-        eventsfeed: function(){
-            console.log('hello events');
-        },
-        editEvent: function(){},
-        contact: function(){},
-        login: function() {
-
-            var loginView = new LoginView();
-            console.log('Hello login');
-        }
-    });
-    return AppRouter;
-});
-*/

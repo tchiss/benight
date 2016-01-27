@@ -13,7 +13,5 @@ define([
     var app = {};
     app.root = '/';
 
-    console.log("pouet");
-
     return app;
 });

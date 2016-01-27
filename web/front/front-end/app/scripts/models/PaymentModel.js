@@ -7,11 +7,13 @@ define([
 
     var PaymentModel = Backbone.Model.extend({
 
+    	amount: 0,
+
     	initialize: function () {
 
   		}
 
   	});
 
-return PaymentModel;
+	return PaymentModel;
 });
