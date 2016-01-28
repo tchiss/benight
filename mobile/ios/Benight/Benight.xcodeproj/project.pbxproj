@@ -33,7 +33,6 @@
 		689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */; };
 		689C9A561BF4A23A000B63F7 /* NightDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */; };
 		689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F19AB1A7686B500B98698 /* NewsTableViewController.swift */; };
-		689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
 		68CA09D11C42D1A400E4869A /* PayPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */; };
 		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
@@ -97,7 +96,6 @@
 		689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsTableViewController.swift; sourceTree = "<group>"; };
 		689F19AB1A7686B500B98698 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPopOverViewController.swift; sourceTree = "<group>"; };
 		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				6837DCB51AA1C79A00115F61 /* MyNightsTableViewController .swift */,
 				68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */,
 				68CE3B9B1C07AFD60052353B /* GlobalVariable.swift */,
-				689F7D4C1A9DE3D900220DD4 /* NightDetailsViewController.swift */,
 				688EE5621A79062F000AD63D /* NightsTableViewController.swift */,
 				68CE3B9D1C07CDAA0052353B /* PastNightsTableViewController.swift */,
 				688EE5691A79234F000AD63D /* NightsTableViewCell.swift */,
@@ -539,7 +536,6 @@
 				68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */,
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
 				682E560C1BF512BE007DC988 /* ImageFullViewController.swift in Sources */,
-				689F7D4D1A9DE3D900220DD4 /* NightDetailsViewController.swift in Sources */,
 				689C9A561BF4A23A000B63F7 /* NightDetailsTableViewController.swift in Sources */,
 				688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */,
 				682B78141AEE0B9200762247 /* AlbumPhotosViewController.swift in Sources */,

@@ -182,15 +182,17 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                                             self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
                                             self.SoldOutVIP.hidden = false
                                             self.TicketVipButton.userInteractionEnabled = false
+                                            self.tableView.reloadData()
                                         }
                                         else
                                         {
                                             self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                            self.tableView.reloadData()
                                         }
                                     }
                                 }
                             }
-
+                            SwiftSpinner.hide()
                         }
                     }
                 }
@@ -201,7 +203,6 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     self.VIPCell.hidden = true
                     self.tableView.reloadData()
                 }
-                SwiftSpinner.hide()
         })
 
         if (self.event!["Album"] == nil) {
