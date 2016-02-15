@@ -85,6 +85,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     {
         self.TicketButton.setImage(UIImage(named: "Pass"), forState: .Normal)
         self.TicketButton.setTitle("", forState: .Normal)
+        SwiftSpinner.hide()
     }
     
     override func viewDidLoad() {
@@ -183,11 +184,13 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                                             self.SoldOutVIP.hidden = false
                                             self.TicketVipButton.userInteractionEnabled = false
                                             self.tableView.reloadData()
+                                            SwiftSpinner.hide()
                                         }
                                         else
                                         {
                                             self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
                                             self.tableView.reloadData()
+                                            SwiftSpinner.hide()
                                         }
                                     }
                                 }

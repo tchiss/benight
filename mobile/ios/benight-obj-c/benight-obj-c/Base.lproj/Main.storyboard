@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3g-tn-rcd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+            <string>Lato-Light</string>
+            <string>Lato-Light</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Connection-->
+        <scene sceneID="sR5-Bq-hh2">
+            <objects>
+                <viewController storyboardIdentifier="Connexion" title="Connection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t3g-tn-rcd" customClass="ConnectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7qo-O6-4CW"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLb-d9-2iR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z25-yB-Zph">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rw2-Yq-5L3">
+                                <rect key="frame" x="181" y="285" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="o7e-ee-bO7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-x2-eek">
+                                <rect key="frame" x="280" y="367" width="139" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="ngd-NK-fVx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                <state key="normal" title="Rejoindre Benight">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCK-YG-uCl">
+                                <rect key="frame" x="181" y="367" width="139" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="evs-5I-Xs5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                <state key="normal" title="Mot de passe Perdu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtG-dV-AOX">
+                                <rect key="frame" x="181" y="323" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="8Nd-nA-L2a"/>
+                                    <constraint firstAttribute="height" constant="36" id="NXT-tk-3et"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <state key="normal" title="Connexion" backgroundImage="login_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Connect" destination="t3g-tn-rcd" eventType="touchUpInside" id="tAq-uf-b6p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISK-FA-pir">
+                                <rect key="frame" x="181" y="432" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="OrY-x0-tqY"/>
+                                    <constraint firstAttribute="height" constant="36" id="de3-Rh-IHm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="y5I-T0-CrF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="zaz-4k-pU4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="  Connexion  Facebook" image="Facebook" backgroundImage="facebook_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="y5I-T0-CrF"/>
+                                        <exclude reference="zaz-4k-pU4"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZu-1g-jXl">
+                                <rect key="frame" x="181" y="476" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="C6k-Hu-Vwb"/>
+                                    <constraint firstAttribute="width" constant="238" id="XUM-jo-pBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="  Connexion Twitter" image="Twitter" backgroundImage="twitter_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQg-ti-PQP">
+                                <rect key="frame" x="181" y="520" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="m86-87-T0D"/>
+                                    <constraint firstAttribute="width" constant="238" id="w5M-Fj-gfC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="  Connexion Google+" image="Google" backgroundImage="google+_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-l1-zfk">
+                                <rect key="frame" x="210" y="28" width="181" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="181" id="MFh-jp-NMY"/>
+                                    <constraint firstAttribute="width" secondItem="wBe-l1-zfk" secondAttribute="height" multiplier="1:1" id="N3h-b4-B5j"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="181" id="bSj-wR-Dns"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x8S-ay-9pz">
+                                <rect key="frame" x="181" y="247" width="238" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="n2e-sd-Rbq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.023529411760000001" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="x8S-ay-9pz" secondAttribute="centerX" id="0u3-Rp-MX5"/>
+                            <constraint firstItem="fCK-YG-uCl" firstAttribute="leading" secondItem="GtG-dV-AOX" secondAttribute="leading" id="8IV-Vu-VJb"/>
+                            <constraint firstItem="wBe-l1-zfk" firstAttribute="centerX" secondItem="x8S-ay-9pz" secondAttribute="centerX" id="B2P-Mu-TWd"/>
+                            <constraint firstItem="Rw2-Yq-5L3" firstAttribute="top" secondItem="x8S-ay-9pz" secondAttribute="bottom" constant="8" id="BIt-CV-j2k"/>
+                            <constraint firstItem="fCK-YG-uCl" firstAttribute="top" secondItem="BkY-x2-eek" secondAttribute="top" id="Bab-Va-lTO"/>
+                            <constraint firstItem="x8S-ay-9pz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wBe-l1-zfk" secondAttribute="bottom" constant="10" id="Bzo-ej-835"/>
+                            <constraint firstItem="aQg-ti-PQP" firstAttribute="top" secondItem="VZu-1g-jXl" secondAttribute="bottom" constant="8" id="Bzu-Cb-Zke"/>
+                            <constraint firstItem="Rw2-Yq-5L3" firstAttribute="top" secondItem="x8S-ay-9pz" secondAttribute="bottom" constant="8" id="DKL-ar-0vV"/>
+                            <constraint firstItem="BkY-x2-eek" firstAttribute="top" secondItem="GtG-dV-AOX" secondAttribute="bottom" constant="8" id="LEZ-KJ-9sb"/>
+                            <constraint firstItem="GtG-dV-AOX" firstAttribute="trailing" secondItem="BkY-x2-eek" secondAttribute="trailing" id="Ofy-Gg-wNR"/>
+                            <constraint firstItem="VZu-1g-jXl" firstAttribute="centerX" secondItem="ISK-FA-pir" secondAttribute="centerX" id="PFW-4Q-Ym3"/>
+                            <constraint firstAttribute="centerX" secondItem="GtG-dV-AOX" secondAttribute="centerX" id="TIe-7t-Ziq"/>
+                            <constraint firstAttribute="centerX" secondItem="GtG-dV-AOX" secondAttribute="centerX" id="Toj-wc-2a2"/>
+                            <constraint firstItem="aQg-ti-PQP" firstAttribute="top" secondItem="VZu-1g-jXl" secondAttribute="bottom" constant="8" id="UbK-H6-YJQ"/>
+                            <constraint firstItem="ISK-FA-pir" firstAttribute="centerY" secondItem="dLb-d9-2iR" secondAttribute="top" multiplier="0.75" id="WKs-27-qLP"/>
+                            <constraint firstAttribute="centerY" secondItem="Rw2-Yq-5L3" secondAttribute="centerY" id="Yev-5e-itK"/>
+                            <constraint firstItem="VZu-1g-jXl" firstAttribute="centerX" secondItem="aQg-ti-PQP" secondAttribute="centerX" id="e9M-mZ-Ix2"/>
+                            <constraint firstItem="VZu-1g-jXl" firstAttribute="top" secondItem="ISK-FA-pir" secondAttribute="bottom" constant="8" id="gAc-q7-we0"/>
+                            <constraint firstItem="fCK-YG-uCl" firstAttribute="top" secondItem="GtG-dV-AOX" secondAttribute="bottom" constant="8" id="kmQ-Zj-uzr"/>
+                            <constraint firstItem="wBe-l1-zfk" firstAttribute="top" secondItem="7qo-O6-4CW" secondAttribute="bottom" constant="8" id="pt3-gs-DRa"/>
+                            <constraint firstAttribute="centerX" secondItem="ISK-FA-pir" secondAttribute="centerX" id="t32-KC-7eI"/>
+                            <constraint firstItem="GtG-dV-AOX" firstAttribute="top" secondItem="Rw2-Yq-5L3" secondAttribute="bottom" constant="8" symbolic="YES" id="uOi-1i-0tU"/>
+                            <constraint firstAttribute="centerX" secondItem="Rw2-Yq-5L3" secondAttribute="centerX" id="vaD-e6-OaC"/>
+                            <constraint firstItem="fCK-YG-uCl" firstAttribute="bottom" secondItem="BkY-x2-eek" secondAttribute="bottom" id="x76-Hm-s1l"/>
+                            <constraint firstItem="dLb-d9-2iR" firstAttribute="top" secondItem="ISK-FA-pir" secondAttribute="bottom" constant="137" id="y7c-Ld-SkO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="y7c-Ld-SkO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="idField" destination="x8S-ay-9pz" id="mY9-0c-cjn"/>
+                        <outlet property="passwdField" destination="Rw2-Yq-5L3" id="Jbc-vs-9Wm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fks-xp-nLh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="608"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Facebook" width="30" height="30"/>
+        <image name="Google" width="30" height="30"/>
+        <image name="Twitter" width="30" height="30"/>
+        <image name="facebook_button" width="586" height="89"/>
+        <image name="google+_button" width="586" height="89"/>
+        <image name="login_button" width="586" height="89"/>
+        <image name="logo" width="341" height="341"/>
+        <image name="twitter_button" width="586" height="89"/>
+    </resources>
+</document>

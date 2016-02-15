@@ -31,6 +31,7 @@
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
         </mutableArray>
         <mutableArray key="Lato-Light.ttf">
             <string>Lato-Light</string>
@@ -80,12 +81,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-Ri-nPx">
-                                <rect key="frame" x="36" y="285" width="528" height="30"/>
+                                <rect key="frame" x="40" y="352" width="528" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyB-qM-VA8">
-                                <rect key="frame" x="205" y="323" width="191" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyB-qM-VA8">
+                                <rect key="frame" x="204" y="390" width="191" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="IrU-w5-af6"/>
                                     <constraint firstAttribute="width" constant="191" id="oFe-BT-nm1"/>
@@ -230,6 +231,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xek-Bs-Foc">
+                                <rect key="frame" x="277" y="134" width="46" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Aw-SC-WAN"/>
+                                    <constraint firstAttribute="width" constant="46" id="Je4-PD-JN9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.023529411764705882" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -237,12 +248,14 @@
                             <constraint firstItem="dL4-MH-r6G" firstAttribute="centerY" secondItem="wfy-db-euE" secondAttribute="top" multiplier="0.75" id="1Qg-Vs-mNQ"/>
                             <constraint firstItem="zgx-Yk-Mh6" firstAttribute="top" secondItem="dL4-MH-r6G" secondAttribute="bottom" constant="8" id="1U5-qU-fnc"/>
                             <constraint firstItem="BsW-ld-iHT" firstAttribute="top" secondItem="13f-FA-OOQ" secondAttribute="bottom" constant="8" id="2a8-Pe-cgG"/>
+                            <constraint firstItem="xek-Bs-Foc" firstAttribute="centerX" secondItem="7G2-ss-yAh" secondAttribute="centerX" id="3F6-J2-TT1"/>
                             <constraint firstItem="fl3-W7-339" firstAttribute="top" secondItem="7G2-ss-yAh" secondAttribute="bottom" constant="8" id="5FA-Gr-1tW"/>
                             <constraint firstAttribute="centerX" secondItem="13f-FA-OOQ" secondAttribute="centerX" id="6bi-GL-9MU"/>
                             <constraint firstAttribute="centerX" secondItem="13f-FA-OOQ" secondAttribute="centerX" id="7fk-h1-3EX"/>
                             <constraint firstAttribute="centerY" secondItem="fl3-W7-339" secondAttribute="centerY" id="8lR-Vt-PFW"/>
                             <constraint firstItem="ZZs-JG-u7S" firstAttribute="centerX" secondItem="7G2-ss-yAh" secondAttribute="centerX" id="BCr-GC-Rb9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dL4-MH-r6G" secondAttribute="bottom" constant="137" id="C8f-w4-EPR"/>
+                            <constraint firstItem="xek-Bs-Foc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="Cor-MK-ylq"/>
                             <constraint firstItem="ZZs-JG-u7S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="J9O-Vq-yew"/>
                             <constraint firstItem="13f-FA-OOQ" firstAttribute="top" secondItem="fl3-W7-339" secondAttribute="bottom" constant="8" symbolic="YES" id="Lb4-n9-A7U"/>
                             <constraint firstItem="fl3-W7-339" firstAttribute="top" secondItem="7G2-ss-yAh" secondAttribute="bottom" constant="8" id="ZIh-2t-WC2"/>
@@ -1589,9 +1602,9 @@
         <image name="twitter_button" width="586" height="89"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O76-Dm-4mv"/>
-        <segue reference="LAd-uV-Q2s"/>
-        <segue reference="XNf-PF-W2b"/>
         <segue reference="7NK-Ei-Pqk"/>
+        <segue reference="XNf-PF-W2b"/>
+        <segue reference="LAd-uV-Q2s"/>
+        <segue reference="O76-Dm-4mv"/>
     </inferredMetricsTieBreakers>
 </document>

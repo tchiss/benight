@@ -86,6 +86,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     if error == nil {
                         if let imageData = imageData {
                             let image = UIImage(data:imageData)
+                            SwiftSpinner.hide()
                             //self.FlyerImage.image = image
                         }
                     }

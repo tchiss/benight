@@ -42,12 +42,27 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
-                  timestampString = "475083192.436962"
+                  timestampString = "475687861.595149"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Benight_Pro.ClientListTableViewController.ScanTitle.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UINavigationItem&gt;"
+                  moduleName = "Benight Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
+                  timestampString = "475687861.595367"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +72,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
-                  timestampString = "475083192.437347"
+                  timestampString = "475687861.595568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -72,12 +87,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
-                  timestampString = "475083192.437544"
+                  timestampString = "475687861.59576"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "209">
+                  offsetFromSymbolStart = "248">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -87,12 +102,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
-                  timestampString = "475083192.437758"
+                  timestampString = "475687861.595956"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "289">
+                  offsetFromSymbolStart = "296">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -102,12 +117,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/ClientListTableViewController.swift"
-                  timestampString = "475083192.437939"
+                  timestampString = "475687861.596121"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "209">
+                  offsetFromSymbolStart = "248">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -247,12 +262,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/NightDetailsTableViewController.swift"
-                  timestampString = "475083192.445232"
+                  timestampString = "475687861.602639"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "149"
                   endingLineNumber = "149"
-                  offsetFromSymbolStart = "1507">
+                  offsetFromSymbolStart = "1136">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -262,12 +277,12 @@
                   moduleName = "Benight Pro"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Kylyu/Documents/benight/mobile/ios/BenightPro/Benight/NightDetailsTableViewController.swift"
-                  timestampString = "475083192.445415"
+                  timestampString = "475687861.602851"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "151"
                   endingLineNumber = "151"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
