@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Benight/FlickrSearcher.swift"
-            timestampString = "464626214.36148"
+            timestampString = "478125878.470022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "searchFlickrForTerm(_:completion:)"
             landmarkType = "5">
          </BreakpointContent>

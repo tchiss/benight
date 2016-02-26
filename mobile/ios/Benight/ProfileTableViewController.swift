@@ -41,7 +41,7 @@ class ProfileTableViewController: UITableViewController {
 
 	
 	override func viewWillAppear(animated: Bool) {
-		var user = PFUser.currentUser()
+		//var user = PFUser.currentUser()
 		self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
 		self.ProfileImage.clipsToBounds = true
 		UserName.text = PFUser.currentUser()!.username

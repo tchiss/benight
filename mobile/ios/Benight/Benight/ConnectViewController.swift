@@ -36,8 +36,6 @@ class ConnectViewController: ResponsiveTextFieldViewController {
     override func viewDidLoad()
 	{
 		super.viewDidLoad()
-		UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-		
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		// Do any additional setup after loading the view.
 		let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self,	action: "DismissKeyboard")

@@ -220,7 +220,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             let url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
-            var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
+            let bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
             request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
             webView.loadRequest(request)
         }
@@ -331,18 +331,9 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                 if (statusCode == 200)
                 {
                     print("Success: \(statusCode)")
-                    var pkfile : NSData = NSData(data: data!)
-                    var error2: NSError?
                     var pass: PKPass?
-                    do {
-                        pass = try PKPass(data: data!, error: nil)
-                    } catch let error as NSError {
-                        error2 = error
-                        pass = nil
-                    } catch {
-                        fatalError()
-                    }
-                    if (error2 == nil)
+                        pass =  PKPass(data: data!, error: nil)
+                    if (pass == nil)
                     {
                         ticketGetted = true
                         self.openPass(pass!)

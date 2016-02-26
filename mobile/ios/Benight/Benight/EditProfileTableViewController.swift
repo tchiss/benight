@@ -64,7 +64,7 @@ class EditProfileTableViewController: UITableViewController {
 	
 	
 	@IBAction func Save(sender: AnyObject) {
-		var user = PFUser.currentUser()
+		let user = PFUser.currentUser()
 		if (UserPasswd.text == ConfirmPasswd.text)
 		{
 			user!.email = UserEmail.text
@@ -81,7 +81,7 @@ class EditProfileTableViewController: UITableViewController {
 			})
 		}
 		else {
-			print("toto", terminator: "")
+            self.ErrorPopup("Wrong Password Confirmation")
 		}
 	}
 	

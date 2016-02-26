@@ -68,7 +68,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
     {
 		if (passwordField.text == confirmField.text)
 		{
-		var user = PFUser()
+		let user = PFUser()
 		user.username = loginField.text
 		user.password = passwordField.text
 		user.email = emailField.text

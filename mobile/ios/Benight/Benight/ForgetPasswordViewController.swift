@@ -22,7 +22,7 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
             var error: NSError? = nil
             do {
                 try PFUser.requestPasswordResetForEmail(EmailField.text!)
-            } catch var error1 as NSError {
+            } catch let error1 as NSError {
                 error = error1
             }
             if (error == nil)

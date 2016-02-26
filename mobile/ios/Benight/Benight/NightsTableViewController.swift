@@ -28,7 +28,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
         let query = PFQuery(className: "Event")
         query.orderByAscending("date")
         let now = NSDate()
-        let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let midnightOfToday = cal!.startOfDayForDate(now)
         query.whereKey("date", greaterThanOrEqualTo: midnightOfToday)
         switch segmentedControl.selectedSegmentIndex{
@@ -97,7 +97,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
 		let query = PFQuery(className: "Event")
         query.orderByAscending("date")
         let now = NSDate()
-        let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let midnightOfToday = cal!.startOfDayForDate(now)
         query.whereKey("date", greaterThanOrEqualTo: midnightOfToday)
 		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
