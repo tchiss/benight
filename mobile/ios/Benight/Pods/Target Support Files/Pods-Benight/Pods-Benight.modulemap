@@ -1,0 +1,6 @@
+framework module Pods_Benight {
+  umbrella header "Pods-Benight-umbrella.h"
+
+  export *
+  module * { export * }
+}

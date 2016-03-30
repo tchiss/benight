@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class EditProfileTableViewController: UITableViewController {
 		@IBOutlet var ProfileImage: UIImageView!
 		
@@ -32,8 +32,8 @@ class EditProfileTableViewController: UITableViewController {
 			self.ProfileImage.clipsToBounds = true
 			UserName.text = user!.username
 			UserEmail.text = user!.email
-			UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
-			UserAdress.text = PFUser.currentUser()!["adress"] as? String ?? "Unknown"
+			UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
+			UserAdress.text = PFUser.currentUser()!["adress"] as? String ?? "Inconnu"
 			
 			// Uncomment the following line to preserve selection between presentations
 			// self.clearsSelectionOnViewWillAppear = false
@@ -43,7 +43,7 @@ class EditProfileTableViewController: UITableViewController {
 		}
 	func ErrorPopup(message: String)
 	{
-		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+		let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .Alert)
 		
 		let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
 		alertController.addAction(defaultAction)
@@ -54,9 +54,11 @@ class EditProfileTableViewController: UITableViewController {
 	
 	func SavePopup(message: String)
 	{
-		let alertController = UIAlertController(title: "Saved", message: message, preferredStyle: .Alert)
+		let alertController = UIAlertController(title: "Sauvé", message: message, preferredStyle: .Alert)
 		
-		let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (actionSheetController) -> Void in
+            self.dismissViewControllerAnimated(true, completion: {});
+        })
 		alertController.addAction(defaultAction)
 		
 		presentViewController(alertController, animated: true, completion: nil)
@@ -74,14 +76,14 @@ class EditProfileTableViewController: UITableViewController {
 			{
 				(success: Bool, error: NSError?) -> Void in
 				if (success) {
-					self.SavePopup("Informations saved")
+                    self.SavePopup("Données Enregistrées")
 				} else {
 					self.ErrorPopup(error!.userInfo.description)
 				}
 			})
 		}
 		else {
-            self.ErrorPopup("Wrong Password Confirmation")
+            self.ErrorPopup("Erreur de Confirmation de mot de passe")
 		}
 	}
 	

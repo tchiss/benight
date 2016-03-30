@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class AlbumPhotosViewController: UICollectionViewController {
 	
@@ -29,7 +30,7 @@ class AlbumPhotosViewController: UICollectionViewController {
             forBarMetrics: .Default)
         super.viewDidLoad()
 		self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        SwiftSpinner.show("Getting Pictures...")
+        SwiftSpinner.show("Téléchargement Images...")
             do {
                 try album.fetch()
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class NightMapViewController: UIViewController {
     @IBOutlet weak var Tital: UINavigationItem!

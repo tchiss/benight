@@ -9,6 +9,7 @@
 import UIKit
 import PassKit
 import Alamofire
+import Parse
 
 class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
@@ -57,7 +58,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     @IBAction func BuyOrGetTicket(let sender: AnyObject) {
         if HasTicket
         {
-            SwiftSpinner.show("Downloading Your Ticket")
+            SwiftSpinner.show("Chargement du Ticket")
             getTicketPassbook(0)
         }
         else
@@ -89,7 +90,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     }
     
     override func viewDidLoad() {
-        SwiftSpinner.show("Getting Data", animated: true)
+        SwiftSpinner.show("Chargement", animated: true)
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"),
             forBarMetrics: .Default)
@@ -136,7 +137,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         query.whereKey("Event", equalTo: event!)
         query.findObjectsInBackgroundWithBlock(
             {
-                (objects: [PFObject]?, NSError error) in
+                (objects: [PFObject]?, error) in
                 if (error != nil) {
                     NSLog("error " + error!.localizedDescription)
                 }
@@ -306,6 +307,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     {
         _ = "Benight Ticket"
         let passcontroller = PKAddPassesViewController(pass: pass)
+        passcontroller.view.backgroundColor = UIColor.blackColor()
         passcontroller.delegate = self
         SwiftSpinner.hide()
         self.presentViewController(passcontroller, animated: true, completion: nil)
@@ -333,7 +335,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     print("Success: \(statusCode)")
                     var pass: PKPass?
                         pass =  PKPass(data: data!, error: nil)
-                    if (pass == nil)
+                    if (pass != nil)
                     {
                         ticketGetted = true
                         self.openPass(pass!)

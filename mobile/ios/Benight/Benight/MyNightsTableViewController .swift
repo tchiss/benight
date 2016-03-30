@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class MyNightsTableViewController: UITableViewController {
 	
-	var events: Array<AnyObject> = []
+	var events: Array<PFObject> = []
 	
     override func shouldAutorotate() -> Bool {
         return false
@@ -24,7 +25,7 @@ class MyNightsTableViewController: UITableViewController {
                 // do something with the new geoPoint
             }
         }
-        SwiftSpinner.show("Getting Data", animated: true)
+        SwiftSpinner.show("Chargement", animated: true)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
@@ -32,12 +33,12 @@ class MyNightsTableViewController: UITableViewController {
         let query = PFQuery(className: "Reservation")
 		query.includeKey("Event")
 		query.whereKey("User", equalTo: PFUser.currentUser()!)
-		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+		query.findObjectsInBackgroundWithBlock({(objects, error) in
 			if (error != nil) {
 				NSLog("error " + error!.localizedDescription)
 			}
 			else {
-				self.events = NSArray(array: objects!) as Array<AnyObject>
+				self.events = NSArray(array: objects!) as! Array<PFObject>
 				self.tableView.reloadData()
 			}
 		})
@@ -71,7 +72,7 @@ class MyNightsTableViewController: UITableViewController {
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
-		cell.fillCell(events[indexPath.row]["Event"]!!)
+		cell.fillCell(events[indexPath.row]["Event"]! as! PFObject)
 		return cell
 	}
 	
@@ -79,7 +80,7 @@ class MyNightsTableViewController: UITableViewController {
 		if segue.identifier ==  "mynightDetails"
 		{
 			let indexPath = self.tableView.indexPathForSelectedRow!.row
-			let object = events[indexPath]["Event"]
+			let object = events[indexPath]["Event"] as! PFObject
 			let vc = segue.destinationViewController as! NightDetailsTableViewController
 			vc.event = object as? PFObject
 		}

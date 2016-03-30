@@ -1,12 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
+target "Benight" do
 use_frameworks!
-pod 'FBSDKCoreKit'
 pod 'Alamofire', '~> 2.0'
 pod "SwiftSpinner"
-pod 'FBSDKLoginKit'
 pod 'ParseFacebookUtilsV4'
-pod 'Parse', '~>1.11.0'
+pod 'Parse'
 pod 'Bolts'
 pod 'ParseTwitterUtils'
 pod 'Stripe'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
+end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CreateAccountViewController: ResponsiveTextFieldViewController {
 	
@@ -31,7 +32,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
     
 	func ErrorPopup(message: String)
 	{
-		let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+		let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .Alert)
 		
 		let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
 		alertController.addAction(defaultAction)
@@ -41,10 +42,12 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 	
 	func NicePopup(message: String)
 	{
-		let alertController = UIAlertController(title: "Hi :)", message: message, preferredStyle: .Alert)
+		let alertController = UIAlertController(title: "Bonjour", message: message, preferredStyle: .Alert)
 		
-		let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-		alertController.addAction(defaultAction)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: { (actionSheetController) -> Void in
+            self.dismissViewControllerAnimated(true, completion: {});
+        })
+        alertController.addAction(defaultAction)
 		
 		presentViewController(alertController, animated: true, completion: nil)
 	}
@@ -77,7 +80,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		user.signUpInBackgroundWithBlock {
 			(succeeded: Bool, error1: NSError?) -> Void in
 			if error1 == nil {
-				self.NicePopup("Your account is created, Welcome")
+				self.NicePopup("Votre compte à été créé")
 				self.performSegueWithIdentifier("accountCreated", sender: nil)
 			} else {
 				let errorString = error1!.userInfo["error"] as! NSString
@@ -87,7 +90,7 @@ class CreateAccountViewController: ResponsiveTextFieldViewController {
 		}
 		else
 		{
-			self.ErrorPopup("Please put same password")
+			self.ErrorPopup("Erreur de vérification de mot de passe")
 		}
 	}
 	

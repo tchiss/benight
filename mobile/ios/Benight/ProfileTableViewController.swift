@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileTableViewController: UITableViewController {
 	@IBOutlet var ProfileImage: UIImageView!
@@ -31,7 +32,7 @@ class ProfileTableViewController: UITableViewController {
 		self.ProfileImage.clipsToBounds = true
 		UserName.text = PFUser.currentUser()!.username
 		UserEmail.text = PFUser.currentUser()!.email
-		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
+		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
 		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,7 +47,7 @@ class ProfileTableViewController: UITableViewController {
 		self.ProfileImage.clipsToBounds = true
 		UserName.text = PFUser.currentUser()!.username
 		UserEmail.text = PFUser.currentUser()!.email
-		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Unknown"
+		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
 
 	}
 	

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 let apiKey = "d95c2f660e276021fac7f4448a22288b"
 

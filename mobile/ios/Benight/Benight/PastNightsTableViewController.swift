@@ -24,7 +24,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
     var resultSearchController = UISearchController()
 
     @IBAction func changedSize(sender: AnyObject) {
-        SwiftSpinner.show("Getting Data", animated: true)
+        SwiftSpinner.show("Chargement", animated: true)
         let query = PFQuery(className: "Event")
         query.orderByAscending("date")
         let now = NSDate()
@@ -48,7 +48,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
             print("all")
             break
         }
-        query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+        query.findObjectsInBackgroundWithBlock({(objects, error) in
             if (error != nil) {
                 NSLog("error " + error!.localizedDescription)
                 SwiftSpinner.hide()
@@ -66,7 +66,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
 	override func viewDidLoad() {
 		super.viewDidLoad()
         self.definesPresentationContext = false
-        SwiftSpinner.show("Getting Data", animated: true)
+        SwiftSpinner.show("Chargement", animated: true)
         self.resultSearchController = UISearchController(searchResultsController: nil)
         self.resultSearchController.searchResultsUpdater = self
         self.resultSearchController.dimsBackgroundDuringPresentation = false
@@ -88,7 +88,7 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
         let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let midnightOfToday = cal!.startOfDayForDate(now)
         query.whereKey("date", lessThan: midnightOfToday)
-		query.findObjectsInBackgroundWithBlock({(NSArray objects, NSError error) in
+		query.findObjectsInBackgroundWithBlock({(objects, error) in
 			if (error != nil) {
 				NSLog("error " + error!.localizedDescription)
                 SwiftSpinner.hide()
@@ -151,9 +151,9 @@ class PastNightsTableViewController: UITableViewController, UISearchResultsUpdat
 		let cell = self.tableView.dequeueReusableCellWithIdentifier("NightCell", forIndexPath: indexPath) as! NightsTableViewCell
 
         if self.resultSearchController.active {
-            cell.fillCell(filteredEvents[indexPath.row])
+            cell.fillCell(filteredEvents[indexPath.row] as! PFObject)
         } else {
-            cell.fillCell(events[indexPath.row])
+            cell.fillCell(events[indexPath.row] as! PFObject)
         }
 		return cell
 	}

@@ -17,6 +17,7 @@
 		683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868A1A41BC9500C3EA24 /* SideMenu.swift */; };
 		683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */; };
 		683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */; };
+		68428FD41CA9AF1800AD4ECE /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68428FD31CA9AF1800AD4ECE /* NewsTableViewController.swift */; };
 		685921811C4FB9B8007F1DD6 /* VipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685921801C4FB9B8007F1DD6 /* VipViewController.swift */; };
 		687224B81AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
 		687224B91AAE96430098DCB4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 687224B71AAE96430098DCB4 /* Lato-Light.ttf */; };
@@ -32,7 +33,6 @@
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
 		689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */; };
 		689C9A561BF4A23A000B63F7 /* NightDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */; };
-		689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F19AB1A7686B500B98698 /* NewsTableViewController.swift */; };
 		68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */; };
 		68CA09D11C42D1A400E4869A /* PayPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */; };
 		68CCF4391ADD69C500E2E6D2 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */; };
@@ -58,7 +58,7 @@
 		68F473941AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473931AAD694E00C26A29 /* ResponsiveTextFieldViewController.swift */; };
 		68F473961AADE52600C26A29 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F473951AADE52600C26A29 /* ProfileTableViewController.swift */; };
 		68F617701B7D5F5700290867 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F6176F1B7D5F5700290867 /* PassKit.framework */; };
-		9801196DD6C8DE9D8993EC86 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8E409A67081EDB1664356A39 /* Pods_Benight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCA957ED7BE16FEF1530DEB /* Pods_Benight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		61242AB3EE025F88780EEBFD /* Pods-Benight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Benight/Pods-Benight.release.xcconfig"; sourceTree = "<group>"; };
 		681597B81AFEF72E003582D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		681EBB671B998A6B00F3DB03 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		682B78131AEE0B9200762247 /* AlbumPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotosViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 		683B868A1A41BC9500C3EA24 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = Benight/SideMenu.swift; sourceTree = "<group>"; };
 		683B868B1A41BC9500C3EA24 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Benight/SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		683B868E1A41BCB300C3EA24 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		68428FD31CA9AF1800AD4ECE /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		685921801C4FB9B8007F1DD6 /* VipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VipViewController.swift; sourceTree = "<group>"; };
 		687224B71AAE96430098DCB4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		687224BA1AAE96940098DCB4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
 		689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightDetailsTableViewController.swift; sourceTree = "<group>"; };
-		689F19AB1A7686B500B98698 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		68CA09D01C42D1A400E4869A /* PayPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPopOverViewController.swift; sourceTree = "<group>"; };
 		68CCF4381ADD69C500E2E6D2 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +128,8 @@
 		68F6176F1B7D5F5700290867 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		68F617711B7D5F5700290867 /* Benight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Benight.entitlements; sourceTree = "<group>"; };
 		CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E7F1287CB2F05D0F6BA7CAA6 /* Pods-Benight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Benight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Benight/Pods-Benight.debug.xcconfig"; sourceTree = "<group>"; };
+		EDCA957ED7BE16FEF1530DEB /* Pods_Benight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Benight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +152,7 @@
 				68DA58DD1A33617800B3A236 /* CFNetwork.framework in Frameworks */,
 				68DA58DB1A33617000B3A236 /* AudioToolbox.framework in Frameworks */,
 				68D31F811BAA21F0005E604C /* MapKit.framework in Frameworks */,
-				9801196DD6C8DE9D8993EC86 /* Pods.framework in Frameworks */,
+				8E409A67081EDB1664356A39 /* Pods_Benight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +166,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199935B45A1B3B466C6BE460 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7F1287CB2F05D0F6BA7CAA6 /* Pods-Benight.debug.xcconfig */,
+				61242AB3EE025F88780EEBFD /* Pods-Benight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		24C0723AB9610497F7C35950 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 				68741F2B1C1A514B00043BAB /* Accounts.framework */,
 				68D31F801BAA21F0005E604C /* MapKit.framework */,
 				CA97F18E5C9A91A7EB11F1B0 /* Pods.framework */,
+				EDCA957ED7BE16FEF1530DEB /* Pods_Benight.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,7 +248,6 @@
 				682B781A1AEFF59C00762247 /* Menu / Connection */,
 				68CCF43B1ADD69ED00E2E6D2 /* Profile */,
 				68CCF43A1ADD69CD00E2E6D2 /* Nights */,
-				689F19AB1A7686B500B98698 /* NewsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +265,7 @@
 				68D31F7E1BAA1C1A005E604C /* NightMapViewController.swift */,
 				689C9A551BF4A23A000B63F7 /* NightDetailsTableViewController.swift */,
 				685921801C4FB9B8007F1DD6 /* VipViewController.swift */,
+				68428FD31CA9AF1800AD4ECE /* NewsTableViewController.swift */,
 			);
 			name = Nights;
 			sourceTree = "<group>";
@@ -295,7 +306,7 @@
 				68E329241A1A5B8100883116 /* Products */,
 				681597B81AFEF72E003582D4 /* Images.xcassets */,
 				24C0723AB9610497F7C35950 /* Frameworks */,
-				EAB352F3D14AE910AC7D7C48 /* Pods */,
+				199935B45A1B3B466C6BE460 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,15 +359,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EAB352F3D14AE910AC7D7C48 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */,
-				284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,12 +366,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68E329421A1A5B8100883116 /* Build configuration list for PBXNativeTarget "Benight" */;
 			buildPhases = (
-				B433BA1245D201B984007A57 /* Check Pods Manifest.lock */,
+				BD4F87DA1EC0B190F0FF920D /* 📦 Check Pods Manifest.lock */,
 				68E3291F1A1A5B8100883116 /* Sources */,
 				68E329201A1A5B8100883116 /* Frameworks */,
 				68E329211A1A5B8100883116 /* Resources */,
-				2948468FD4F2C61761FF40FB /* Embed Pods Frameworks */,
-				C06E027C360961DB6EA67C06 /* Copy Pods Resources */,
+				9330BCB15AF2608A744E7D16 /* 📦 Embed Pods Frameworks */,
+				9A3D9CE9F134A651323F2E45 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,49 +478,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2948468FD4F2C61761FF40FB /* Embed Pods Frameworks */ = {
+		9330BCB15AF2608A744E7D16 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benight/Pods-Benight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B433BA1245D201B984007A57 /* Check Pods Manifest.lock */ = {
+		9A3D9CE9F134A651323F2E45 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Benight/Pods-Benight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4F87DA1EC0B190F0FF920D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C06E027C360961DB6EA67C06 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -534,6 +536,7 @@
 				68CE3B9E1C07CDAA0052353B /* PastNightsTableViewController.swift in Sources */,
 				683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */,
 				68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */,
+				68428FD41CA9AF1800AD4ECE /* NewsTableViewController.swift in Sources */,
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
 				682E560C1BF512BE007DC988 /* ImageFullViewController.swift in Sources */,
 				689C9A561BF4A23A000B63F7 /* NightDetailsTableViewController.swift in Sources */,
@@ -549,7 +552,6 @@
 				685921811C4FB9B8007F1DD6 /* VipViewController.swift in Sources */,
 				683B868F1A41BCB300C3EA24 /* MyNavigationController.swift in Sources */,
 				68EAEEFB1B8F8FF100F39F65 /* SwiftSpinner.swift in Sources */,
-				689F19AC1A7686B500B98698 /* NewsTableViewController.swift in Sources */,
 				6837DCB61AA1C79A00115F61 /* MyNightsTableViewController .swift in Sources */,
 				683B868C1A41BC9500C3EA24 /* SideMenu.swift in Sources */,
 				68C1A41B1A41AFBC00A17A97 /* MyMenuTableViewController.swift in Sources */,
@@ -677,7 +679,7 @@
 		};
 		68E329431A1A5B8100883116 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2C2172118DBF78904FAD76C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E7F1287CB2F05D0F6BA7CAA6 /* Pods-Benight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -686,8 +688,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Benight/Framwork",
-					"$(PROJECT_DIR)",
-					"/Users/Kylyu/Downloads/parse-library-1-2",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/Benight/Framework",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
@@ -703,7 +704,7 @@
 		};
 		68E329441A1A5B8100883116 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 284EF83910BACC762CE8BD64 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 61242AB3EE025F88780EEBFD /* Pods-Benight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -712,8 +713,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Benight/Framwork",
-					"$(PROJECT_DIR)",
-					"/Users/Kylyu/Downloads/parse-library-1-2",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/Benight/Framework",
 				);
 				INFOPLIST_FILE = Benight/Info.plist;
