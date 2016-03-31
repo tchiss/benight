@@ -1,4 +1,0 @@
-C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_CommonPhone\bin\Debug\Benight_CommonPhone.dll
-C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_CommonPhone\bin\Debug\Benight_CommonPhone.pdb
-C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_CommonPhone\obj\Debug\Benight_CommonPhone.dll
-C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_CommonPhone\obj\Debug\Benight_CommonPhone.pdb
