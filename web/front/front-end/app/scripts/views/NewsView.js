@@ -2,36 +2,33 @@ define(['jquery',
     'underscore',
     'backbone',
     'templates',
-    'models/MyPartyEvent',
-    'models/ReservationModel',
-    'models/TicketModel',
-    'models/CodeModel',
-    'collections/EventsCollection',
-    'views/ResaCreateView',
+    'models/NewsModel',
+    'collections/NewsCollection',
+    'views/PartyEvents',
     'views/PaymentView',
     'views/ReservationView'
-    ], function($, _, Backbone, JST, PartyEventModel, ReservationModel, TicketModel, CodeModel, EventsCollection, ResaView, PaymentView, ReservationView){
+    ], function($, _, Backbone, JST, NewsModel, NewsCollection, PartyEventView){
         'use strict'
 
-    var PartyEventView = Backbone.View.extend({
+    var NewsView = Backbone.View.extend({
 
             //template: JST['app/scripts/templates/PartyEvents.ejs'],
 
-            template: JST['app/scripts/templates/event.ejs'],
+            template: JST['app/scripts/templates/news.ejs'],
 
-            model: PartyEventModel,
+            model: NewsModel,
 
             tagName: 'li',
 
-            //el: '.elements',
+            //el: '.content',
 
-            events: {
+            /*events: {
               "click .log-out": "logOut",
-              "click .news-section": "news",
+              "click .events-section": "events",
               "click .home-section": "home",
               //"click .reserve": "reserver"
               //"click .events-section": "eventsSection"
-          },
+          },*/
 
             //calssName: 'list-group-item',
 
@@ -39,7 +36,7 @@ define(['jquery',
 
                 initialize: function(){
 
-                    _.bindAll(this, 'render', 'logOut', 'home', 'news');
+                    _.bindAll(this, 'render');
                     this.model.bind('change', this.render);
                     this.model.bind('destroy', this.remove);
                     this.render();
@@ -56,12 +53,12 @@ define(['jquery',
                 console.log("i'm home");
             },
 
-            news: function(e)  {
-                console.log("what's new");
-                new NewsView();
+            /*events: function(e)  {
+                console.log("event list");
+                new PartyEventView();
                 this.undelegateEvents();
                 delete this;
-            },
+            },*/
 
             close: function () {
                 $(this.el).empty();
@@ -75,5 +72,5 @@ define(['jquery',
             },
     });
 
-    return PartyEventView;
+    return NewsView;
 });

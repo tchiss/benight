@@ -12,6 +12,12 @@ define(function(require, exports, module){
     var PaymentView = require('views/PaymentView');
     var EventSoloView = require('views/EventView');
     var AlbumView = require('views/AlbumView');
+    var NewsCollection = require('collections/NewsCollection');
+    var NewsModel = require('models/NewsModel');
+    var NewsView = require('views/NewsView');
+    var NewsCollectionView = require('views/NewsCollectionView');
+    var AccountView = require('views/Account');
+    //var NewsSoloView = require('views/NewsSoloView');
 
 
     module.exports = Backbone.Router.extend({
@@ -27,6 +33,9 @@ define(function(require, exports, module){
         "event/:eventID": "event",
         "payment/:eventID": "payment",
         "album/:albumID": "album",
+        "news": "news",
+        "account": "account",
+        //"news/:newsID": "news",
         "signup": "signup"
         },
 
@@ -76,6 +85,36 @@ define(function(require, exports, module){
                 }
             });
         },
+
+        news: function() {
+            console.log('hello news');
+            this.navigate('#news', {trigger : true});
+            var nvView = new NewsCollectionView;
+            //evView.render();
+            this.loadView(nvView);
+        },
+
+        account: function() {
+            console.log('hello account');
+            this.navigate('#account', {trigger: true});
+            var accView = new AccountView();
+            this.loadView(accView);
+        },
+
+        /*new: function(newsID) {
+
+            var soloModel = Parse.Object.extend('News');
+
+            var query = new Parse.Query(soloModel);
+            query.get(eventID, {
+                success: function(soloModel) {
+                    var NewsView = new newsSoloView({model: soloModel});
+                },
+                error: function(soloModel, error) {
+                    console.log('damn');
+                }
+            });
+        },*/
 
         payment: function(eventID) {
 
