@@ -5,6 +5,3 @@
 #import <Parse/Parse.h>
 #import <Bolts/Bolts.h>
 #import <Stripe/Stripe.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
-    

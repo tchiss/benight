@@ -70,7 +70,7 @@ class VipViewController: UIViewController, WKNavigationDelegate {
 
     
     func buttonAction(sender: UIButton!) {
-        var tmpController :UIViewController! = self.presentingViewController;
+        let tmpController :UIViewController! = self.presentingViewController;
         
         self.dismissViewControllerAnimated(false, completion: {()->Void in
             tmpController.dismissViewControllerAnimated(false, completion: nil);

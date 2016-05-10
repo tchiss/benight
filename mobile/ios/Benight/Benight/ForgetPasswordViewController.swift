@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ForgetPasswordViewController: ResponsiveTextFieldViewController {
 
@@ -15,19 +16,19 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
     @IBAction func PasswordForget(sender: AnyObject) {
         if (EmailField.text!.characters.count < 0)
         {
-            ErrorPopup("Enter Email Please")
+            ErrorPopup("N'oubliez pas votre Email SVP")
         }
         else
         {
             var error: NSError? = nil
             do {
                 try PFUser.requestPasswordResetForEmail(EmailField.text!)
-            } catch var error1 as NSError {
+            } catch let error1 as NSError {
                 error = error1
             }
             if (error == nil)
             {
-                let alertController = UIAlertController(title: "Ok", message: "Link Sent", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Ok", message: "Email Envoyé", preferredStyle: .Alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                 alertController.addAction(defaultAction)
@@ -38,7 +39,7 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
             }
             else
             {
-                ErrorPopup("Invalid Email")
+                ErrorPopup("Email Invalide")
             }
         }
     }
@@ -46,7 +47,7 @@ class ForgetPasswordViewController: ResponsiveTextFieldViewController {
     
     func ErrorPopup(message: String)
     {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .Alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)

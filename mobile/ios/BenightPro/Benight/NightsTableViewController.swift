@@ -25,9 +25,12 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
 
     @IBAction func changedSize(sender: AnyObject) {
         SwiftSpinner.show("Getting Data", animated: true)
+    
         let query = PFQuery(className: "Event")
         query.orderByAscending("date")
         let now = NSDate()
+        query.includeKey("Creator")
+        query.whereKey("Creator", equalTo: PFUser.currentUser()!)
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let midnightOfToday = cal!.startOfDayForDate(now)
         query.whereKey("date", greaterThanOrEqualTo: midnightOfToday)
@@ -95,6 +98,7 @@ class NightsTableViewController: UITableViewController, UISearchResultsUpdating,
         tableView.estimatedRowHeight = 142.0
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 		let query = PFQuery(className: "Event")
+                query.whereKey("Creator", equalTo: PFUser.currentUser()!)
         query.orderByAscending("date")
         let now = NSDate()
         let cal = NSCalendar(calendarIdentifier: NSGregorianCalendar)

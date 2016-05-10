@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 let apiKey = "d95c2f660e276021fac7f4448a22288b"
 
@@ -98,7 +99,7 @@ class Flickr {
                 return
             }
             do {
-                var JSONError : NSError?
+                let JSONError : NSError? = nil
                 let resultsDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions(rawValue: 0)) as? NSDictionary
                 if JSONError != nil {
                     completion(results: nil, error: JSONError)

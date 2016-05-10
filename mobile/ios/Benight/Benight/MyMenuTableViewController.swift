@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class MyMenuTableViewController: UITableViewController {
     
@@ -48,7 +49,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
-		return 5
+		return 6
     }
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -80,7 +81,11 @@ class MyMenuTableViewController: UITableViewController {
 			cell!.imageView?.image = UIImage(named: "ticket")
 			cell!.textLabel?.text = "Mes Soirées"
 			break
-		default:
+        case 4:
+            cell!.imageView?.image = UIImage(named: "News")
+            cell!.textLabel?.text = "Les News"
+            break
+        default:
 			cell!.imageView?.image = UIImage(named: "logout")
 			cell!.textLabel?.text = "Déconnection"
 			break
@@ -115,6 +120,9 @@ class MyMenuTableViewController: UITableViewController {
 		case 3:
 			destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MyNightsView") 
 			break
+        case 4:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NewsView")
+            break
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Connexion")
             LogOut = true

@@ -6,32 +6,35 @@ PODS:
   - Bolts/AppLinks (1.6.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
-  - FBSDKCoreKit (4.9.1):
+  - FBSDKCoreKit (4.10.1):
     - Bolts (~> 1.5)
-  - FBSDKLoginKit (4.9.1):
+  - FBSDKLoginKit (4.10.1):
     - FBSDKCoreKit
-  - Parse (1.11.0):
-    - Bolts/Tasks (~> 1.5)
-  - ParseFacebookUtilsV4 (1.11.0):
-    - Bolts/Tasks (>= 1.5)
-    - FBSDKCoreKit (~> 4.9.0-beta)
-    - FBSDKLoginKit (~> 4.9.0-beta)
-    - FBSDKTVOSKit (~> 4.9.0-beta)
-    - Parse (~> 1.11)
+  - FBSDKShareKit (4.10.1):
+    - FBSDKCoreKit
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - ParseFacebookUtilsV4 (1.11.1):
+    - Bolts/Tasks (>= 1.6)
+    - FBSDKCoreKit (~> 4.10)
+    - FBSDKLoginKit (~> 4.10)
+    - FBSDKTVOSKit (~> 4.10)
+    - Parse (~> 1.12)
   - ParseTwitterUtils (1.10.0):
     - Bolts/Tasks (~> 1.5)
     - Parse (~> 1.9)
-  - Stripe (6.0.1):
-    - Stripe/Core (= 6.0.1)
-  - Stripe/Core (6.0.1)
-  - SwiftSpinner (0.8.0)
+  - Stripe (6.2.0):
+    - Stripe/Core (= 6.2.0)
+  - Stripe/Core (6.2.0)
+  - SwiftSpinner (0.9.1)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0)
   - Bolts
   - FBSDKCoreKit
   - FBSDKLoginKit
-  - Parse (~> 1.11.0)
+  - FBSDKShareKit
+  - Parse
   - ParseFacebookUtilsV4
   - ParseTwitterUtils
   - Stripe
@@ -40,12 +43,15 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   Bolts: f52a250053bb517ca874523c3913776359ab3def
-  FBSDKCoreKit: aee20b6d9855f15b618d4fddd1a5ad45f5a4a59d
-  FBSDKLoginKit: ec22dc49bd372b064e93d6773df4ffefb3a552a2
-  Parse: 886af46a0a677402f6374bb97ac212e795f70afe
-  ParseFacebookUtilsV4: 216e03bd560404eed09a4875c75f0c1cdf758070
+  FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
+  FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
+  FBSDKShareKit: 2fd887cce0056bdda91f99b2021d724a4fed8e88
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   ParseTwitterUtils: 8856ac80da50bbb0f0bcf251def20b62e1ae6bc4
-  Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
-  SwiftSpinner: 11c2c5ec7443d92f3026d3067ca8a91d4adef13f
+  Stripe: 275524137e6c4cc1058f6d32ece248adf30a21f9
+  SwiftSpinner: 09a60c00f4dfa2097b4deabd26f513ad077af4f1
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 40de790a23f011d95d7427cd821240b4aeca5401
+
+COCOAPODS: 1.0.0.beta.6

@@ -9,6 +9,7 @@
 import UIKit
 import PassKit
 import Alamofire
+import Parse
 
 class NightDetailsTableViewController: UITableViewController, PKAddPassesViewControllerDelegate, UIPopoverPresentationControllerDelegate {
 
@@ -57,7 +58,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     @IBAction func BuyOrGetTicket(let sender: AnyObject) {
         if HasTicket
         {
-            SwiftSpinner.show("Downloading Your Ticket")
+            SwiftSpinner.show("Chargement du Ticket")
             getTicketPassbook(0)
         }
         else
@@ -85,10 +86,11 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     {
         self.TicketButton.setImage(UIImage(named: "Pass"), forState: .Normal)
         self.TicketButton.setTitle("", forState: .Normal)
+        SwiftSpinner.hide()
     }
     
     override func viewDidLoad() {
-        SwiftSpinner.show("Getting Data", animated: true)
+        SwiftSpinner.show("Chargement", animated: true)
         super.viewDidLoad()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"),
             forBarMetrics: .Default)
@@ -135,7 +137,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
         query.whereKey("Event", equalTo: event!)
         query.findObjectsInBackgroundWithBlock(
             {
-                (objects: [PFObject]?, NSError error) in
+                (objects: [PFObject]?, error) in
                 if (error != nil) {
                     NSLog("error " + error!.localizedDescription)
                 }
@@ -182,15 +184,19 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                                             self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
                                             self.SoldOutVIP.hidden = false
                                             self.TicketVipButton.userInteractionEnabled = false
+                                            self.tableView.reloadData()
+                                            SwiftSpinner.hide()
                                         }
                                         else
                                         {
                                             self.TicketVipButton.setTitle("Acheter un Ticket VIP à " + String(self.event!["VipPrice"]) + "€.", forState: UIControlState.Normal)
+                                            self.tableView.reloadData()
+                                            SwiftSpinner.hide()
                                         }
                                     }
                                 }
                             }
-
+                            SwiftSpinner.hide()
                         }
                     }
                 }
@@ -201,7 +207,6 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                     self.VIPCell.hidden = true
                     self.tableView.reloadData()
                 }
-                SwiftSpinner.hide()
         })
 
         if (self.event!["Album"] == nil) {
@@ -216,7 +221,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
             let url = NSURL(string: "https://tickets.benight.cc/soundcloud.php")
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
-            var bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
+            let bodyData: String = "authKey=TheIslandOfMusic&ObjectId=" + event!["SoundCloud"].objectId!!
             request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
             webView.loadRequest(request)
         }
@@ -302,6 +307,7 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
     {
         _ = "Benight Ticket"
         let passcontroller = PKAddPassesViewController(pass: pass)
+        passcontroller.view.backgroundColor = UIColor.blackColor()
         passcontroller.delegate = self
         SwiftSpinner.hide()
         self.presentViewController(passcontroller, animated: true, completion: nil)
@@ -327,18 +333,9 @@ class NightDetailsTableViewController: UITableViewController, PKAddPassesViewCon
                 if (statusCode == 200)
                 {
                     print("Success: \(statusCode)")
-                    var pkfile : NSData = NSData(data: data!)
-                    var error2: NSError?
                     var pass: PKPass?
-                    do {
-                        pass = try PKPass(data: data!, error: nil)
-                    } catch let error as NSError {
-                        error2 = error
-                        pass = nil
-                    } catch {
-                        fatalError()
-                    }
-                    if (error2 == nil)
+                        pass =  PKPass(data: data!, error: nil)
+                    if (pass != nil)
                     {
                         ticketGetted = true
                         self.openPass(pass!)

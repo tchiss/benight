@@ -1,0 +1,42 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Benight_application.PageEventInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Name="TitleName" Text="Informations" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40"/>
+        </StackPanel>
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,92">
+            <TextBlock Name="nomSoirée" Text="{Binding eventName}" Margin="10,0,74,543"></TextBlock>
+            <!--<TextBlock Name="descSoirée" Text="{Binding}" Margin="10,131,10,31"></TextBlock>
+            <TextBlock Name="dateSoirée" Text="{Binding}" Margin="10,61,74,474"></TextBlock>-->
+            <ListBox Name="descSoirée" ItemsSource="{Binding}" Margin="10,131,10,31"></ListBox>
+            <ListBox Name="dateSoirée" ItemsSource="{Binding}" Margin="10,61,74,474"></ListBox>
+
+            <!--<TextBlock x:Name="NomSoirée" DataContext="{Binding nomEv}" HorizontalAlignment="Left" Margin="105,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="327"/>-->
+        </Grid>
+        <Button x:Name="retour" Content="Retour" HorizontalAlignment="Left" Margin="0,589,0,0" Grid.Row="1" VerticalAlignment="Top" Height="87" Width="168" Click="retour_Click"/>
+        <Button x:Name="inscription" Content="S'inscrire" HorizontalAlignment="Left" Margin="293,589,0,0" Grid.Row="1" VerticalAlignment="Top" Height="87" Width="187" Click="inscription_Click"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>

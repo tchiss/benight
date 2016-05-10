@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class NightMapViewController: UIViewController {
     @IBOutlet weak var Tital: UINavigationItem!
@@ -29,7 +30,7 @@ class NightMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let status = CLLocationManager.authorizationStatus()
+        //let status = CLLocationManager.authorizationStatus()
         let latitude: CLLocationDegrees = descLocation.latitude
         let longtitude: CLLocationDegrees = descLocation.longitude
         let location: CLLocation = CLLocation(latitude: latitude, longitude: longtitude)

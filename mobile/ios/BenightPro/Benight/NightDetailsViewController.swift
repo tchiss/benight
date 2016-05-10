@@ -48,6 +48,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
             self.reservation = resa
             self.GenerateTicket()
             AddPassbookButton.hidden = false
+            SwiftSpinner.hide()
 		}
 	}
 
@@ -153,6 +154,7 @@ class NightDetailsViewController: UIViewController, PKAddPassesViewControllerDel
                 }
                 if (inc < 6 && ticketGetted == false)
                 {
+                    SwiftSpinner.hide()
                     self.getTicketPassbook(inc + 1)
                 }
                 else if (ticketGetted == false)

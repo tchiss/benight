@@ -1,0 +1,4 @@
+C:\Users\Alzio\Desktop\bn\Benight_application\Benight_application.csproj;neutral
+C:\Users\Alzio\Desktop\bn\Benight_BLLPhone\Benight_BLLPhone.csproj;neutral
+C:\Users\Alzio\Desktop\bn\Benight_CommonPhone\Benight_CommonPhone.csproj;neutral
+C:\Users\Alzio\Desktop\bn\Benight_DALPhone\Benight_DALPhone.csproj;neutral

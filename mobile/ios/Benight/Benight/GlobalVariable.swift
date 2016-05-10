@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import Parse
 
 class GlobalVariables {
     
     // These are the properties you can store in your singleton
     internal var userLoc: PFGeoPoint? = nil
-    
     
     // Here is how you would get to it without there being a global collision of variables.
     // , or in other words, it is a globally accessable parameter that is specific to the

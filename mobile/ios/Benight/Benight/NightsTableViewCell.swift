@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import Parse
 
 class NightsTableViewCell: UITableViewCell {
 
@@ -19,7 +20,7 @@ class NightsTableViewCell: UITableViewCell {
     @IBOutlet weak var FlyerImage: UIImageView!
     @IBOutlet weak var SoldOutImage: UIImageView!
 
-	func fillCell(event: AnyObject)
+	func fillCell(event: PFObject)
 	{
 		self.NameLabel.text = event["name"] as? String
 		self.PlaceLabel.text = event["author"] as? String
