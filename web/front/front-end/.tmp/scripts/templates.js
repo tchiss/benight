@@ -12,6 +12,16 @@ __p += '            <div class="header">   \r\n                <ul class="nav na
 return __p
 };
 
+this["JST"]["app/scripts/templates/about.ejs"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \tNos Partenaires et Technologies\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n            <div class="row">\r\n    \t\t  <div class="col-md-2"><img src="styles/images/eip.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/epitech.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/fb_partenaire.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/flickr.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/parse.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/stripe.png"></div>\r\n              <div class="col-md-2"><img src="styles/images/twitter_partenaire.png"></div>\r\n            </div>\r\n    </div>\r\n</div>';
+
+}
+return __p
+};
+
 this["JST"]["app/scripts/templates/account.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
@@ -40,9 +50,17 @@ var __t, __p = '', __e = _.escape;
 with (obj) {
 __p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \tModifier le Profil\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n    \t<form class="form-horizontal">\r\n            <div class="form-group">\r\n                <label for="inputUsername" class="col-sm-2 control-label">Nom d\'Utilisateur</label>\r\n    \t\t    <div class="col-sm-10">\r\n                    <input type="username" class="form-control" id="inputUsername" value="' +
 ((__t = ( username )) == null ? '' : __t) +
-'" disabled>\r\n                </div>\r\n                <label for="inputLastname" class="col-sm-2 control-label">Nom de famille</label>\r\n                <div class="col-sm-10">\r\n                    <input type="lastname" class="form-control" id="inputLastname" placeholder="Nom de famille">\r\n                </div>\r\n                <label for="inputName" class="col-sm-2 control-label">Prénom</label>\r\n                <div class="col-sm-10">\r\n                    <input type="name" class="form-control" id="inputName" placeholder="Prénom">\r\n                </div>\r\n                <label for="inputEmail" class="col-sm-2 control-label">Email</label>\r\n                <div class="col-sm-10">\r\n                    <input type="email" class="form-control" id="inputEmail" value="' +
+'" disabled>\r\n                </div>\r\n                <label for="inputLastname" class="col-sm-2 control-label">Nom de famille</label>\r\n                <div class="col-sm-10">\r\n                    <input type="lastname" class="form-control" id="inputLastname" value="' +
+((__t = ( lastname )) == null ? '' : __t) +
+'">\r\n                </div>\r\n                <label for="inputName" class="col-sm-2 control-label">Prénom</label>\r\n                <div class="col-sm-10">\r\n                    <input type="name" class="form-control" id="inputName" value="' +
+((__t = ( name )) == null ? '' : __t) +
+'">\r\n                </div>\r\n                <label for="inputEmail" class="col-sm-2 control-label">Email</label>\r\n                <div class="col-sm-10">\r\n                    <input type="email" class="form-control" id="inputEmail" value="' +
 ((__t = ( email )) == null ? '' : __t) +
-'" disabled>\r\n                </div>\r\n                <label for="inputAddress" class="col-sm-2 control-label">Addresse</label>\r\n                <div class="col-sm-10">\r\n                    <input type="adress" class="form-control" id="inputAddress" placeholder="Addresse">\r\n                </div>\r\n                <label for="inputPhone" class="col-sm-2 control-label">Numéro de Téléphone</label>\r\n                <div class="col-sm-10">\r\n                    <input type="phone" class="form-control" id="inputPhone" placeholder="Numéro de Téléphone">\r\n                </div>\r\n            </div>\r\n    \t</form>\r\n        <button type="button" class="btn btn-success-outline save" style="background-color: #38d07d; color: white; font-weight: bold;">Sauvegarder</button>\r\n    </div>\r\n</div>';
+'" disabled>\r\n                </div>\r\n                <label for="inputAddress" class="col-sm-2 control-label">Addresse</label>\r\n                <div class="col-sm-10">\r\n                    <input type="adress" class="form-control" id="inputAddress" value="' +
+((__t = ( adress )) == null ? '' : __t) +
+'">\r\n                </div>\r\n                <label for="inputPhone" class="col-sm-2 control-label">Numéro de Téléphone</label>\r\n                <div class="col-sm-10">\r\n                    <input type="phone" class="form-control" id="inputPhone" value="' +
+((__t = ( phone )) == null ? '' : __t) +
+'">\r\n                </div>\r\n            </div>\r\n    \t</form>\r\n        <button type="button" class="btn btn-success-outline save" style="background-color: #38d07d; color: white; font-weight: bold;">Sauvegarder</button>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -76,7 +94,7 @@ __p += '<div class="panel panel-default">\r\n    <div class="panel-heading" styl
 ((__t = ( objectId )) == null ? '' : __t) +
 '">Réserver (' +
 ((__t = ( price )) == null ? '' : __t) +
-' euros)</a></button>\r\n\t\t\t\t</div>\r\n\r\n                <div id="photo" class="col-md-4 panel-footer text-center">\r\n                    <button id="button_photo" class="album"><a id="album" target="_blank">Album Photo</a></button>\r\n                </div>\r\n\r\n\t\t\t\t<div id="vip" class="col-md-4 panel-footer text-center">\r\n    \t\t\t\t<button class="vip"><a target="_blank" href="http://VIP.benight.cc">Espace VIP</a></button>\r\n\t\t\t\t</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>';
+' euros)</a></button>\r\n\t\t\t\t</div>\r\n\r\n                <div id="photo" class="col-md-4 panel-footer text-center">\r\n                    <button id="button_photo" class="album"><a id="album">Album Photo</a></button>\r\n                </div>\r\n\r\n\t\t\t\t<div id="vip" class="col-md-4 panel-footer text-center">\r\n    \t\t\t\t<button class="vip"><a target="_blank" href="http://VIP.benight.cc">Espace VIP</a></button>\r\n\t\t\t\t</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>';
 
 }
 return __p
@@ -86,7 +104,7 @@ this["JST"]["app/scripts/templates/eventsCollection.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<ul class="events">\r\n\t<span>' +
+__p += '<nav class="navbar navbar-default">   \r\n    <ul class="nav navbar-nav">\r\n        <li class="active"><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n        <li><a href="#about">A propos</a></li>\r\n    </ul>\r\n    <ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n        <li><a href="#account" class="account">Mon Compte</a></li>\r\n    </ul>\r\n</nav>\r\n\r\n<ul class="events">\r\n\t<span>' +
 __e( author ) +
 '</span>\r\n</ul>';
 
@@ -98,7 +116,7 @@ this["JST"]["app/scripts/templates/home.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="header col-md-12">   \r\n    <ul class="nav navbar-nav">\r\n        <li class="active"><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n    \t<li><a href="#contact" class="contact-section">Nous Contacter</a></li>\r\n        <li><a href="#">A propos</a></li>\r\n    </ul>\r\n\t<ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n\t\t<li><a href="#account" class="account">Mon Compte</a></li>\r\n\t</ul>\r\n</div>\r\n\r\n';
+__p += '<div class="header col-md-12">   \r\n    <ul class="nav navbar-nav">\r\n        <li class="active"><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n        <li><a href="#about">A propos</a></li>\r\n    </ul>\r\n\t<ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n\t\t<li><a href="#account" class="account">Mon Compte</a></li>\r\n\t</ul>\r\n</div>\r\n\r\n';
 
 }
 return __p

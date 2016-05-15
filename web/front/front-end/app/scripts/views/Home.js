@@ -14,7 +14,7 @@ define(['jquery',
 
     	template: JST['app/scripts/templates/home.ejs'],
 
-    	el: '.content',
+    	el: '.elements',
 
     	events: {
     		"click .log-out": "logOut",

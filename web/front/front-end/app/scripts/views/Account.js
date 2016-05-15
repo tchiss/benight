@@ -12,6 +12,8 @@ define(['jquery',
 
         editTemplate: JST['app/scripts/templates/accountEdit.ejs'],
 
+        homeTemplate: JST['app/scripts/templates/home.ejs'],
+
     	el: '.elements',
 
     	events: {
@@ -24,7 +26,6 @@ define(['jquery',
     	initialize: function(){
     		_.bindAll(this, 'render');
             var currentUser = Parse.User.current();
-            console.log(currentUser);
             if(currentUser) {
                 if(!currentUser.attributes.username)
                     currentUser.attributes.username = 'Non renseigné!';
@@ -40,12 +41,12 @@ define(['jquery',
                     currentUser.attributes.phone = 'Non renseigné!';
             }
             this.model = currentUser;
-            console.log(this.model);
             this.model.on('change', this.render, this);
     		this.render();
     	},
 
         edit: function(e) {
+            this.$el.html(this.homeTemplate());
             this.$el.html(this.editTemplate(this.model.toJSON()));
         },
 
@@ -83,6 +84,7 @@ define(['jquery',
         },
 
     	render: function(){
+            this.$el.html(this.homeTemplate());
     		this.$el.html(this.template(this.model.toJSON()));
     		return this;
     	}

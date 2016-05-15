@@ -11,12 +11,12 @@ define(function(require, exports, module){
     var LoginView = require('views/Login');
     var PaymentView = require('views/PaymentView');
     var EventSoloView = require('views/EventView');
-    var AlbumView = require('views/AlbumView');
     var NewsCollection = require('collections/NewsCollection');
     var NewsModel = require('models/NewsModel');
     var NewsView = require('views/NewsView');
     var NewsCollectionView = require('views/NewsCollectionView');
     var AccountView = require('views/Account');
+    var AboutView = require('views/About');
     //var NewsSoloView = require('views/NewsSoloView');
 
 
@@ -35,6 +35,8 @@ define(function(require, exports, module){
         "album/:albumID": "album",
         "news": "news",
         "account": "account",
+        "about": "about",
+        "gallery/:FlickrAlbumId/:FlickrUserId": "gallery",
         //"news/:newsID": "news",
         "signup": "signup"
         },
@@ -47,12 +49,20 @@ define(function(require, exports, module){
             }
             else
             {
+               /* this.navigate('#events', {trigger : true});
+            var evView = new EventsCollectionView;
+            //evView.render();
+            this.loadView(evView);*/
+                $('.navbar').show();
+                $('.wrp').hide();
                 var homeView = new HomeView;
                 this.loadView(homeView);
             }
         },
 
         login: function() {
+            $('.wrp').hide();
+            $('.navbar').hide();
             var logView = new LoginView();
             //logView.render();
             this.loadView(logView);
@@ -60,10 +70,12 @@ define(function(require, exports, module){
 
         logout: function() {
             Parse.User.logOut();
-            this.navigate('', {trigger: true});
+            location.reload();
+            this.navigate('#login', {trigger: true});
         },
 
         events: function() {
+            $('.wrp').hide();
             console.log('hello events');
             this.navigate('#events', {trigger : true});
             var evView = new EventsCollectionView;
@@ -72,6 +84,8 @@ define(function(require, exports, module){
         },
 
         event: function(eventID) {
+
+            $('.wrp').hide();
 
             var soloModel = Parse.Object.extend('Event');
 
@@ -87,6 +101,7 @@ define(function(require, exports, module){
         },
 
         news: function() {
+            $('.wrp').hide();
             console.log('hello news');
             this.navigate('#news', {trigger : true});
             var nvView = new NewsCollectionView;
@@ -95,10 +110,19 @@ define(function(require, exports, module){
         },
 
         account: function() {
+            $('.wrp').hide();
             console.log('hello account');
             this.navigate('#account', {trigger: true});
             var accView = new AccountView();
             this.loadView(accView);
+        },
+
+        about: function() {
+            $('.wrp').hide();
+            console.log('hello about');
+            this.navigate('#about', {trigger: true});
+            var aboutView = new AboutView();
+            this.loadView(aboutView);
         },
 
         /*new: function(newsID) {
@@ -115,6 +139,110 @@ define(function(require, exports, module){
                 }
             });
         },*/
+
+        gallery: function(FlickrAlbumId, FlickrUserId) {
+
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
+            
+                $('.wrp').show();
+
+                console.log(FlickrAlbumId);
+
+                var Item = Backbone.Model.extend({});
+                var item = new Item();
+
+                var ItemsCollection = Backbone.Collection.extend({
+                    model: Item
+                });
+
+                var ItemView = Backbone.View.extend({
+                    className: "list__item",
+
+                    tmpl: "#item",
+
+                    render: function(){
+                        var tmpl = _.template($(this.tmpl).html());
+
+                        document.getElementById("pic").src = "http://farm" + this.model.attributes.farm + ".static.flickr.com/" + this.model.attributes.server + "/" + this.model.attributes.id + "_" + this.model.attributes.secret + "_" + "s.jpg";
+                        document.getElementById("link").href = "http://www.flickr.com/photos/" + FlickrUserId + "/" + this.model.attributes.id + "/";
+
+                        this.$el.html(tmpl(this.model.toJSON()));
+
+                        return this;
+                    }
+                });
+
+                var ItemsView = Backbone.View.extend({
+                    initialize: function(){
+                        console.log(this.collection);
+                    },
+
+                    className: "list",
+
+                    render: function(){
+                        this.collection.each(function(item){
+                            var itemView = new ItemView({model: item});
+
+                            this.$el.append(itemView.render().el);
+                        }, this);
+
+                        return this;
+                    }
+                });
+
+                /*var albumModel = Parse.Object.extend('PhotoAlbum');
+
+                var query = new Parse.Query(albumModel);
+                console.log(query); 
+                query.get(id, {
+                    success: function(albumModel) {
+
+                        var FlickrAlbumId = albumModel.get("FlickrAlbumId");
+                        var FlickrUserId = albumModel.get("FlickrUserId");
+
+                        var url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=d95c2f660e276021fac7f4448a22288b&photoset_id='+FlickrAlbumId+'&user_id='+FlickrUserId
+
+                        },
+                        error: function(albumModel, error) {
+                            console.log('damn');
+                        }
+                    });*/
+                
+                var link = 'https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&api_key=d95c2f660e276021fac7f4448a22288b&photoset_id='+FlickrAlbumId+'&user_id='+FlickrUserId+'&jsoncallback=?'; //"http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+                console.log(link);
+
+                $.getJSON(link, 
+                    function(data){
+                        var itemsCollection = new ItemsCollection(data.photoset.photo);
+                        var itemsView = new ItemsView({collection: itemsCollection});
+
+                        $(".wrp").html(itemsView.render().el);
+                    }
+                );
+
+            }
+
+            /*var link = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+            $.getJSON(link,
+                {
+                    tags: "mount rainier",
+                    tagmode: "any",
+                    format: "json"
+                }, 
+                function(data){
+                    var PhotoCollection = new PhotoCollection(data.items);
+                    var PhotoCollectionView = new PhotoCollectionView({collection: PhotoCollection});
+
+        //$(".wrp").html(itemsView.render().el);
+                });*/
+        },
 
         payment: function(eventID) {
 

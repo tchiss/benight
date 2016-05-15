@@ -136,9 +136,9 @@ define(['jquery',
                             var FlickrAlbumId = albumModel.get("FlickrAlbumId");
                             var FlickrUserId = albumModel.get("FlickrUserId");
 
-                            var url = 'https://www.flickr.com/photos/'+FlickrUserId+'/sets/'+FlickrAlbumId
+                            var url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=d95c2f660e276021fac7f4448a22288b&photoset_id='+FlickrAlbumId+'&user_id='+FlickrUserId;//'https://www.flickr.com/photos/'+FlickrUserId+'/sets/'+FlickrAlbumId
 
-                            document.getElementById("album").href = url;
+                            document.getElementById("album").href = '#gallery/'+FlickrAlbumId+'/'+FlickrUserId;
 
                         },
                         error: function(albumModel, error) {
