@@ -29,6 +29,7 @@
 		68741F2E1C1A515100043BAB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741F2D1C1A515100043BAB /* Social.framework */; };
 		68741F301C1A5E5400043BAB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741F2F1C1A5E5400043BAB /* Twitter.framework */; };
 		68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */; };
+		688844381CDF934B0013B9DF /* SendMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688844371CDF934B0013B9DF /* SendMailViewController.swift */; };
 		688EE5631A79062F000AD63D /* NightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5621A79062F000AD63D /* NightsTableViewController.swift */; };
 		688EE56A1A79234F000AD63D /* NightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688EE5691A79234F000AD63D /* NightsTableViewCell.swift */; };
 		689719AB1AFA1C0A00D73564 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */; };
@@ -92,6 +93,7 @@
 		68741F2D1C1A515100043BAB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		68741F2F1C1A5E5400043BAB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		688844371CDF934B0013B9DF /* SendMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMailViewController.swift; sourceTree = "<group>"; };
 		688EE5621A79062F000AD63D /* NightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewController.swift; sourceTree = "<group>"; };
 		688EE5691A79234F000AD63D /* NightsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightsTableViewCell.swift; sourceTree = "<group>"; };
 		689719AA1AFA1C0A00D73564 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -206,6 +208,7 @@
 				681EBB671B998A6B00F3DB03 /* ForgetPasswordViewController.swift */,
 				68745AEE1A97891700A3AC30 /* CreateAccountViewController.swift */,
 				68C1A41A1A41AFBC00A17A97 /* MyMenuTableViewController.swift */,
+				688844371CDF934B0013B9DF /* SendMailViewController.swift */,
 			);
 			name = "Menu / Connection";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				681EBB681B998A6B00F3DB03 /* ForgetPasswordViewController.swift in Sources */,
 				68CE3B9E1C07CDAA0052353B /* PastNightsTableViewController.swift in Sources */,
 				683B868D1A41BC9500C3EA24 /* SideMenuNavigationController.swift in Sources */,
+				688844381CDF934B0013B9DF /* SendMailViewController.swift in Sources */,
 				68E329291A1A5B8100883116 /* AppDelegate.swift in Sources */,
 				68428FD41CA9AF1800AD4ECE /* NewsTableViewController.swift in Sources */,
 				68745AEF1A97891700A3AC30 /* CreateAccountViewController.swift in Sources */,
