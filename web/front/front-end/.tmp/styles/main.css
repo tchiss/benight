@@ -9746,9 +9746,69 @@ body {
   background: #2A0247;
 }
 
+/* line 45, ../../app/styles/main.scss */
+
+.wrp {
+  background: #fff;
+  padding: 20px;
+  display: block;
+  width: 800px;
+  margin: auto;
+}
+
+/* line 53, ../../app/styles/main.scss */
+
+.list__item {
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 59, ../../app/styles/main.scss */
+
+.list__item img {
+  width: 100%;
+}
+
+/* line 63, ../../app/styles/main.scss */
+
+.list__item .pic {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* line 69, ../../app/styles/main.scss */
+
+.list__item .photo-info {
+  padding: 10px;
+}
+
+/* line 73, ../../app/styles/main.scss */
+
+.list__item span {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+/* line 79, ../../app/styles/main.scss */
+
+.list__item p {
+  color: #999;
+  font-size: 12px;
+}
+
+/* line 84, ../../app/styles/main.scss */
+
+.list__item a {
+  color: #999;
+  font-size: 12px;
+}
+
 /* Make the masthead heading the same height as the navigation */
 
-/* line 46, ../../app/styles/main.scss */
+/* line 90, ../../app/styles/main.scss */
 
 .header h3 {
   margin-top: 0;
@@ -9759,7 +9819,7 @@ body {
 
 /* Custom page footer */
 
-/* line 54, ../../app/styles/main.scss */
+/* line 98, ../../app/styles/main.scss */
 
 .footer {
   padding-top: 19px;
@@ -9767,7 +9827,7 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* line 60, ../../app/styles/main.scss */
+/* line 104, ../../app/styles/main.scss */
 
 .container-narrow > hr {
   margin: 30px 0;
@@ -9775,14 +9835,14 @@ body {
 
 /* Main marketing message and sign up button */
 
-/* line 65, ../../app/styles/main.scss */
+/* line 109, ../../app/styles/main.scss */
 
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 70, ../../app/styles/main.scss */
+/* line 114, ../../app/styles/main.scss */
 
 .jumbotron .btn {
   font-size: 21px;
@@ -9791,13 +9851,13 @@ body {
 
 /* Supporting marketing content */
 
-/* line 76, ../../app/styles/main.scss */
+/* line 120, ../../app/styles/main.scss */
 
 .marketing {
   margin: 40px 0;
 }
 
-/* line 80, ../../app/styles/main.scss */
+/* line 124, ../../app/styles/main.scss */
 
 .marketing p + h4 {
   margin-top: 28px;
@@ -9806,7 +9866,7 @@ body {
 /* Responsive: Portrait tablets and up */
 
 @media screen and (min-width: 768px) {
-  /* line 86, ../../app/styles/main.scss */
+  /* line 130, ../../app/styles/main.scss */
 
   .container {
     max-width: 730px;
@@ -9814,7 +9874,7 @@ body {
 
   /* Remove the padding we set earlier */
 
-  /* line 91, ../../app/styles/main.scss */
+  /* line 135, ../../app/styles/main.scss */
 
   .header,
   .marketing,
@@ -9825,7 +9885,7 @@ body {
 
   /* Space out the masthead */
 
-  /* line 98, ../../app/styles/main.scss */
+  /* line 142, ../../app/styles/main.scss */
 
   .header {
     margin-bottom: 30px;
@@ -9833,7 +9893,7 @@ body {
 
   /* Remove the bottom border on the jumbotron for visual effect */
 
-  /* line 102, ../../app/styles/main.scss */
+  /* line 146, ../../app/styles/main.scss */
 
   .jumbotron {
     border-bottom: 0;

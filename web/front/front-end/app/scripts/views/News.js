@@ -9,7 +9,7 @@ define(['jquery',
     var NewsView = Backbone.View.extend({
     	template: JST['app/scripts/templates/news.ejs'],
 
-    	el: '.content',
+    	el: '.elements',
 
     	initialize: function()  {
     		_.bindAll(this, 'render');

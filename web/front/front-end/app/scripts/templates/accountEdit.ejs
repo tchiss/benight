@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+    <div class="panel-heading" style="background-color: #2A0247; color: white;">
+    	Modifier le Profil
+    </div>
+    <div class="panel-body" style="background-color: #54038F; color: white;">
+    	<form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputUsername" class="col-sm-2 control-label">Nom d'Utilisateur</label>
+    		    <div class="col-sm-10">
+                    <input type="username" class="form-control" id="inputUsername" value="<%= username %>" disabled>
+                </div>
+                <label for="inputLastname" class="col-sm-2 control-label">Nom de famille</label>
+                <div class="col-sm-10">
+                    <input type="lastname" class="form-control" id="inputLastname" value="<%= lastname %>">
+                </div>
+                <label for="inputName" class="col-sm-2 control-label">Prénom</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control" id="inputName" value="<%= name %>">
+                </div>
+                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" value="<%= email %>" disabled>
+                </div>
+                <label for="inputAddress" class="col-sm-2 control-label">Addresse</label>
+                <div class="col-sm-10">
+                    <input type="adress" class="form-control" id="inputAddress" value="<%= adress %>">
+                </div>
+                <label for="inputPhone" class="col-sm-2 control-label">Numéro de Téléphone</label>
+                <div class="col-sm-10">
+                    <input type="phone" class="form-control" id="inputPhone" value="<%= phone %>">
+                </div>
+            </div>
+    	</form>
+        <button type="button" class="btn btn-success-outline save" style="background-color: #38d07d; color: white; font-weight: bold;">Sauvegarder</button>
+    </div>
+</div>

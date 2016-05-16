@@ -23,7 +23,7 @@ define(['jquery',
 
             tagName: 'li',
 
-            //el: '.content',
+            //el: '.elements',
 
             events: {
               "click .log-out": "logOut",

@@ -1,0 +1,290 @@
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.csprojResolveAssemblyReference.cache
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\App.g.cs
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\ForgetPassword.g.cs
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\MainPage.g.cs
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Overview.g.cs
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Registration.g.cs
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.g.resources
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.Resources.AppResources.resources
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.csproj.GenerateResource.Cache
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_application.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_application.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\AppManifest.xaml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_application_Debug_AnyCPU.xap
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_BLLPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Facebook.Client.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Facebook.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Parse.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Parse.Phone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\SidebarWP8.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\SlideView.Library.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_CommonPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_DALPhone.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_BLLPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Facebook.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Facebook.Client.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Parse.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Parse.Phone.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\SidebarWP8.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_CommonPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Benight_DALPhone.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\Benight_application.pdb
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\obj\Debug\XapCacheFile.xml
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\guill_000\Documents\Visual Studio 2012\Projects\Benight_application\Benight_application\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_application.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_application.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\AppManifest.xaml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_application_Debug_AnyCPU.xap
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_BLLPhone.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Facebook.Client.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Facebook.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Parse.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Parse.Phone.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\SidebarWP8.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\SlideView.Library.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_DALPhone.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_CommonPhone.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_BLLPhone.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Facebook.xml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Facebook.Client.xml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Parse.xml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Parse.Phone.xml
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\SidebarWP8.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_DALPhone.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\Benight_CommonPhone.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.csprojResolveAssemblyReference.cache
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\App.g.cs
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\ForgetPassword.g.cs
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\MainPage.g.cs
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Overview.g.cs
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Registration.g.cs
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.g.resources
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.Resources.AppResources.resources
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.csproj.GenerateResource.Cache
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.dll
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\Benight_application.pdb
+C:\Users\Alzio\Desktop\Benight_application\Benight_application\obj\Debug\XapCacheFile.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_application.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_application.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\AppManifest.xaml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_application_Debug_AnyCPU.xap
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_BLLPhone.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Facebook.Client.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Facebook.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Parse.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Parse.Phone.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\SidebarWP8.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_DALPhone.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_CommonPhone.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_BLLPhone.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Facebook.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Facebook.Client.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Parse.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Parse.Phone.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\SidebarWP8.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_DALPhone.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_CommonPhone.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.csprojResolveAssemblyReference.cache
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\App.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\ForgetPassword.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\MainPage.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Overview.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Registration.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.g.resources
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.Resources.AppResources.resources
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.csproj.GenerateResource.Cache
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.dll
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\Benight_application.pdb
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\XapCacheFile.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\PageEventInfo.g.cs
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\resources.pri
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\AppxManifest.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\Bin\Debug\Benight_application.build.appxrecipe
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\priconfig.xml
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\priconfig.xml.intermediate
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\layout.resfiles
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\layout.resfiles.intermediate
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\resources.resfiles
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\resources.resfiles.intermediate
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\pri.resfiles
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\pri.resfiles.intermediate
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\qualifiers.txt
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\ProjectArchitectures.txt
+C:\Users\Alzio\Desktop\bn\Benight_application\obj\Debug\MDILProjectFiles.xml
