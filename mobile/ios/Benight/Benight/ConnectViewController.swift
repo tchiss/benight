@@ -25,7 +25,7 @@ class ConnectViewController: ResponsiveTextFieldViewController {
     
     func ErrorPopup(message: String)
     {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Erreur", message: message, preferredStyle: .Alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
@@ -68,16 +68,16 @@ class ConnectViewController: ResponsiveTextFieldViewController {
                         SwiftSpinner.hide()
 						self.performSegueWithIdentifier("Connected", sender: nil)
 					} else {
-						self.ErrorPopup("Login Failed")}
+						self.ErrorPopup("Connection échouée")}
                     SwiftSpinner.hide()
 				}
 			}
 			else {
-				ErrorPopup("Please Enter an Email")}
+				ErrorPopup("Entrez votre Email SVP.")}
 			
 		}
 		else {
-			ErrorPopup("Please Enter an Email")}
+			ErrorPopup("Entrez votre Email SVP.")}
 	}
 	
 	@IBAction func ConnectWithFace(sender: AnyObject)

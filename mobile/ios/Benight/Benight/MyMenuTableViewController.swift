@@ -49,7 +49,7 @@ class MyMenuTableViewController: UITableViewController {
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		// Return the number of rows in the section.
-		return 6
+		return 7
     }
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -84,6 +84,13 @@ class MyMenuTableViewController: UITableViewController {
         case 4:
             cell!.imageView?.image = UIImage(named: "News")
             cell!.textLabel?.text = "Les News"
+            break
+        case 5:
+            cell!.imageView?.image = UIImage(named: "Contact")
+            cell!.textLabel?.text = "Contact"
+        case 6:
+            cell!.imageView?.image = UIImage(named: "About")
+            cell!.textLabel?.text = "À Propos"
             break
         default:
 			cell!.imageView?.image = UIImage(named: "logout")
@@ -122,6 +129,12 @@ class MyMenuTableViewController: UITableViewController {
 			break
         case 4:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NewsView")
+            break
+        case 5:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Contact")
+            break
+        case 6:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("About")
             break
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Connexion")
