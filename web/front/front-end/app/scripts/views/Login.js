@@ -15,7 +15,7 @@ define(['jquery',
         events: {
             'submit form.login-form': 'logIn',
             'submit form.signup-form': 'signUp',
-            'click .fb': 'facebookLogin'
+            'click .fb_content': 'facebookLogin'
         },
 
         el: '.elements',
@@ -25,6 +25,8 @@ define(['jquery',
             this.render();
         },
 
+	fb: function(e){
+	 },
         logIn: function(e){
 
             e.preventDefault();
@@ -81,7 +83,8 @@ define(['jquery',
         },
 
         facebookLogin: function(e) {
-            Parse.FacebookUtils.login(null, {
+
+            Parse.FacebookUtils.logIn(null, {
                 success: function(user) {
                     if (!user.existed()) {
                         alert("User signed up and logged in through facebook!");
@@ -100,6 +103,5 @@ define(['jquery',
             return this;
         }
     });
-
     return LoginView;
 });
