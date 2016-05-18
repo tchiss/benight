@@ -32,7 +32,7 @@ define(function(require, exports, module){
         "events": "events",
         "event/:eventID": "event",
         "payment/:eventID": "payment",
-        "album/:albumID": "album",
+        //"album/:albumID": "album",
         "news": "news",
         "account": "account",
         "about": "about",
@@ -75,54 +75,104 @@ define(function(require, exports, module){
         },
 
         events: function() {
-            $('.wrp').hide();
-            console.log('hello events');
-            this.navigate('#events', {trigger : true});
-            var evView = new EventsCollectionView;
-            //evView.render();
-            this.loadView(evView);
+
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
+                $('.wrp').hide();
+                console.log('hello events');
+
+                var events = new EventsCollection();
+
+                events.reset();
+
+                this.navigate('#events', {trigger : true});
+                var evView = new EventsCollectionView({collection: events});
+                //evView.render();
+                this.loadView(evView);
+            }
         },
 
         event: function(eventID) {
 
-            $('.wrp').hide();
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
 
-            var soloModel = Parse.Object.extend('Event');
+                $('.wrp').hide();
 
-            var query = new Parse.Query(soloModel);
-            query.get(eventID, {
-                success: function(soloModel) {
-                    var EventView = new EventSoloView({model: soloModel});
-                },
-                error: function(soloModel, error) {
-                    console.log('damn');
-                }
-            });
+                var soloModel = Parse.Object.extend('Event');
+
+                var query = new Parse.Query(soloModel);
+                query.get(eventID, {
+                    success: function(soloModel) {
+                        var EventView = new EventSoloView({model: soloModel});
+                    },
+                    error: function(soloModel, error) {
+                        console.log('damn');
+                    }
+                });
+            }
         },
 
         news: function() {
-            $('.wrp').hide();
-            console.log('hello news');
-            this.navigate('#news', {trigger : true});
-            var nvView = new NewsCollectionView;
-            //evView.render();
-            this.loadView(nvView);
+
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
+
+                var newsColl = new NewsCollection();
+
+                newsColl.reset();
+
+                $('.wrp').hide();
+                console.log('hello news');
+                this.navigate('#news', {trigger : true});
+                var nvView = new NewsCollectionView({collection: newsColl});
+                //evView.render();
+                this.loadView(nvView);
+            }
         },
 
         account: function() {
-            $('.wrp').hide();
-            console.log('hello account');
-            this.navigate('#account', {trigger: true});
-            var accView = new AccountView();
-            this.loadView(accView);
+            
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
+                $('.wrp').hide();
+                console.log('hello account');
+                this.navigate('#account', {trigger: true});
+                var accView = new AccountView();
+                this.loadView(accView);
+            }
         },
 
         about: function() {
-            $('.wrp').hide();
-            console.log('hello about');
-            this.navigate('#about', {trigger: true});
-            var aboutView = new AboutView();
-            this.loadView(aboutView);
+            
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
+                $('.wrp').hide();
+                console.log('hello about');
+                this.navigate('#about', {trigger: true});
+                var aboutView = new AboutView();
+                this.loadView(aboutView);
+            }
         },
 
         /*new: function(newsID) {
@@ -246,23 +296,33 @@ define(function(require, exports, module){
 
         payment: function(eventID) {
 
-            var soloModel = Parse.Object.extend('Event');
+            if (!Parse.User.current())
+            {
+                this.navigate('#login', {trigger : true});
+            }
+            else
+            {
 
-            var query = new Parse.Query(soloModel);
-            query.get(eventID, {
-                success: function(soloModel) {
+                $('.wrp').show();
 
-                    var price = soloModel.get("price");
+                var soloModel = Parse.Object.extend('Event');
 
-                    var payView = new PaymentView({amount: price});
-                },
-                error: function(soloModel, error) {
-                    console.log('damn');
-                }
-            });
+                var query = new Parse.Query(soloModel);
+                query.get(eventID, {
+                    success: function(soloModel) {
+
+                        var price = soloModel.get("price");
+
+                        var payView = new PaymentView({amount: price});
+                    },
+                    error: function(soloModel, error) {
+                        console.log('damn');
+                    }
+                });
+            }
         },
 
-        album: function(albumID) {
+/*        album: function(albumID) {
 
             var albumModel = Parse.Object.extend('PhotoAlbum');
 
@@ -279,11 +339,7 @@ define(function(require, exports, module){
                     console.log('damn');
                 }
             });
-        },
-
-        signup: function() {
-            console.log('hello signup');
-        },
+        },*/
 
         loadView : function(view) {
         this.view && (view.close ? view.close() : view.remove());

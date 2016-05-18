@@ -5,6 +5,7 @@ require.config({
         'underscore': '../bower_components/underscore/underscore',
         'three': '../../Render3D/include/js/three.min',
         'bootstrap': 'vendor/bootstrap',
+        'node-twitter-api': '../../nodes_modules/node-twitter-api/twitter',
         'parse': 'vendor/parse-1.3.3.min'
     },
     
@@ -48,4 +49,5 @@ require(['parse'], function(Parse) {
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     });
+});
 

@@ -8,13 +8,9 @@ define(['jquery',
 ], function($, _, Backbone, PartyEventModel, PartyEventView, EventsCollection, JST){
 	'use strict'
 
-	var eventIncoming = new EventsCollection();
-
 	var EventsCollectionView = Backbone.View.extend({
 
 		template: JST['app/scripts/templates/eventsCollection.ejs'],
-
-		collection: eventIncoming,
 
 		el: '.elements',
 
@@ -73,6 +69,7 @@ define(['jquery',
 
 			this._rendered = true;
 
+			console.log(this.collection);
 			$(this.el).empty();
 			var that = this;
 			_(this._eventsViews).each(function(ev) {
