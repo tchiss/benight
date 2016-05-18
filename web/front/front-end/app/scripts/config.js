@@ -29,7 +29,7 @@ require.config({
 require(['parse'], function(Parse) {
         Parse.initialize("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "d5Pye5IKCldho2Vtjdyw0PM7ySaSDX4pxOR2atNM");
 
-        window.fbAsyncInit = function() {
+/*        window.fbAsyncInit = function() {
         Parse.FacebookUtils.init({ // this line replaces FB.init({
           appId      : '{603572813098360}', // Facebook App ID
           status     : true,  // check Facebook Login status
@@ -48,5 +48,6 @@ require(['parse'], function(Parse) {
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));
+*/
 });
 
