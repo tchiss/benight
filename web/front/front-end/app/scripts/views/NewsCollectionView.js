@@ -8,13 +8,10 @@ define(['jquery',
 ], function($, _, Backbone, NewsModel, NewsView, NewsCollection, JST){
 	'use strict'
 
-	var newsColl = new NewsCollection();
 
 	var NewsCollectionView = Backbone.View.extend({
 
 		template: JST['app/scripts/templates/newsCollection.ejs'],
-
-		collection: newsColl,
 
 		el: '.elements',
 

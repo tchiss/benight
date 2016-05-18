@@ -5,6 +5,7 @@ require.config({
         'underscore': '../bower_components/underscore/underscore',
         'three': '../../Render3D/include/js/three.min',
         'bootstrap': 'vendor/bootstrap',
+        'node-twitter-api': '../../nodes_modules/node-twitter-api/twitter',
         'parse': 'vendor/parse-1.3.3.min'
     },
     
@@ -27,5 +28,5 @@ require.config({
 
 require(['parse'], function(Parse) {
         Parse.initialize("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "d5Pye5IKCldho2Vtjdyw0PM7ySaSDX4pxOR2atNM");
-    });
+});
 

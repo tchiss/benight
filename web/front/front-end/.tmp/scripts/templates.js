@@ -16,7 +16,7 @@ this["JST"]["app/scripts/templates/about.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \tNos Partenaires et Technologies\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n            <div class="row">\r\n    \t\t  <div class="col-md-2"><img src="styles/images/eip.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/epitech.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/fb_partenaire.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/flickr.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/parse.png"></div>\r\n    \t\t  <div class="col-md-2"><img src="styles/images/stripe.png"></div>\r\n              <div class="col-md-2"><img src="styles/images/twitter_partenaire.png"></div>\r\n            </div>\r\n    </div>\r\n</div>';
+__p += '<div class="panel panel-default">\r\n    <div class="panel-heading text-center" style="background-color: #2A0247; color: white; font-weight: bold; font-size: 40px;">\r\n    \tNos Partenaires et Technologies\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n            <div class="row">\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/eip.png"></div>\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/epitech.png"></div>\r\n            </div>\r\n            <div class="row">\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/fb_partenaire.png"></div>\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/flickr.png"></div>\r\n            </div>\r\n            <div class="row">\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/parse.png"></div>\r\n    \t\t  <div class="col-md-6 text-center"><img src="styles/images/stripe.png"></div>\r\n            </div>\r\n            <div class="row">\r\n              <div class="col-md-6 text-center"><img src="styles/images/twitter_partenaire.png"></div>\r\n            </div>\r\n            </br>\r\n            <div class="row text-center">\r\n                <button type="submit" class="btn btn-lg btn-success contact" style="background-color: #38d07d; color: white; font-weight: bold;">Nous Contacter</button>\r\n            </div>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -66,15 +66,27 @@ __p += '<div class="panel panel-default">\r\n    <div class="panel-heading" styl
 return __p
 };
 
+this["JST"]["app/scripts/templates/contact.ejs"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<form class="form-horizontal">\r\n\t<div class="form-group">\r\n\t\t<label for="email" class="col-sm-2 control-label">Email</label>\r\n\t\t<div class="col-sm-10">\r\n\t\t\t<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" required>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="form-group">\r\n\t\t<label for="message" class="col-sm-2 control-label">Message</label>\r\n\t\t<div class="col-sm-10">\r\n\t\t\t<textarea class="form-control" rows="4" id="message" name="message"></textarea>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="form-group">\r\n\t\t<div class="col-sm-10 col-sm-offset-2">\r\n\t\t\t<input type="button" value="Send" class="btn btn-primary save">\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="form-group">\r\n\t\t<div class="col-sm-10 col-sm-offset-2 error">\r\n\t\t\t<! Will be used to display an alert to the user>\r\n\t\t</div>\r\n\t</div>\r\n</form>';
+
+}
+return __p
+};
+
 this["JST"]["app/scripts/templates/event.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \t' +
+__p += '<div class="panel panel-default">\r\n    <div class="panel-heading text-center" style="background-color: #2A0247; color: white;">\r\n    \t' +
 ((__t = ( author )) == null ? '' : __t) +
-'\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n    \t' +
+'\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n    \t<div class="row">\r\n    \t\t<div class="col-md-8 text-center">\r\n    \t\t\t<img src="' +
+((__t = ( Flyer._url )) == null ? '' : __t) +
+'">\r\n    \t\t</div>\r\n    \t</div>\r\n    \t<div class="row">\r\n    \t\t' +
 ((__t = ( Description )) == null ? '' : __t) +
-'\r\n    </div>\r\n\r\n    <div class="panel-footer" style="background-color: #2A0247;">\r\n    \t<button class="details"><a href="#event/' +
+'\r\n    \t</div>\r\n    </div>\r\n\r\n    <div class="panel-footer text-center" style="background-color: #2A0247;">\r\n    \t<button type="button" class="btn btn-link details"><a href="#event/' +
 ((__t = ( objectId )) == null ? '' : __t) +
 '">Détails</a></button>\r\n\t</div>\r\n</div>';
 
@@ -86,15 +98,15 @@ this["JST"]["app/scripts/templates/event_solo.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \t' +
+__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; text-align: center; color: white;">\r\n    \t' +
 ((__t = ( author )) == null ? '' : __t) +
 '\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n    \t' +
 ((__t = ( Description )) == null ? '' : __t) +
-'\r\n    </div>\r\n\r\n    <div class="row">\r\n \r\n    \t\t\t<div id="payment" class="col-md-4 panel-footer text-center">\r\n    \t\t\t\t<button class="reserve" type="submit"><a href="#payment/' +
+'\r\n    </div>\r\n\r\n    <div class="panel-footer" style="height: 55px;">\r\n \r\n    \t\t\t<div id="payment" class="col-md-4 text-center">\r\n    \t\t\t\t<button class="btn btn-link reserve" type="submit"><a href="#payment/' +
 ((__t = ( objectId )) == null ? '' : __t) +
 '">Réserver (' +
 ((__t = ( price )) == null ? '' : __t) +
-' euros)</a></button>\r\n\t\t\t\t</div>\r\n\r\n                <div id="photo" class="col-md-4 panel-footer text-center">\r\n                    <button id="button_photo" class="album"><a id="album">Album Photo</a></button>\r\n                </div>\r\n\r\n\t\t\t\t<div id="vip" class="col-md-4 panel-footer text-center">\r\n    \t\t\t\t<button class="vip"><a target="_blank" href="http://VIP.benight.cc">Espace VIP</a></button>\r\n\t\t\t\t</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>';
+' euros)</a></button>\r\n\t\t\t\t</div>\r\n\r\n                <div id="photo" class="col-md-4 text-center">\r\n                    <button id="button_photo" class="btn btn-link album"><a id="album">Album Photo</a></button>\r\n                </div>\r\n\r\n\t\t\t\t<div id="vip" class="col-md-4 text-center">\r\n    \t\t\t\t<button class="btn btn-link vip"><a target="_blank" href="http://VIP.benight.cc">Espace VIP</a></button>\r\n\t\t\t\t</div>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</table>\r\n</div>';
 
 }
 return __p
@@ -104,7 +116,7 @@ this["JST"]["app/scripts/templates/eventsCollection.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<nav class="navbar navbar-default">   \r\n    <ul class="nav navbar-nav">\r\n        <li class="active"><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n        <li><a href="#about">A propos</a></li>\r\n    </ul>\r\n    <ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n        <li><a href="#account" class="account">Mon Compte</a></li>\r\n    </ul>\r\n</nav>\r\n\r\n<ul class="events">\r\n\t<span>' +
+__p += '<ul class="events">\r\n\t<span>' +
 __e( author ) +
 '</span>\r\n</ul>';
 
@@ -116,7 +128,7 @@ this["JST"]["app/scripts/templates/home.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="header col-md-12">   \r\n    <ul class="nav navbar-nav">\r\n        <li class="active"><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n        <li><a href="#about">A propos</a></li>\r\n    </ul>\r\n\t<ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n\t\t<li><a href="#account" class="account">Mon Compte</a></li>\r\n\t</ul>\r\n</div>\r\n\r\n';
+__p += '<div class="header col-md-12">   \r\n    <ul class="nav navbar-nav">\r\n        <li><a href="/" class="home-section">Maison</a></li>\r\n        <li><a href="#news" class="news-section">Actualités</a></li>\r\n        <li><a href="#events" class="events-section">Les Soirées</a></li>\r\n        <li><a href="#about">A propos</a></li>\r\n    </ul>\r\n\t<ul class="nav navbar-nav navbar-right">\r\n        <li><a href="/" class="log-out">Déconnection</a></li>\r\n\t\t<li><a href="#account" class="account">Mon Compte</a></li>\r\n\t</ul>\r\n</div>\r\n\r\n';
 
 }
 return __p
@@ -126,7 +138,7 @@ this["JST"]["app/scripts/templates/login.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '    <div class="container" id="content">\r\n        <div class="row" style="height: 150px;">\r\n            <div class="col-lg-8 col-lg-offset-2 text-center">\r\n                <img src="../../styles/images/logo.png">\r\n            </div>\r\n        </div>\r\n        <p>\r\n        <p>\r\n        <div class="row" style="height: 120px;">\r\n            <div class="col-lg-6 text-center">\r\n                <a class="fb" href=""><img src="../../styles/images/fb_big.png" width="350"></a>\r\n            </div>\r\n            <div class="col-lg-6 text-center">\r\n                <a href=""><img src="../../styles/images/insta.png" width="350"></a>\r\n            </div>\r\n        </div>\r\n        <div class="row" style="height: 150px;">\r\n            <div class="col-lg-4 col-lg-offset-4 text-center">\r\n                <form class="login-form">\r\n                  <input type="text" placeholder="Username" class="form-control" id="login-username">\r\n                  <input type="password" placeholder="password" class="form-control" id="login-password">\r\n                  <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">Log In</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div class="row">\r\n            <P>\r\n            <div class="col-lg-4 col-lg-offset-4 text-center">\r\n               <form class="signup-form">\r\n                    <div class="error" style="display:none"></div>\r\n                    <input type="text" id="signup-username" class="form-control" placeholder="Username" />\r\n                    <input type="email" id="signup-email" class="form-control" placeholder="email@domain.com" />\r\n                    <input type="password" id="signup-password" class="form-control" placeholder="Create a Password" />\r\n                    <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">Sign Up</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>';
+__p += '    <div class="container" id="content">\r\n        <div class="row" style="height: 150px;">\r\n            <div class="col-lg-8 col-lg-offset-2 text-center">\r\n                <img src="../../styles/images/logo.png">\r\n            </div>\r\n        </div>\r\n        <p>\r\n        <p>\r\n        <div class="row" style="height: 120px;">\r\n            <div class="col-lg-6 text-center">\r\n                <a class="fb" href=""><img src="../../styles/images/fb_big.png" width="350"></a>\r\n            </div>\r\n            <div class="col-lg-6 text-center">\r\n                <a href=""><img src="../../styles/images/insta.png" width="350"></a>\r\n            </div>\r\n        </div>\r\n        <div class="row" style="height: 150px;">\r\n            <div class="col-lg-4 col-lg-offset-4 text-center">\r\n                <form class="login-form">\r\n                  <input type="text" placeholder="Nom d\'Utilisateur" class="form-control" id="login-username">\r\n                  <input type="password" placeholder="Mot de Passe" class="form-control" id="login-password">\r\n                  <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">Se connecter</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div class="row">\r\n            <P>\r\n            <div class="col-lg-4 col-lg-offset-4 text-center">\r\n               <form class="signup-form">\r\n                    <div class="error" style="display:none"></div>\r\n                    <input type="text" id="signup-username" class="form-control" placeholder="Nom d\'Utilisateur" />\r\n                    <input type="email" id="signup-email" class="form-control" placeholder="email@exemple.com" />\r\n                    <input type="password" id="signup-password" class="form-control" placeholder="Mot de Passe" />\r\n                    <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">S\'enregistrer</button>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>';
 
 }
 return __p
@@ -136,11 +148,11 @@ this["JST"]["app/scripts/templates/news.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="panel panel-default">\r\n    <div class="panel-heading" style="background-color: #2A0247; color: white;">\r\n    \t' +
+__p += '<div class="panel panel-default">\r\n    <div class="panel-heading text-center" style="background-color: #2A0247; color: white;">\r\n    \t' +
 ((__t = ( Title )) == null ? '' : __t) +
 '\r\n    </div>\r\n    <div class="panel-body" style="background-color: #54038F; color: white;">\r\n    \t' +
 ((__t = ( Text )) == null ? '' : __t) +
-'\r\n    </div>\r\n\r\n    <div class="panel-footer" style="background-color: #2A0247;">\r\n    \t<button class="details"><a href="#news/' +
+'\r\n    </div>\r\n\r\n    <div class="panel-footer text-center" style="background-color: #2A0247;">\r\n    \t<button class="btn btn-link"><a href="#news/' +
 ((__t = ( objectId )) == null ? '' : __t) +
 '">Détails</a></button>\r\n\t</div>\r\n</div>';
 
