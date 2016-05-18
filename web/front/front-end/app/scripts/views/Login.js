@@ -25,8 +25,6 @@ define(['jquery',
             this.render();
         },
 
-	fb: function(e){
-	 },
         logIn: function(e){
 
             e.preventDefault();
