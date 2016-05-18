@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Benight": {
+      "applicationId": "KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT"
+    },
+    "_default": {
+      "link": "Benight"
+    }
+  }
+}
