@@ -18,8 +18,9 @@ class EditProfileTableViewController: UITableViewController {
 		@IBOutlet var UserWeb: UITextField!
 		@IBOutlet var UserPasswd: UITextField!
 		@IBOutlet var ConfirmPasswd: UITextField!
-		@IBOutlet var UserAdress: UITextField!
 	
+    @IBOutlet weak var userFirstName: UITextField!
+    @IBOutlet weak var userLastName: UITextField!
     override func shouldAutorotate() -> Bool {
         return false
     }
@@ -30,11 +31,10 @@ class EditProfileTableViewController: UITableViewController {
 			let user = PFUser.currentUser()
 			self.ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.width / 2
 			self.ProfileImage.clipsToBounds = true
-			UserName.text = user!.username
 			UserEmail.text = user!.email
 			UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
-			UserAdress.text = PFUser.currentUser()!["adress"] as? String ?? "Inconnu"
-			
+            userLastName.text = PFUser.currentUser()!["lastname"] as? String ?? "Inconnu"
+            userFirstName.text = PFUser.currentUser()!["name"] as? String ?? "Inconnu"
 			// Uncomment the following line to preserve selection between presentations
 			// self.clearsSelectionOnViewWillAppear = false
 			
@@ -70,9 +70,11 @@ class EditProfileTableViewController: UITableViewController {
 		if (UserPasswd.text == ConfirmPasswd.text)
 		{
 			user!.email = UserEmail.text
-			user!.username = UserName.text
 			user!.password = UserPasswd.text
-			user!.saveInBackgroundWithBlock(
+            PFUser.currentUser()!["phone"] = UserPhone.text
+            PFUser.currentUser()!["lastname"] = userLastName.text
+            PFUser.currentUser()!["name"] = userFirstName.text
+            user!.saveInBackgroundWithBlock(
 			{
 				(success: Bool, error: NSError?) -> Void in
 				if (success) {
@@ -103,6 +105,6 @@ class EditProfileTableViewController: UITableViewController {
 		override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 			// #warning Incomplete method implementation.
 			// Return the number of rows in the section.
-			return 7
+			return 8
 		}
 }

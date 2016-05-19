@@ -16,10 +16,10 @@ class ProfileTableViewController: UITableViewController {
 	@IBOutlet var UserName: UILabel!
 	@IBOutlet var UserPhone: UILabel!
 	@IBOutlet var UserEmail: UILabel!
-	@IBOutlet var UserWeb: UILabel!
 	
+    @IBOutlet weak var UserFirstName: UILabel!
 	
-	@IBOutlet var UserAdress: UILabel!
+    @IBOutlet weak var UserLastName: UILabel!
     
     override func shouldAutorotate() -> Bool {
         return false
@@ -33,6 +33,8 @@ class ProfileTableViewController: UITableViewController {
 		UserName.text = PFUser.currentUser()!.username
 		UserEmail.text = PFUser.currentUser()!.email
 		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
+        UserFirstName.text = PFUser.currentUser()!["lastname"] as? String ?? "Inconnu"
+        UserLastName.text = PFUser.currentUser()!["name"] as? String ?? "Inconnu"
 		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,6 +50,8 @@ class ProfileTableViewController: UITableViewController {
 		UserName.text = PFUser.currentUser()!.username
 		UserEmail.text = PFUser.currentUser()!.email
 		UserPhone.text = PFUser.currentUser()!["phone"] as? String ?? "Inconnu"
+        UserFirstName.text = PFUser.currentUser()!["lastname"] as? String ?? "Inconnu"
+        UserLastName.text = PFUser.currentUser()!["name"] as? String ?? "Inconnu"
 
 	}
 	

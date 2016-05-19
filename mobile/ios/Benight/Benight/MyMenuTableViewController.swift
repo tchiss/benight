@@ -61,7 +61,7 @@ class MyMenuTableViewController: UITableViewController {
 			cell!.backgroundColor = UIColor.clearColor()
 			cell!.textLabel?.textColor = UIColor.whiteColor()
 			let selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
-			selectedBackgroundView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.5)
+			selectedBackgroundView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
 			cell!.selectedBackgroundView = selectedBackgroundView
 		}
 		switch (indexPath.row) {
