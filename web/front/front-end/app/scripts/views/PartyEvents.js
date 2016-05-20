@@ -42,6 +42,14 @@ define(['jquery',
                     _.bindAll(this, 'render', 'logOut', 'home', 'news');
                     this.model.bind('change', this.render);
                     this.model.bind('destroy', this.remove);
+
+                    console.log(this.model.attributes.Flyer._url);
+
+                    if (!this.model.attributes.author)
+                        this.model.attributes.author = '';
+                    if (!this.model.attributes.Description)
+                        this.model.attributes.Description = 'Etrange...il n\'y a aucune description pour cette soirée!';
+
                     this.render();
                 },
 
@@ -68,7 +76,15 @@ define(['jquery',
             },
 
             render: function () {
+
+                var str = this.model.attributes.Flyer._url;
+
+                var link = 'http://' + str.substr(7);
+
+                console.log(link);
+
                 this.$el.html(this.template(this.model.toJSON()));
+                document.getElementById('pic').src = link;
                 //this.delegateEvents();
                 //this.input = this.$('.edit');
                 return this;

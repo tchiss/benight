@@ -1,64 +1,37 @@
-<div id="fb-root"></div>
-<div class="container" id="content">
-        <div class="row" style="height: 150px;">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <img src="../../styles/images/logo.png">
-            </div>
-        </div>
-        <p>
-        <p>
-        <div class="row" style="height: 120px;">
-            <div class="col-lg-6 text-center">
-                <a class="fb" href=""><img class="fb_content" src="../../styles/images/fb_big.png" width="350"></a>
-            </div>
-            <div class="col-lg-6 text-center">
-                <a href=""><img src="../../styles/images/insta.png" width="350"></a>
-            </div>
-        </div>
-        <div class="row" style="height: 150px;">
-            <div class="col-lg-4 col-lg-offset-4 text-center">
-                <form class="login-form">
-                  <input type="text" placeholder="Nom d'Utilisateur" class="form-control" id="login-username">
 
-                  <input type="password" placeholder="Mot de Passe" class="form-control" id="login-password">
-                  <button type="submit" class="btn btn-success-outline" style="background-color: #37d07d; color: white; font-weight: bold;">Se connecter</button>
-                </form>
-            </div>
+<div class="container" id="content">
+    <div class="row" style="height: 150px;">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <img src="../../styles/images/logo.png">
         </div>
-        <div class="row">
-            <P>
-            <div class="col-lg-4 col-lg-offset-4 text-center">
-               <form class="signup-form">
-                    <div class="error" style="display:none"></div>
+    </div>
+    <p>
+    <p>
+    <div class="row" style="height: 120px;">
+        <div class="col-lg-12 text-center">
+            <button id="fb_content" style="background: url(../../styles/images/facebook.png) center; width: 283px; height: 55px;" />
+        </div>
+    </div>
+    <div class="row" style="height: 150px;">
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+            <form class="login-form">
+                <input type="text" placeholder="Nom d'Utilisateur" class="form-control" id="login-username">
+
+                <input type="password" placeholder="Mot de Passe" class="form-control" id="login-password">
+                <button type="submit" class="btn btn-success-outline" style="background-color: #37d07d; color: white; font-weight: bold;">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <P>
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+            <form class="signup-form">
+                <div class="error" style="display:none"></div>
                     <input type="text" id="signup-username" class="form-control" placeholder="Nom d'Utilisateur" />
                     <input type="email" id="signup-email" class="form-control" placeholder="email@exemple.com" />
                     <input type="password" id="signup-password" class="form-control" placeholder="Mot de Passe" />
                     <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">S'enregistrer</button>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
-    <script>
-        // Initialize Parse
-        Parse.initialize("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "d5Pye5IKCldho2Vtjdyw0PM7ySaSDX4pxOR2atNM");
-
-          window.fbAsyncInit = function() {
-        Parse.FacebookUtils.init({ // this line replaces FB.init({
-          appId      : '{603572813098360}', // Facebook App ID
-          status     : true,  // check Facebook Login status
-          cookie     : true,  // enable cookies to allow Parse to access the session
-          xfbml      : true,  // initialize Facebook social plugins on the page
-          version    : 'v2.2' // point to the latest Facebook Graph API version
-        });
-
-            // Run code after the Facebook SDK is loaded.
-        };
-
-          (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+</div>

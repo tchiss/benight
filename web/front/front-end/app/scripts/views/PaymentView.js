@@ -71,7 +71,7 @@ define(['jquery',
                         success: function(results) {
                             console.log(results);
                             alert('Ticket d\'une valeur de ' + amount + ' payé!');
-                            Backbone.history.navigate('', {trigger : true});
+                            Backbone.history.navigate('/', {trigger : true});
                         },
                         error: function() {
                             console.log('Cloud Code failed');

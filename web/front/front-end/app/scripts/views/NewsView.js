@@ -65,6 +65,13 @@ define(['jquery',
             },
 
             render: function () {
+
+                var str = this.model.attributes.Image._url;
+
+                var link = 'http://' + str.substr(7);
+
+                console.log(link);
+
                 this.$el.html(this.template(this.model.toJSON()));
                 //this.delegateEvents();
                 //this.input = this.$('.edit');
