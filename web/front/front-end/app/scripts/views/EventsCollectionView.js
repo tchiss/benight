@@ -77,7 +77,7 @@ define(['jquery',
 				//this.$('ul.events').append(ev.render().el);
 			});
 
-			return this;
+			//return this;
 		}
 	});
 

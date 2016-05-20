@@ -1,35 +1,42 @@
 
 <div class="container" id="content">
-    <div class="row" style="height: 150px;">
+    <div class="row" style="margin-top: 100px;">
         <div class="col-lg-8 col-lg-offset-2 text-center">
             <img src="../../styles/images/logo.png">
         </div>
     </div>
-    <p>
-    <p>
-    <div class="row" style="height: 120px;">
+    <div class="row">
         <div class="col-lg-12 text-center">
-            <button id="fb_content" style="background: url(../../styles/images/facebook.png) center; width: 283px; height: 55px;" />
+            <button id="fb_content" style="background: url(../../styles/images/facebook.png) center; width: 283px; height: 55px; margin-top: 30px; margin-bottom: 25px;" />
         </div>
     </div>
-    <div class="row" style="height: 150px;">
+    <div class="row" style="height: 50px;">
+        <div class="col-lg-4 col-lg-offset-4 text-center" style="margin-top: 30px; margin-bottom: 15px; font-size: 25px;">
+            Vous avez déjà un compte :
+        </div>
         <div class="col-lg-4 col-lg-offset-4 text-center">
             <form class="login-form">
-                <input type="text" placeholder="Nom d'Utilisateur" class="form-control" id="login-username">
+                <input type="text" placeholder="Nom d'Utilisateur" class="form-control" id="login-username" style="margin-bottom: 25px;">
 
-                <input type="password" placeholder="Mot de Passe" class="form-control" id="login-password">
-                <button type="submit" class="btn btn-success-outline" style="background-color: #37d07d; color: white; font-weight: bold;">Se connecter</button>
+                <input type="password" placeholder="Mot de Passe" class="form-control" id="login-password" style="margin-bottom: 25px;">
+                <button type="submit" class="btn btn-success-outline" style="background-color: #37d07d; color: white; font-weight: bold; margin-bottom: 25px;">Se connecter</button>
             </form>
+        </div>
+        <p>
+        <div class="col-lg-4 col-lg-offset-4 text-center">
+            <button type="button" class="btn btn-info" style="font-weight: bold;" id="reset">Récupérer votre Mot de Passe</button>
         </div>
     </div>
     <div class="row">
-        <P>
+        <div class="col-lg-4 col-lg-offset-4 text-center" style="margin-top: 50px; margin-bottom: 15px; font-size: 25px;">
+            Créez votre compte :
+        </div>
         <div class="col-lg-4 col-lg-offset-4 text-center">
             <form class="signup-form">
                 <div class="error" style="display:none"></div>
-                    <input type="text" id="signup-username" class="form-control" placeholder="Nom d'Utilisateur" />
-                    <input type="email" id="signup-email" class="form-control" placeholder="email@exemple.com" />
-                    <input type="password" id="signup-password" class="form-control" placeholder="Mot de Passe" />
+                    <input type="text" id="signup-username" class="form-control" placeholder="Nom d'Utilisateur" style="margin-bottom: 15px;"/>
+                    <input type="email" id="signup-email" class="form-control" placeholder="email@exemple.com" style="margin-bottom: 15px;"/>
+                    <input type="password" id="signup-password" class="form-control" placeholder="Mot de Passe" style="margin-bottom: 15px;"/>
                     <button type="submit" class="btn btn-success-outline" style="background-color: #38d07d; color: white; font-weight: bold;">S'enregistrer</button>
             </form>
         </div>

@@ -43,7 +43,7 @@ define(['jquery',
                     this.model.bind('change', this.render);
                     this.model.bind('destroy', this.remove);
 
-                    console.log(this.model.attributes.Flyer._url);
+                    //console.log(this.model.attributes.Flyer._url);
 
                     if (!this.model.attributes.author)
                         this.model.attributes.author = '';
@@ -84,7 +84,7 @@ define(['jquery',
                 console.log(link);
 
                 this.$el.html(this.template(this.model.toJSON()));
-                document.getElementById('pic').src = link;
+                //document.getElementById('pic').src = link;
                 //this.delegateEvents();
                 //this.input = this.$('.edit');
                 return this;

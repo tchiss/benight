@@ -12,10 +12,14 @@ define(['jquery',
 
         template: JST['app/scripts/templates/login.ejs'],
 
+        resetTemplate: JST['app/scripts/templates/reset.ejs'],
+
         events: {
             'submit form.login-form': 'logIn',
             'submit form.signup-form': 'signUp',
-            'click #fb_content': 'facebookLogin'
+            'click #fb_content': 'facebookLogin',
+            'click #reset': 'resetPass',
+            'click #send': 'sendReset'
         },
 
         el: '.elements',
@@ -102,6 +106,26 @@ define(['jquery',
                     alert("User cancelled the Facebook login or did not fully authorize");
                 }
             });
+        },
+
+        resetPass: function(e) {
+            this.$el.html(this.resetTemplate());
+        },
+
+        sendReset: function(e) {
+
+            var email = $('#send').val();
+
+            Parse.User.requestPasswordReset(email, {
+                success: function() {
+                    alert("L'email de récupération a bien été envoyé! Merci de vérifier votre boite mail pour la suite des opérations!");
+                },
+                error: function(error) {
+                    // Show the error message somewhere
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            });
+
         },
 /*
         twitterLogin: function(e) {
